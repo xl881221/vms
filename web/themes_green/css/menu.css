@@ -1,0 +1,79 @@
+.titleStyle_1,.titleStyle_1 td {
+	BORDER-BOTTOM: #BCC4D5 1px solid;
+	FONT-SIZE: 9pt; 
+	CURSOR: default;
+	background :url(../images/leftmenubg.png) 0 bottom;
+	text-align:left;
+	padding-left: 47px;
+	COLOR: #32415A;
+	cursor:pointer;
+	line-height:30px;
+	padding-top:6px;
+	font-weight:bold;
+}
+.titleStyle_2,.titleStyle_2 td{
+	BORDER-BOTTOM: #BCC4D5 1px solid;
+	FONT-SIZE: 9pt; 
+	CURSOR: default;
+	background :url(../images/leftmenubg_on.png) 0 bottom;
+	text-align:left;
+	padding-left: 47px;
+	COLOR: #32415A;
+	line-height:30px;
+	padding-top:6px;
+	font-weight:bold;
+}
+
+.cf07{color:#F07f07;}
+
+.titleStyle_1 span{
+	
+} 
+
+.contentStyle {
+	FONT-SIZE: 9pt; 
+	COLOR: #999999; 
+	BACKGROUND: #FFFFFF; 
+	text-align:left;
+	vertical-align:top;
+}
+A {
+	/* 样式调整  2009-07-21 10:16 ShiCH */
+	/*COLOR: #00659B;*/
+	color:#000;
+	TEXT-DECORATION: none;	
+	font:normal 12px Arial,Verdana,宋体;
+}
+A:hover {
+	/* 样式调整  2009-07-21 10:15 ShiCH */
+	/*font-weight:bold ;*/
+	/*COLOR: #00659B; */
+	/*font-size:13;*/
+	color:#FB9337;
+}
+A:ACTIVE {
+	/* 样式调整  2009-07-21 10:15 ShiCH */
+	/*COLOR: #00659B;*/
+	color:#FB9337;
+}
+
+.highlight {
+    color:#FB9337;
+}
+
+.contentStyle span {
+	width:30px;
+}
+
+/* 样式优化 ShiCH 2009-07-16 14:43 */
+
+.titleStyle_1 img,.titleStyle_2 img {
+	position:relative;
+	left:0px;
+	top:2px;
+}
+
+.dropmenu{ border-bottom:#BCC4D5 solid 1px!important; overflow-y:auto!important; overflow-x:hidden!important;}
+.dropmenu a{ display:block; width:210px; height:33px; line-height:33px; margin-top:6px; background: url(../images/dropmenubg.png) left center no-repeat; color:#999999; padding-left:36px; text-decoration:none; cursor: defaule;}
+.dropmenu a:hover { text-decoration:none; color:#34A344; cursor: pointer;}
+

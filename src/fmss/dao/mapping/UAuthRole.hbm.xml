@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping
+>
+    <class
+        name="fmss.dao.entity.UAuthRoleDO"
+        table="U_AUTH_ROLE"
+        dynamic-update="true"
+        dynamic-insert="true"
+    >
+		<id
+            name="roleId"
+            column="ROLE_ID"
+            type="java.lang.String"
+            unsaved-value="null"
+        />
+       <property
+            name="roleName"
+            type="java.lang.String"
+            update="true"
+            insert="true"
+            column="ROLE_NAME"
+            length="20"/>
+ 	  <property
+            name="startDate"
+            type="java.sql.Date"
+            update="true"
+            insert="true"
+            column="START_DATE"/>
+ 	  <property
+            name="endDate"
+            type="java.sql.Date"
+            update="true"
+            insert="true"
+            column="END_DATE"/>                            
+ 	  <property
+            name="createTime"
+            type="java.sql.Date"
+            update="true"
+            insert="true"
+            column="CREATE_TIME"/>            
+		<property
+            name="description"
+            type="java.lang.String"
+            update="true"
+            insert="true"
+            column="DESCRIPTION"
+            length="600"/> 
+		<property
+            name="enabled"
+            type="java.lang.String"
+            update="true"
+            insert="true"
+            column="ENABLED"
+            length="5"/>
+       	<property
+            name="systemId"
+            type="java.lang.String"
+            update="true"
+            insert="true"
+            column="SYSTEM_ID"
+            length="50"/>     
+        <property
+            name="isHead"
+            type="java.lang.String"
+            update="true"
+            insert="true"
+            column="IS_HEAD"
+            length="5"/>
+        <property
+            name="systemCname"
+            type="java.lang.String"
+            formula="(SELECT a.SYSTEM_CNAME FROM U_BASE_CONFIG a WHERE a.SYSTEM_ID=SYSTEM_ID)"/>                    
+    </class>
+
+</hibernate-mapping>

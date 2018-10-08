@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping
+>
+    <class
+        name="fmss.dao.entity.UBaseFolderDO"
+        table="U_BASE_FOLDER"
+        dynamic-update="true"
+        dynamic-insert="true"
+    >
+		<id
+            name="folderId"
+            column="FOLDER_ID"
+            type="java.lang.Long"
+            unsaved-value="null"
+        />
+       <property
+            name="parentFolderId"
+            type="java.lang.Long"
+            update="true"
+            insert="true"
+            column="PARENT_FOLDER_ID"
+            length="20"/>
+       <many-to-one name="baseConfig"
+			class="fmss.dao.entity.UBaseConfigDO" cascade="none"
+			outer-join="auto" update="false" insert="false" lazy="false"
+			column="SYSTEM_ID" />
+       <property
+            name="folderCode"
+            type="java.lang.String"
+            update="true"
+            insert="true"
+            column="FOLDER_CODE"
+            length="20"/>
+       <property
+            name="folderName"
+            type="java.lang.String"
+            update="true"
+            insert="true"
+            column="FOLDER_NAME"
+            length="50"/>
+       <property
+            name="folderPath"
+            type="java.lang.String"
+            update="true"
+            insert="true"
+            column="FOLDER_PATH"
+            length="50"/>
+       <property
+            name="folderLevel"
+            type="java.lang.Long"
+            update="true"
+            insert="true"
+            column="FOLDER_LEVEL"/>
+       <property
+            name="display"
+            type="java.lang.String"
+            update="true"
+            insert="true"
+            length="50"
+            column="DISPLAY"/>
+    </class>
+
+</hibernate-mapping>

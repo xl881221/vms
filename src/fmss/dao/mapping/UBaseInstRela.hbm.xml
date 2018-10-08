@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="fmss.dao.entity.UBaseInstRelaDO"
+		table="u_base_inst_rela" dynamic-update="true"
+		dynamic-insert="true">
+		<id name="instId" column="INST_ID" type="java.lang.String"
+			unsaved-value="null" />
+		<property name="instIdLevel1" type="java.lang.String"
+			update="true" insert="true" column="INST_ID_LEVEL_1" length="20" />
+		<property name="instIdLevel2" type="java.lang.String"
+			update="true" insert="true" column="INST_ID_LEVEL_2" length="20" />
+		<property name="instIdLevel3" type="java.lang.String"
+			update="true" insert="true" column="INST_ID_LEVEL_3" length="20" />
+		<property name="instIdLevel4" type="java.lang.String"
+			update="true" insert="true" column="INST_ID_LEVEL_4" length="20" />
+		<property name="instIdLevel5" type="java.lang.String"
+			update="true" insert="true" column="INST_ID_LEVEL_5" length="20" />
+		<property name="instIdLevel6" type="java.lang.String"
+			update="true" insert="true" column="INST_ID_LEVEL_6" length="20" />
+		<!--
+			To add non XDoclet property mappings, create a file named
+			hibernate-properties-Alert.xml
+			containing the additional properties and place it in your merge dir.
+		-->
+
+	</class>
+
+</hibernate-mapping>

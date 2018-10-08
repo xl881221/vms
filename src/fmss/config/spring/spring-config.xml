@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+           http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd
+           http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd">
+
+	<bean id="PrivateConfig" class="fmss.common.config.PrivateConfig">
+		<property name="canMetaConfig" value="" />
+	</bean>
+	<bean id="LoggingConfig" class="fmss.common.config.LoggingConfig">
+		<property name="loggingParamChanges" value="1" /><!-- open default  -->
+		<property name="loggingConfigedName" value="1" /><!-- open default ,include role&resource name-->
+	</bean>
+	<bean id="UIConfig" class="fmss.common.config.UIConfig">
+		<property name="loginLogoPic.width" value="250" />
+		<property name="loginLogoPic.height" value="89" />
+		<property name="loginLogoPic.offsetX" value="" />
+		<property name="loginLogoPic.offsetY" value="" />
+		<property name="loginLogoPic.cssFilter" value="border: 1px solid #a59fa1;" />
+		<property name="loginLogoPic.path" value="image/ui/logo_dg.png" />
+		<property name="loginLogoPic.display" value="0" />
+		<property name="topLogoPic.width" value="" />
+		<property name="topLogoPic.height" value="50" />
+		<property name="topLogoPic.offsetX" value="" />
+		<property name="topLogoPic.offsetY" value="" />
+		<property name="topLogoPic.path" value="image/ui/logo_dg.png" />
+		<property name="topLogoPic.display" value="0" />
+	</bean>
+	<bean id="cacheManager" class="fmss.common.cache.CacheManager"/>
+	<bean id="systemCache" class="fmss.common.cache.SystemCache"
+		init-method="runCacheRegister" autowire="byName"/>
+	<bean id="SpringContextUtils" class="fmss.common.util.SpringContextUtils"/>
+</beans>

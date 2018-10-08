@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping
+>
+    <class
+     name="fmss.dao.entity.UBaseSysLogDO"
+        table="U_BASE_SYS_LOG"
+        dynamic-update="true"
+        dynamic-insert="true"
+    >
+   	<id
+         name="logId"
+         column="LOG_ID"
+         type="java.lang.Long"
+         unsaved-value="null"
+        />
+    <property
+            name="userId"
+            type="java.lang.String"
+            update="true"
+            insert="true"
+            column="USER_ID"
+            length="20"/>
+      <property
+            name="userEname"
+            type="java.lang.String"
+            update="true"
+            insert="true"
+            column="USER_ENAME"
+            length="20"/>
+	      <property
+            name="userCname"
+            type="java.lang.String"
+            update="true"
+            insert="true"
+            column="USER_CNAME"
+            length="30"/>
+	      <property
+            name="instId"
+            type="java.lang.String"
+            update="true"
+            insert="true"
+            column="INST_ID"
+            length="20"/>
+	      <property
+            name="instCname"
+            type="java.lang.String"
+            update="true"
+            insert="true"
+            column="INST_CNAME"
+            length="30"/>
+	      <property
+            name="menuId"
+            type="java.lang.String"
+            update="true"
+            insert="true"
+            column="MENU_ID"
+            length="20"/>
+	      <property
+            name="menuName"
+            type="java.lang.String"
+            update="true"
+            insert="true"
+            column="MENU_NAME"
+            length="30"/>
+	      <property
+            name="ip"
+            type="java.lang.String"
+            update="true"
+            insert="true"
+            column="IP"
+            length="20"/>
+	      <property
+            name="browse"
+            type="java.lang.String"
+            update="true"
+            insert="true"
+            column="[BROWSE]"
+            length="100"/>
+	      <property
+            name="logType"
+            type="java.lang.String"
+            update="true"
+            insert="true"
+            column="LOG_TYPE"
+            length="5"/>
+	      <property
+            name="execTime"
+            type="java.sql.Timestamp"
+            update="true"
+            insert="true"
+            column="EXEC_TIME"/>
+		<property
+            name="description"
+            type="java.lang.String"
+            update="true"
+            insert="true"
+            column="DESCRIPTION"
+            length="200"/>
+        <property
+            name="status"
+            type="java.lang.String"
+            update="true"
+            insert="true"
+            column="STATUS"
+            length="10"/>
+        <property
+            name="systemId"
+            type="java.lang.String"
+            update="true"
+            insert="true"
+            column="SYSTEM_ID"
+            length="20"/>
+        <!--
+            To add non XDoclet property mappings, create a file named
+                hibernate-properties-Alert.xml
+            containing the additional properties and place it in your merge dir.
+        -->
+
+    </class>
+
+</hibernate-mapping>

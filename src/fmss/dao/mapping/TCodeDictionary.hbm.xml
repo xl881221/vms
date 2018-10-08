@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping
+>
+    <class
+     name="fmss.dao.entity.TCodeDictionaryDO"
+        table="t_code_dictionary"
+        dynamic-update="true"
+        dynamic-insert="true"
+    >
+        <composite-id>
+			 <key-property	  name="codeType"	  column="CODE_TYPE"	  type="java.lang.String"/>
+			 <key-property  name="codeName" column="CODE_NAME"  type="java.lang.String"/>
+		</composite-id>
+		<property
+            name="codeName"
+            type="java.lang.String"
+            update="false"
+            insert="false"
+            column="CODE_NAME"
+            length="10"/>
+		<property
+            name="codeValueStandardNum"
+            type="java.lang.String"
+            update="true"
+            insert="true"
+            column="CODE_VALUE_STANDARD_NUM"
+            length="50"/>                         
+    </class>
+
+</hibernate-mapping>

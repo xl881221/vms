@@ -1,0 +1,107 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+ <head>
+  <title> 公用滚动tab页使用示例 </title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="generator" content="editplus">
+  <meta name="author" content="ShiCH">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+
+  <script language="javascript" src="../http/common.js"></script>
+  <script language="javascript" src="../http/xml.js"></script>
+  <script language="javascript" src="../http/xmlHttp.js"></script>
+
+  <script language="javascript" src="js/ScrollTab.js"></script>
+  <link	rel="stylesheet" href="css/ScrollTab.css" type="text/css"></link>
+  <style type="text/css">
+  .tabConDiv {
+    border-width:0px 1px 1px 1px;
+    border-style:solid;
+    border-color:#8DB2E3;
+    height:200px;
+    font:normal 12px Arial,宋体;
+
+    padding:10px;
+  }
+  </style>
+  <script language="javascript">
+  <!--
+    window.onload = function(){
+        // xml数据形式
+        getData();
+        // Json 数据形式
+        getData2();
+    }
+
+    function getData(){
+        __WAITING_IMG_PATH = "images/";
+        var p = new HttpRequestParams();
+        //p.url = "data/data.xml";
+        p.url = "../../service/scrollTab.asp";
+        var request = new HttpRequest(p);
+        request.onresult = function(){
+            var data = this.getNodeValue("ScrollTab");
+            buildTab(data);
+        }
+        request.send();
+    }
+
+    function buildTab(data){    
+        var div = document.getElementById("tabCon");
+        var scrollTab = new ScrollTab();
+        scrollTab.container = div;
+        scrollTab.data = data;
+        scrollTab.singleWidth = 150;
+        scrollTab.width = 660;
+        scrollTab.clickEvt = function(elm){
+            var con = document.getElementById("tabConDiv");
+            var isIE = this.isIE;
+            con.innerHTML = (isIE ? elm.innerText : elm.textContent) + "<br>此tab标签的数据ID为:" + elm.getAttribute("dataId") + "<br>XML形式数据";
+        }
+        scrollTab.init();
+    }
+
+    function getData2(){
+        // JSON串....
+        var str = "{1:{id:'33',name:'JsonTab 1'},2:{id:'34',name:'JsonTab 2'},3:{id:'35',name:'JsonTab 3'},4:{id:'36',name:'JsonTab 4'},5:{id:'37',name:'JsonTab 5'},6:{id:'38',name:'JsonTab 6'},7:{id:'39',name:'JsonTab 7'}}";
+        // 将JSON串转换为JSON对像，并指定给obj
+        eval("obj="+str);
+        buildTab2(obj);
+    }
+
+    function buildTab2(data){
+        var div = document.getElementById("tabCon2");
+        var scrollTab = new ScrollTab();
+        scrollTab.dataType = 2;
+        scrollTab.container = div;
+        scrollTab.data = data;
+        scrollTab.clickEvt = function(elm){
+            var con = document.getElementById("tabConDiv2");
+            var isIE = this.isIE;
+            con.innerHTML = (isIE ? elm.innerText : elm.textContent)  + "<br>此tab标签的数据ID为:" + elm.getAttribute("dataId") + "<br>JSON形式数据";
+        }
+        scrollTab.init();
+    }
+  //-->
+  </script>
+ </head>
+
+ <body scroll=no>
+  <div id="tabCon" style="height:25px;"><span style="font:normal 10px verdana">loading...<span></div>
+  <div id="tabConDiv" class="tabConDiv">
+  Xml Tab 1<br>
+  此tab标签的数据ID为:1<br>
+  XML形式数据
+  </div>
+
+  <p>
+  
+  <div id="tabCon2">loading...</div>
+  <div id="tabConDiv2" class="tabConDiv">
+  JsonTab 1<br>
+  此tab标签的数据ID为:33<br>
+  JSON形式数据
+  </div>
+ </body>
+</html>

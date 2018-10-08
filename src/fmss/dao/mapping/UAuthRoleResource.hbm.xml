@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping
+>
+    <class name="fmss.dao.entity.UAuthRoleResourceDO"
+        table="U_AUTH_ROLE_RESOURCE"
+        dynamic-update="true"
+        dynamic-insert="true"
+    >
+       <composite-id>
+            <key-property name="objectId" column="OBJECT_ID" type="java.lang.String" />
+            <key-property name="resId" column="RES_ID" type="java.lang.String" />
+            <key-property name="resDetailValue" column="RES_DETAIL_VALUE" type="java.lang.String" />
+        </composite-id>
+        <many-to-one 
+            name="resMap" 
+     		class="fmss.dao.entity.UAuthResMapDO" 
+            cascade="none" 
+            outer-join="auto" 
+            update="false" 
+            insert="false" 
+            lazy="false" 
+            column="RES_ID"/>
+        <property
+            name="resDetailName"
+            type="java.lang.String"
+            update="true"
+            insert="true"
+            column="RES_DETAIL_NAME"
+            length="50"/>
+        <property
+            name="systemId"
+            type="java.lang.String"
+            update="true"
+            insert="true"
+            column="SYSTEM_ID"
+            length="50"/>
+		<many-to-one 
+            name="ubaseConfig" 
+     		class="fmss.dao.entity.UBaseConfigDO" 
+            cascade="none" 
+            outer-join="auto" 
+            update="false" 
+            insert="false" 
+            lazy="false" 
+            column="SYSTEM_ID"/>
+    </class>
+
+</hibernate-mapping>

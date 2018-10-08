@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="fmss.dao.entity.UBaseHolidayTypeDO"
+		table="u_base_holiday_type" dynamic-update="true"
+		dynamic-insert="true">
+		<id name="holidayType" column="holiday_type"
+			type="java.lang.String" unsaved-value="null" />
+		<property name="holidayName" type="java.lang.String"
+			update="true" insert="true" column="holiday_name" length="30" />
+		<property name="enable" type="java.lang.String" update="true"
+			insert="true" column="enable" length="3" />
+		<property name="remark" type="java.lang.String" update="true"
+			insert="true" column="remark" length="30" />
+	</class>
+
+</hibernate-mapping>

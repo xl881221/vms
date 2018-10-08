@@ -1,0 +1,93 @@
+/* all */
+body{
+	font-size: 12px;
+	margin:0px;
+	background-image: url(../img/login_bg.gif);
+	background-repeat: repeat-x;
+	background-position: left top;
+	background-color: #f6f8fa;
+	color: #839fba;
+}
+td,th{
+	font-size: 12px;
+}
+.logo_c{
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+.top{
+	background-image: url(../img/login_bg_b.jpg);
+	background-repeat: no-repeat;
+	background-position: center top;
+	height: 100%;
+	text-align: center;
+}
+.intro{
+	font-size: 13px;
+	line-height: 20px;
+}
+.login{
+	margin-top: 30px;
+}
+.login td{
+	font-size: 14px;
+	color: #35587e;
+}
+.login .note{
+	font-size: 12px;
+	color: #ff6633;
+}
+.login .input01{
+	background-image: url(../img/login_input.gif);
+	height: 28px;
+	width: 137px;
+	margin: 0px;
+	border: 0px;
+	vertical-align: middle;
+	line-height: 28px;
+	padding:5px 0px 0px 3px;
+	font:normal 12px Arial,Verdana,ËÎÌו;
+}
+.login .input02{
+	background-image: url(../img/login.gif);
+	height: 28px;
+	width: 87px;
+	border:0;
+	margin:0;
+	text-align: center;
+	vertical-align: middle;
+}
+.input05{
+	background-image: url(../img/login_en.gif);
+	height: 28px;
+	width: 87px;
+	border:0;
+	margin:0;
+	text-align: center;
+	vertical-align: middle;
+}
+.input03{
+	background-image: url(../img/login_help.gif);
+	height: 22px;
+	width: 72px;
+	border:0;
+	margin:0;
+	text-align: center;
+	vertical-align: middle;
+}
+.input04{
+	background-image: url(../img/login_reset.gif);
+	height: 22px;
+	width: 72px;
+	border:0;
+	margin:0;
+	text-align: center;
+	vertical-align: middle;
+}
+.select{
+	font-size:12px;
+	font-family:Arial,Verdana,ËÎÌו; 
+	vertical-align:middle ;
+	border: 1px solid #B7B7B7;
+	height: 21px;
+	}

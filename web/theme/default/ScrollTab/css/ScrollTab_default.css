@@ -1,0 +1,156 @@
+html{filter:expression(document.execCommand("BackgroundImageCache", false, true))}
+
+.tabContainerDiv {
+	font:normal 12px "宋体";
+	background:url(../../img/bgbg.jpg) 0px 0px repeat-x;
+	height:25px;
+  cursor:default;
+}
+.tabbox
+{
+	padding:0;	
+  	border:1px solid #b7b7b7;
+  	margin-bottom:5px;	
+}
+.tabContainerDiv * {
+    margin:0px;
+    padding:0px;
+    border:0px;
+    text-align:left;
+    font:normal 12px Arial,宋体;
+    position:static;
+    overflow:auto;
+}
+/* TAB标签样式 */
+.scrollTabCon {
+	width:100%;
+	display:block;
+    overflow:hidden ;
+    height:27px;
+    background:#00A9DA;
+}
+.scrollTabCon .bodyTr td {
+	padding:0px 2px 0px 2px;
+	height:25px !important;
+  width:auto;
+}
+.scrollTabCon .bodyTr div {
+	padding:0px 0px 0px 10px;
+	height:27px !important;
+}
+.scrollTabCon .bodyTr div div {
+	padding:5px 10px 5px 0px;
+	height:25px !important;
+}
+.scrollTabCon .tabOutDiv_Checked {
+	height:27px;
+	width:auto;
+	cursor:default;
+	background:#FFF; 
+	line-height:27px; 
+	color:#006498; 
+	font-weight:bold;
+	border-left:#B4B4B4 solid 1px; 
+	border-right:#B4B4B4 solid 1px; 
+	border-top:0; 
+	border-bottom:0; 
+	padding:0 25px;
+    overflow:hidden;
+}
+.scrollTabCon .tabOutDiv_Checked .tabMainDiv {
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	word-break:keep-all;
+	
+	height:25px;
+	font:normal 10px Arial !important;
+	 
+	color:#006498;
+	padding:5px 10px 5px 0px;
+}
+
+.scrollTabCon .tabOutDiv {
+	height:25px;
+	width:auto;
+	cursor:hand;
+  overflow:hidden;
+}
+.scrollTabCon .tabOutDiv .tabMainDiv {
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	word-break:keep-all;
+	font-weight: bold;
+	height:25px;
+	font:normal 10px Arial !important; 
+	color:#fff;
+	padding:5px 10px 5px 0px;
+}
+
+.scrollTabCon .tabOutDiv_Over {
+	height:25px;
+	width:auto;
+	cursor:default; 
+  overflow:hidden;
+}
+.scrollTabCon .tabOutDiv_Over .tabMainDiv {
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	word-break:keep-all;
+	
+	height:25px; 
+	 
+	color:#fff;
+	padding:5px 10px 5px 0px;
+	font-weight: bold;
+}
+.scrollTabCon .intext{
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	word-break:keep-all;
+	text-align:center;
+
+	font:normal 12px Verdana,宋体;
+	height:18px !important;
+  cursor:default;
+  line-height:12px;
+  padding:4px 0px 0px 0px !important;
+  text-indent:0px;
+}
+
+/* 东亚风格的滚动样式 2008-12-11 */
+.scrollTabCon .rollTabTD{
+	width:14px;	
+	padding:5px 0px 2px 3px;
+}
+.scrollTabCon .tabRoll_dy_left {
+	background: url(../images/tabRoll_default.gif) no-repeat;
+	font-size:12px;
+	width:10px;
+	height:16px;
+	cursor:default;
+}
+.scrollTabCon .tabRoll_dy_left_canUse{
+	background: url(../images/tabRoll_default.gif) no-repeat;
+	font-size:12px;
+	width:10px;
+	height:16px;
+	cursor:default;
+}
+.scrollTabCon .tabRoll_dy_right {
+	background: url(../images/tabRoll_default.gif) no-repeat;
+	font-size:12px;
+	width:10px;
+	height:16px;
+	cursor:default;
+}
+.scrollTabCon .tabRoll_dy_right_canUse{
+	background: url(../images/tabRoll_default.gif) no-repeat;
+	font-size:12px;
+	width:10px;
+	height:16px;
+	cursor:default;
+}

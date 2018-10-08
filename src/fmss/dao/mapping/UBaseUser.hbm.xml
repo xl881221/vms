@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="fmss.dao.entity.UBaseUserDO"
+		table="U_BASE_USER" dynamic-update="true" dynamic-insert="true">
+		<id name="userId" column="USER_ID" type="java.lang.String"
+			unsaved-value="null" />
+		<property name="userEname" type="java.lang.String" update="true"
+			insert="true" column="USER_ENAME" length="20" />
+		<property name="userCname" type="java.lang.String" update="true"
+			insert="true" column="USER_CNAME" length="30" />
+		<property name="password" type="java.lang.String" update="true"
+			insert="true" column="PASSWORD" length="50" />
+		<many-to-one name="ubaseInst"
+			class="fmss.dao.entity.UBaseInstDO" cascade="none"
+			outer-join="auto" update="false" insert="false" lazy="false"
+			column="INST_ID" />
+		<property name="instId" type="java.lang.String" update="true"
+			insert="true" column="INST_ID" length="20" />
+		<property name="departId" type="java.lang.String" update="true"
+			insert="true" column="DEPART_ID" length="20" />
+		<property name="tel" type="java.lang.String" update="true"
+			insert="true" column="TEL" length="20" />
+		<property name="mobile" type="java.lang.String" update="true"
+			insert="true" column="MOBILE" length="27" />
+		<property name="address" type="java.lang.String" update="true"
+			insert="true" column="ADDRESS" length="100" />
+		<property name="email" type="java.lang.String" update="true"
+			insert="true" column="EMAIL" length="50" />
+		<property name="lastModifyDate" type="java.util.Date"
+			update="true" insert="true" column="LAST_MODIFY_DATE" />
+		<property name="isFirstLogin" type="java.lang.String"
+			update="true" insert="true" column="IS_FIRST_LOGIN" length="1" />
+		<property name="wrongPwdCount" type="java.lang.String"
+			update="true" insert="true" column="WRONG_PWD_COUNT" />
+		<property name="wrongPwdDate" type="java.util.Date"
+			update="true" insert="true" column="WRONG_PWD_DATE" />
+		<property name="isUserLocked" type="java.lang.String"
+			update="true" insert="true" column="IS_USER_LOCKED" length="1" />
+		<property name="userLockedReson" type="java.lang.String"
+			update="true" insert="true" column="USER_LOCKED_RESON" length="50" />
+		<property name="startDate" type="java.util.Date" update="true"
+			insert="true" column="START_DATE" />
+		<property name="endDate" type="java.util.Date" update="true"
+			insert="true" column="END_DATE" />
+		<property name="description" type="java.lang.String"
+			update="true" insert="true" column="DESCRIPTION" length="600" />
+		<property name="enabled" type="java.lang.String" update="true"
+			insert="true" column="ENABLED" length="5" />
+		<property name="createTime" type="java.util.Date" update="true"
+			insert="true" column="CREATE_TIME" />
+		<many-to-one name="baseInst"
+			class="fmss.dao.entity.UBaseInstDO" cascade="none"
+			outer-join="auto" update="false" insert="false" lazy="false"
+			column="INST_ID" />
+		<property name="isDelete" type="java.lang.String" update="true"
+			insert="true" column="IS_DELETE" />
+		<property name="isList" type="java.lang.String" update="true"
+			insert="true" column="IS_LIST" />
+		<property name="lastLoginDate" type="java.util.Date" update="true"
+			insert="true" column="LAST_LOGIN_DATE" />
+	</class>
+</hibernate-mapping>

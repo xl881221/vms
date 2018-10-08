@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+           http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd
+           http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd">
+	<bean id="sqlDAO" class="fmss.common.db.SQLDAO">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<!--如果使用ID生成器，则需要在所在类中注入此bean -->
+	
+	<bean id="idGenerator"
+		class="fmss.common.db.IdGenerator">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<bean id="logManagerDAO"
+		class="common.logger.LogManagerImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	
+	<bean id="baseEntityManager"
+		class="fmss.common.db.AbstractBaseEntityManager">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<bean id="userService" class="fmss.services.UserService">
+		<property name="bem" ref="baseEntityManager" />
+		<property name="instService" ref="instService" />
+		<property name="cacheManager" ref="cacheManager" />
+	</bean>
+	
+	<bean id="instService" class="fmss.services.InstService">
+		<property name="bem" ref="baseEntityManager" />
+		<property name="jdbcDaoAccessor" ref="jdbcDaoAccessor" />
+	</bean>
+	<bean id="commonService" class="fmss.services.CommonService">
+		<property name="bem" ref="baseEntityManager" />
+	</bean>
+	<bean id="subSystemService"
+		class="fmss.services.SubSystemService" parent="commonService">
+		<property name="cacheManager" ref="cacheManager" />
+	    <property name="jdbcDaoAccessor" ref="jdbcDaoAccessor" />	
+	</bean>
+	<bean id="dicService"
+		class="fmss.services.DictionaryService">
+		<property name="bem" ref="baseEntityManager" />
+	</bean>
+	<bean id="authObjectService"
+		class="fmss.services.AuthObjectService">
+		<property name="bem" ref="baseEntityManager" />
+	</bean>
+	<bean id="authRoleService"
+		class="fmss.services.AuthRoleService">
+		<property name="bem" ref="baseEntityManager" />
+		<property name="userService" ref="userService" />
+		<property name="instService" ref="instService" />
+		<property name="cacheManager" ref="cacheManager" />
+	</bean>
+	<bean id="resourceConfigAction"
+		class="fmss.action.ResourceConfigAction">
+		<property name="authRoleService" ref="authRoleService" />
+		<property name="dicService" ref="dicService" />
+		<property name="resourceConfigService" ref="resourceConfigService" />
+		<property name="sysLogService" ref="sysLogService"></property>
+		<property name="cacheManager" ref="cacheManager" />
+		<property name="userChangingService" ref="userChangingService" />
+	</bean>
+	<bean id="subSystemAction"
+		class="fmss.action.SubSystemAction">
+		<property name="subSystemService" ref="subSystemService" />
+		<property name="sysLogService" ref="sysLogService"></property>
+	</bean>
+	<bean id="resourceConfigDao"
+		class="fmss.dao.ResourceConfigDao">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	<bean id="resourceConfigService"
+		class="fmss.services.ResourceConfigService">
+		<property name="bem" ref="baseEntityManager" />
+		<property name="dicService" ref="dicService" />
+		<property name="authRoleService" ref="authRoleService" />
+		<property name="resourceConfigDao" ref="resourceConfigDao" />
+	</bean>
+	<bean id="sysLogService"
+		class="fmss.services.UBaseSysLogService">
+		<property name="bem" ref="baseEntityManager" />
+	</bean>
+	<bean id="paramConfigService"
+		class="fmss.services.ParamConfigService">
+		<property name="bem" ref="baseEntityManager" />
+		<property name="jdbcDaoAccessor" ref="jdbcDaoAccessor" />
+	</bean>
+	<bean id="noticeService"
+		class="fmss.services.NoticeService">
+		<property name="bem" ref="baseEntityManager" />
+		<property name="fileManager" ref="fileManager" />
+	</bean>
+	<bean id="noticeAction"
+		class="fmss.action.NoticeAction">
+		<property name="noticeService" ref="noticeService" />
+	</bean>
+	<bean id="dwrAsynService"
+		class="fmss.services.DwrAsynService">
+		<property name="noticeService" ref="noticeService" />
+		<property name="systemCache" ref="systemCache" />
+		<property name="userService" ref="userService" />
+		<property name="sysLogService" ref="sysLogService" />
+		<property name="cacheManager" ref="cacheManager" />
+		<property name="onlineService" ref="onlineService" />
+		<property name="usysTask" ref="usysTask" />
+	</bean>
+	<bean id="sysLogAction"
+		class="fmss.action.SysLogAction">
+		<property name="logManagerService" ref="logManagerService" />
+	</bean>
+	<bean id="dataSourceConfigAction"
+		class="fmss.action.DataSourceConfigAction">
+		<property name="dataSourceConfig" ref="dataSourceConfig" />
+	</bean>
+	<!-- 指标配置 -->
+	<bean id="extentBaseService" class="fmss.services.ExtentBaseService">
+		<property name="bem" ref="baseEntityManager" />
+	</bean>
+	<!-- 指标配置 end-->
+	<!-- 维护总账配置 -->
+	<bean id="sapMapInfoService" class="fmss.services.SapMapInfoService">
+		<property name="bem" ref="baseEntityManager" />
+	</bean>
+	<!-- 维护总账配置 end -->
+	<!-- 数据库对比工具 -->
+	<bean id="dbCompareAction"
+		class="fmss.action.DbCompareAction">
+		<property name="exportXMLService" ref="exportXMLService" />
+		<property name="compareXMLService" ref="compareXMLService" />
+	</bean>
+	<bean id="exportXMLService"
+		class="fmss.services.ExportXMLService" >		
+	</bean>
+	<bean id="compareXMLService"
+		class="fmss.services.CompareXMLService" >		
+	</bean>
+	<!-- 数据库对比工具 end-->
+	
+		<bean id="fileManager" class="com.jes.core.file.FileManagerDBImpl" depends-on="systemCache">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	<bean id="usysTask" class="fmss.services.UsysTask" depends-on="systemCache">
+		<property name="systemCache" ref="systemCache"/>
+		<property name="cacheManager" ref="cacheManager"/>
+		<property name="onlineService" ref="onlineService"/>
+		<property name="instService" ref="instService"/>
+	</bean>
+	<bean id="onlineService" class="fmss.services.OnlineService">			
+		<property name="bem" ref="baseEntityManager" />
+		<property name="cacheManager" ref="cacheManager" />
+	</bean>
+	<bean id="fileService" class="fmss.services.FileService">			
+		<property name="bem" ref="baseEntityManager"/>
+	</bean>
+	<bean id="loginService" class="fmss.services.LoginService">			
+		<property name="userService" ref="userService"/>
+		<property name="cacheManager" ref="cacheManager" />
+	</bean>
+	<bean id="privilegeService" class="fmss.services.PrivilegeService">
+		<property name="bem" ref="baseEntityManager"/>
+		<property name="authRoleService" ref="authRoleService"/>
+		<property name="loginService" ref="loginService"/>
+	</bean>
+	
+	 <bean id="logManagerService"
+		class="fmss.services.LogManagerService">
+		<property name="logManagerDAO" ref="logManagerDAO" />
+	</bean>
+	
+	<bean id="functionService"
+		class="fmss.services.FunctionService">
+		<property name="bem" ref="baseEntityManager" />
+		<property name="subSystemService" ref="subSystemService" />
+		<property name="cacheManager" ref="cacheManager" />
+	</bean>
+	<bean id="userLoginManager" class="fmss.services.UserLoginManager">
+		<property name="loginService" ref="loginService"/>
+	</bean>
+	<bean id="scheduleUserTask" class="fmss.services.ScheduleUserTask" depends-on="systemCache">
+		<property name="loginService" ref="loginService"/>
+		<property name="userService" ref="userService"/>
+		<property name="cacheManager" ref="cacheManager"/>
+	</bean>
+	<bean id="holidayService"
+		class="fmss.services.HolidayService">
+		<property name="bem" ref="baseEntityManager" />
+		<property name="jdbcDaoAccessor" ref="jdbcDaoAccessor" />
+	</bean>
+	
+	<bean id="scriptManager" class="fmss.services.ScriptManager">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+		<property name="sql" value="select * from U_SQL_HISTORY"/>
+		<property name="separator" value="," />
+	</bean>
+	
+<!--	 panshaobo 用户实现类，使用ldap验证，修改class配置 -->
+<!--	<bean id="ldapConnectionApi" class="fmss.services.ldap.LdapAccessServiceByApiGK">-->
+<!--		<constructor-arg value="resources/ldap/ldap_api_gk.properties"></constructor-arg>-->
+<!--	</bean>-->
+<!--	<bean id="ldapService" parent="ldapConnectionApi"/>-->
+</beans>

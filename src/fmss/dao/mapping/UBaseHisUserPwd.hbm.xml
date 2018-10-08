@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping
+>
+    <class
+        name="fmss.dao.entity.UBaseHisUserPwdDO"
+        table="U_BASE_HIS_USER_PWD"
+        dynamic-update="true"
+        dynamic-insert="true"
+    >
+    	<id
+            name="id"
+            column="ID"
+            type="java.lang.Long"
+            unsaved-value="null"
+        />
+        <property
+            name="userId"
+            type="java.lang.String"
+            update="true"
+            insert="true"
+            column="USER_ID"
+            length="20"/>
+       <property
+            name="password"
+            type="java.lang.String"
+            update="true"
+            insert="true"
+            column="PASSWORD"
+            length="50"/>
+ 	  	<property
+            name="modifyTime"
+            type="java.util.Date"
+            update="true"
+            insert="true"
+            column="MODIFY_TIME"/>            
+        <!--
+            To add non XDoclet property mappings, create a file named
+                hibernate-properties-Alert.xml
+            containing the additional properties and place it in your merge dir.
+        -->
+
+    </class>
+
+</hibernate-mapping>

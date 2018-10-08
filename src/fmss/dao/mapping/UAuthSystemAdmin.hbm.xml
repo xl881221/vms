@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping
+>
+    <class
+     name="fmss.dao.entity.UAuthSystemAdminDO"
+        table="U_AUTH_SYSTEM_ADMIN"
+        dynamic-update="true"
+        dynamic-insert="true"
+    >
+	<composite-id>
+            <key-property name="userId" column="USER_ID" type="java.lang.String" />
+            <key-property name="systemId" column="SYSTEM_ID" type="java.lang.String" />
+    </composite-id>
+    </class>
+</hibernate-mapping>

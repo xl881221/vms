@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+           http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd
+           http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd">
+	
+	
+	<!-- 常用数据库连接的配置信息，根据客户现场实施情况进行设置 -->
+	<!-- ORACLE -->
+	<bean id="propertyConfigurer"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="location">
+			<value>classpath:/fmss/config/dbset.properties</value>
+		</property>
+	</bean>	
+	<!-- MYSQL -->
+<!--	<bean id="propertyConfigurer"-->
+<!--		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">-->
+<!--		<property name="location">-->
+<!--			<value>classpath:/dialect/mysql/dataSource.properties</value>-->
+<!--		</property>-->
+<!--	</bean>	-->
+	<!-- MSSQL -->
+<!--	<bean id="propertyConfigurer"-->
+<!--		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">-->
+<!--		<property name="location">-->
+<!--			<value>classpath:/dialect/mssql/dataSource.properties</value>-->
+<!--		</property>-->
+<!--	</bean>	-->
+	<!-- DB2 -->
+<!--	<bean id="propertyConfigurer"-->
+<!--		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">-->
+<!--		<property name="location">-->
+<!--			<value>classpath:/dialect/db2/dataSource.properties</value>-->
+<!--		</property>-->
+<!--	</bean>	-->
+	<!-- START -->
+	<bean id="dataSourceConfig" class="fmss.common.db.DataSourceConfig">
+		<property name="hibernateDialect" value="${hibernate.dialect}" />
+		<property name="dbDriver" value="${db.driver}" />
+		<property name="dbUrl" value="${db.url}" />
+		<property name="dbUserName" value="${db.username}" />
+		<property name="dbPassword" value="${db.password}" />
+	</bean>
+
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
+		destroy-method="close">
+		<property name="driverClassName" value="${db.driver}" />
+		<property name="url" value="${db.url}" />
+		<property name="username" value="${db.username}" />
+		<property name="password" value="${db.password}" />
+	</bean>
+
+	<bean id="transactionManager"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<bean id="TransactionTemplate"
+		class="org.springframework.transaction.support.TransactionTemplate">
+		<property name="transactionManager" ref="transactionManager" />
+	</bean>
+	<!-- END -->
+	
+	<!-- HIBERNATE Property -->
+	<bean id="hibernateProperties"
+		class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+		<property name="properties">
+			<props>
+				<prop key="hibernate.connection.autocommit">true</prop>
+				<prop key="hibernate.hbm2ddl.auto">false</prop>
+				<prop key="hibernate.dialect" >
+					${hibernate.dialect}
+				</prop>
+				<prop key="hibernate.query.substitutions">
+					true 'T', false 'F'
+				</prop>
+				<prop key="hibernate.show_sql">false</prop>
+			</props>
+		</property>
+	</bean>
+
+	<!-- HIBERNATE SessionFactory -->
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="entityInterceptor">
+			<bean class="org.hibernate.EmptyInterceptor"></bean>
+		</property>
+		<property name="hibernateProperties">
+			<ref bean="hibernateProperties" />
+		</property>
+		<!--  指定.hbm.xml文件目录的方式>-->
+		<property name="mappingDirectoryLocations">
+			<value>classpath:/fmss/dao/mapping</value>
+		</property>
+	</bean>
+	<bean id="hibTransactionManager"
+		class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory">
+			<ref local="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="persistentManager" abstract="true"
+		class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+		<property name="transactionManager">
+			<ref local="hibTransactionManager" />
+		</property>
+		<property name="transactionAttributes">
+			<props>
+				<prop key="tx*">PROPAGATION_REQUIRES_NEW</prop>
+				<prop key="get*">PROPAGATION_REQUIRED,readOnly</prop>
+				<prop key="insert*">PROPAGATION_REQUIRED</prop>
+				<prop key="update*">PROPAGATION_REQUIRED</prop>
+				<prop key="delete*">PROPAGATION_REQUIRED</prop>
+				<prop key="save*">PROPAGATION_REQUIRED</prop>
+				<prop key="add*">PROPAGATION_REQUIRED</prop>
+			</props>
+		</property>
+	</bean>
+	<!-- add -->
+	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">  
+        <constructor-arg><ref bean="dataSource"/></constructor-arg>   
+    </bean> 
+    <bean id="userChangingService" parent="persistentManager">  
+        <property name="target">
+        	<bean class="fmss.action.base.UserChangingService" autowire="byName" >
+        		<property name="userService" ref="userService" />
+				<property name="jdbcDaoAccessor" ref="jdbcDaoAccessor" />
+				<property name="cacheManager" ref="cacheManager" />
+				<property name="userLoginManager" ref="userLoginManager" />
+				<property name="instService" ref="instService" />
+				<property name="dicService" ref="dicService" />
+				<property name="paramConfigService" ref="paramConfigService" />
+				<property name="onlineService" ref="onlineService" />
+        	</bean>
+        </property>  
+    </bean>
+    <bean id="jdbcDaoAccessor"  
+        class="fmss.action.base.JdbcDaoAccessor" autowire="byType">  
+        <property name="jdbcTemplate">  
+            <ref bean="jdbcTemplate" />
+        </property>
+    </bean>
+</beans>

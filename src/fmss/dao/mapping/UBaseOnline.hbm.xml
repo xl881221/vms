@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping
+>
+    <class
+        name="fmss.dao.entity.UBaseOnlineDO"
+        table="U_BASE_ONLINE"
+        dynamic-update="true"
+        dynamic-insert="true"
+    >
+		<id
+            name="loginId"
+            column="LOGIN_ID"
+            type="java.lang.String"
+            unsaved-value="null"
+        />
+        <property name="userId" type="java.lang.String" update="true"
+			insert="true" column="USER_ID" length="20" />
+        <many-to-one name="baseUser"
+			class="fmss.dao.entity.UBaseUserDO" cascade="none"
+			outer-join="auto" update="false" insert="false" lazy="false"
+			column="USER_ID" />
+       <property
+            name="kickoutTime"
+            type="java.sql.Timestamp"
+            update="true"
+            insert="true"
+            column="KICKOUT_TIME"
+            length="30"/>
+       <property
+            name="loginTime"
+            type="java.sql.Timestamp"
+            update="true"
+            insert="true"
+            column="LOGIN_TIME"
+            length="30"/>
+       <property
+            name="addr"
+            type="java.lang.String"
+            update="true"
+            insert="true"
+            column="ADDR"
+            length="50"/>
+       <property
+            name="status"
+            type="java.lang.String"
+            update="true"
+            insert="true"
+            column="STATUS"/>
+        <!--
+            To add non XDoclet property mappings, create a file named
+                hibernate-properties-Alert.xml
+            containing the additional properties and place it in your merge dir.
+        -->
+
+    </class>
+
+</hibernate-mapping>

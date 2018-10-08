@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="fmss.dao.entity.VBaseUserEmailDO" table="V_BASE_USER_EMAIL" dynamic-update="true" dynamic-insert="true">
+	   <id name="userId"  column="USER_ID" type="java.lang.String"  unsaved-value="null" />
+       <property name="userEname"    type="java.lang.String" update="true"  insert="true" column="USER_ENAME"    length="30"/>
+	   <property name="systemId"  type="java.lang.String" update="true"  insert="true" column="SYSTEM_ID"    length="30"/>
+	   <property name="emailAddr" type="java.lang.String" update="true"  insert="true" column="EMAIL_ADDR"   length="100"/>
+    </class>
+</hibernate-mapping>

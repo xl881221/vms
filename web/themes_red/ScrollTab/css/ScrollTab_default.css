@@ -1,0 +1,266 @@
+html{filter:expression(document.execCommand("BackgroundImageCache", false, true))}
+
+.tabContainerDiv {
+	background:url(../../img/bgbg.jpg) 0px 0px repeat-x;
+	height:40px;
+    cursor:default;
+}
+.tabbox{
+	padding:0;	
+  	border:1px solid #DDDDDD;
+}
+.tabContainerDiv * {
+    margin:0px;
+    padding:0px;
+    border:0px;
+    text-align:left;
+    font:normal 12px Arial,宋体;
+    position:static;
+    overflow:auto;
+}
+/* TAB标签样式 */
+.scrollTabCon {
+	width:100%;
+	display:block;
+    overflow:hidden ;
+    height:39px;
+    background:#EEEEEE;
+  	border-bottom:1px solid #DDDDDD;
+}
+.scrollTabCon .bodyTr td {
+	padding:0px 2px 0px 2px;
+  	width:auto;
+}
+.scrollTabCon .bodyTr div {
+	padding:0px 0px 0px 10px;
+}
+.scrollTabCon .bodyTr div div {
+	padding:0 10px 0 0px;
+}
+.scrollTabCon .tabOutDiv_Checked {
+	height:40px;
+	width:auto;
+	cursor:default;
+	background:#FFF; 
+	line-height:40px; 
+	color:#FB9337; 
+	font-weight:bold;
+	border-left:#CCCCCC solid 1px; 
+    border-right:#CCCCCC solid 1px;
+	border-top:0; 
+	border-bottom:0; 
+	padding:0 25px;
+    overflow:hidden;
+}
+.scrollTabCon .tabOutDiv_Checked .tabMainDiv {
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	word-break:keep-all;
+	height:40px;
+	color:#C40000;
+	font-weight:bold;
+	line-height:40px;
+}
+
+.scrollTabCon .tabOutDiv {
+	height:40px;
+	width:auto;
+	cursor:pointer!important;
+    overflow:hidden;
+    border-left:#CCCCCC solid 1px;
+    border-right:#CCCCCC solid 1px;
+    background:#9A9A9A;
+}
+.scrollTabCon .tabOutDiv .tabMainDiv {
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	word-break:keep-all;
+	font-weight: bold;
+	height:40px;
+	color:#fff;
+	line-height:40px;
+    background:#9A9A9A;
+    cursor:pointer;
+}
+
+.scrollTabCon .tabOutDiv_Over {
+	height:40px;
+	width:auto;
+	cursor:pointer; 
+    overflow:hidden;
+    border-left:#CCCCCC solid 1px;
+    border-right:#CCCCCC solid 1px;
+    background:#9A9A9A;
+}
+.scrollTabCon .tabOutDiv_Over .tabMainDiv {
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	word-break:keep-all;
+	height:40px; 
+	line-height:40px;
+	font-weight:bold;	 
+	color:#fff;
+	font-weight: bold;
+	cursor:pointer;
+}
+.scrollTabCon .intext{
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	word-break:keep-all;
+	text-align:center;
+	height:35px !important;
+    line-height:35px;
+    padding:4px 0px 0px 0px !important;
+    text-indent:0px;
+}
+
+/* 东亚风格的滚动样式 2008-12-11 */
+.scrollTabCon .rollTabTD{
+	width:20px;	
+	height:40px;
+	padding:0 0px 0 0;
+	text-align:center;
+}
+.scrollTabCon .tabRoll_dy_left {
+	background: url(../images/tabroll01.png) 0 0 no-repeat;
+	width:20px;
+	height:40px;
+	cursor:default;
+}
+*+ html .scrollTabCon .tabRoll_dy_left {
+	background: url(../images/tabroll01.png) 0 16px no-repeat;
+	width:20px;
+	height:40px;
+	cursor:default;
+}
+.scrollTabCon .tabRoll_dy_left_canUse{
+	background: url(../images/tabroll02.png) 0 0 no-repeat;
+	width:20px;
+	height:40px;
+	cursor:pointer;
+}
+*+ html .scrollTabCon .tabRoll_dy_left_canUse{
+	background: url(../images/tabroll02.png) 0 16px no-repeat;
+	width:20px;
+	height:40px;
+	cursor:pointer;
+}
+.scrollTabCon .tabRoll_dy_right {
+	background: url(../images/tabroll03.png) 0 0 no-repeat;
+	width:20px;
+	height:40px;
+	cursor:default;
+	border-left:#ddd solid 1px;
+}
+*+ html .scrollTabCon .tabRoll_dy_right {
+	background: url(../images/tabroll03.png) 0 16px no-repeat;
+	width:20px;
+	height:40px;
+	cursor:default;
+	border-left:#ddd solid 1px;
+}
+.scrollTabCon .tabRoll_dy_right_canUse{
+	background: url(../images/tabroll04.png) 0 0 no-repeat;
+	width:20px;
+	height:40px;
+	cursor:pointer;
+	border-left:#ddd solid 1px;
+}
+*+ html .scrollTabCon .tabRoll_dy_right_canUse{
+	background: url(../images/tabroll04.png) 0 16px no-repeat;
+	width:20px;
+	height:40px;
+	cursor:pointer;
+	border-left:#ddd solid 1px;
+}
+ #mainTab,#infoBlock {
+     height:40px;
+ }
+ 
+ /* TAB区块容器样式 开始 */
+  #mainTab,#infoBlock {
+      height:40px;
+      font:normal 12px Verdana,宋体;
+  }
+  #mainTabTarget {
+      cursor:default;
+      overflow:hidden;
+      background:#FFF;
+  }
+  #mainTabTarget .singleBlock {
+      font:normal 12px Arial,Verdana,宋体;
+      padding:3px 8px 0 8px;
+      overflow-x:hidden!important;
+      overflow-y:auto!important;
+  }
+
+  #infoBlockContent {
+      font:normal 12px Arial,Verdana,宋体;
+      padding:0 8px 0 8px;
+      cursor:default;
+      background:#FFF;
+      overflow:auto;
+  }
+  .taskMainTable {
+      background:url(../img/mid_bg1.gif) repeat-x;
+  }
+  .taskUL {
+      height:29px;
+      background:#FFFFDF;
+      width:100%;
+      border:#FBE187 solid 1px;
+  }
+  .taskUL .taskLI {
+      float:left;
+      padding:0 10px 0 4px;
+      white-space: nowrap;
+      line-height:29px;
+  }
+  .taskTable {
+      margin-top:8px;
+      border-collapse:collapse;
+      width:100%;
+      background:#FFFFFF;
+  }
+  .taskTable th {
+      background: #E1E4EB;
+      font:bold 12px Arial,宋体;
+      font-weight:bold;
+      work-break:keep-all;
+      white-space:noWrap;
+      height:29px;
+      line-height:29px;
+      border-bottom:1px solid #D4D5D7;
+      cursor:default;
+  }
+  .taskTable td {
+      font:normal 12px Arial,宋体;
+      padding:0 3px;
+      height:28px;
+      line-height:28px;
+      border-bottom:1px solid #D5D5D7;
+      cursor:default;
+  }
+  .taskTable .rowA {
+      background:#FFF;
+  }
+  .taskTable .rowB {
+      background:#FFF;
+  }
+  .noticeTD {
+      border-left:1px solid #BDC2C7;
+      border-right:1px solid #BDC2C7;
+      background:url(../img/mid_bg2.gif);
+      height:201px;
+  }
+  .userInfoTD {
+       background: url(../img/neirong3_bg.gif) no-repeat;
+       vertical-align:top;
+       width:266px;
+       height:476px;
+  }
+  /* TAB区块容器样式 结束 */

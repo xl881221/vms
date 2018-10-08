@@ -1,0 +1,1054 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="fmss" extends="struts-default">
+		<interceptors>
+			<interceptor name="accessInterceptor"
+				class="fmss.action.AccessInterceptor" />
+			<interceptor-stack name="defaultInterStack">
+				<interceptor-ref name="defaultStack" />
+				<interceptor-ref name="accessInterceptor" />
+			</interceptor-stack>
+		</interceptors>
+		<default-interceptor-ref name="defaultInterStack" />
+		
+		<global-results>
+			<result name="error">/WEB-INF/jsp/system/error.jsp</result>
+			<result name="exception">/WEB-INF/jsp/system/error.jsp</result>
+			<result name="login">/WEB-INF/jsp/index.jsp</result>
+		</global-results>
+
+		<global-exception-mappings>
+			<exception-mapping exception="java.lang.Exception"
+				result="error" />
+			<exception-mapping exception="java.lang.Error"
+				result="error" />
+		</global-exception-mappings>
+		
+		<action name="logincas" class="fmss.action.LoginCasAction">
+			<interceptor-ref name="defaultStack"></interceptor-ref>
+			<result name="input">/WEB-INF/jsp/login.jsp</result>
+			<result name="success">/WEB-INF/jsp/index.jsp</result>
+		</action>
+		
+		<action name="loginZhiWen" class="fmss.action.LoginZhiWenAction">
+			<interceptor-ref name="defaultStack"></interceptor-ref>
+			<result name="input">/WEB-INF/jsp/login.jsp</result>
+			<result name="success">/WEB-INF/jsp/index.jsp</result>
+		</action>
+ 
+ 		<action name="login"
+			class="fmss.action.LoginAction">
+			<interceptor-ref name="defaultStack"></interceptor-ref>
+			<result name="input">/WEB-INF/jsp/login.jsp</result>
+			<result name="success">/WEB-INF/jsp/index.jsp</result>
+		</action>
+		<action name="loginzs"
+			class="fmss.action.LoginZSAction">
+			<interceptor-ref name="defaultStack"></interceptor-ref>
+			<result name="input">/WEB-INF/jsp/login.jsp</result>
+			<result name="success">/WEB-INF/jsp/index.jsp</result>
+		</action>
+		<action name="homeNoteData"
+			class="fmss.action.HomeDataXmlAction">
+		</action>
+		
+		<action name="goLoginJsp"
+			class="fmss.action.GoLoginJSPAction">
+			<result name="success">/WEB-INF/jsp/login.jsp</result>
+		</action>
+		<action name="messageDisplay"
+			class="fmss.action.MessageDisplayAction">
+			<result name="success">
+				/WEB-INF/jsp/messagedisplay.jsp
+			</result>
+			<result name="logoutAndOthers">
+				/WEB-INF/jsp/logoutAndOthers.jsp
+			</result>
+		</action>
+		<action name="logout"
+			class="fmss.action.LogoutAction">
+			<result name="success" type="redirect">goLoginJsp.ajax</result>
+		</action>
+		<action name="checkLogin"
+			class="fmss.action.CheckLoginAction">
+		</action>
+		<action name="checkPrivs"
+			class="fmss.action.CheckPrivsAction">
+		</action>
+		<action name="top"
+			class="fmss.action.TopMenuAction">
+			<result name="success">/WEB-INF/jsp/top.jsp</result>
+		</action>
+		<action name="sysImg"
+			class="fmss.action.SysImgAction">
+			<result name="success">/WEB-INF/jsp/sysImg.jsp</result>
+		</action>
+		<action name="menu"
+			class="fmss.action.MenuAction">
+			<result name="success">/WEB-INF/jsp/menu.jsp</result>
+		</action>
+		<action name="welcome"
+			class="fmss.action.WelcomeAction">
+			<result name="success">/WEB-INF/jsp/welcome.jsp</result>
+			<result name="error">/WEB-INF/jsp/login.jsp</result>
+			<result name="sysImg" type="redirect">sysImg.action</result>
+		</action>
+		<action name="midlle"
+			class="fmss.action.SysImgAction">
+			<result name="success">/WEB-INF/jsp/middle.jsp</result>
+		</action>
+		<action name="dataSourceConfig"
+			class="dataSourceConfigAction">
+			<result name="success"></result>
+		</action>
+		
+		<action name="loginsso"
+			class="fmss.action.LoginSSOAction">
+			<interceptor-ref name="defaultStack"></interceptor-ref>
+			<result name="input">/WEB-INF/jsp/login.jsp</result>
+			<result name="success">/WEB-INF/jsp/index.jsp</result>
+		</action>
+		
+		<action name="loginqz"
+			class="fmss.action.LoginQZAction">
+			<interceptor-ref name="defaultStack"></interceptor-ref>
+			<result name="input">/WEB-INF/jsp/login.jsp</result>
+			<result name="success">/WEB-INF/jsp/index.jsp</result>
+		</action>
+		
+	
+		<action name="refresher" class="fmss.action.RefresherAction" method="refresher">
+			<result name="success">/WEB-INF/jsp/refresher.jsp</result>
+		</action>
+		
+		<action name="script" class="fmss.action.ScriptAction" method="script">
+			<interceptor-ref name="defaultStack"></interceptor-ref>
+		</action>
+		<action name="forbidden" class="fmss.action.ScriptAction" method="forbidden">
+			<interceptor-ref name="defaultStack"></interceptor-ref>
+			<result name="success">/WEB-INF/jsp/forbidden.jsp</result>
+		</action>
+		<!-- struts01 -->
+		<action name="listAllAuditWorks" method="listAllAuditWorks"
+			class="fmss.action.UserChangeAuditAction">
+			<result name="success">
+				/WEB-INF/jsp/system/authority/audit/listUserAudits.jsp
+			</result>
+		</action>
+		<action name="approveUserAdd" method="approveUserAdd"
+			class="fmss.action.UserChangeAuditAction">
+			<result name="success" type="redirect">
+				listAllAuditWorks.action?changeType=${changeType}&amp;operationType=${operationType}&amp;paginationList.currentPage=${paginationList.currentPage}&amp;RESULT_MESSAGE=${RESULT_MESSAGE}
+			</result>
+		</action>
+		<action name="rejectUserAdd" method="rejectUserAdd"
+			class="fmss.action.UserChangeAuditAction">
+			<result name="success" type="redirect">
+				listAllAuditWorks.action?changeType=${changeType}&amp;operationType=${operationType}&amp;paginationList.currentPage=${paginationList.currentPage}&amp;RESULT_MESSAGE=${RESULT_MESSAGE}
+			</result>
+		</action>
+		<action name="approveUserModify" method="approveUserModify"
+			class="fmss.action.UserChangeAuditAction">
+			<result name="success" type="redirect">
+				listAllAuditWorks.action?changeType=${changeType}&amp;operationType=${operationType}&amp;paginationList.currentPage=${paginationList.currentPage}&amp;RESULT_MESSAGE=${RESULT_MESSAGE}
+			</result>
+		</action>
+		<action name="rejectUserModify" method="rejectUserModify"
+			class="fmss.action.UserChangeAuditAction">
+			<result name="success" type="redirect">
+				listAllAuditWorks.action?changeType=${changeType}&amp;operationType=${operationType}&amp;paginationList.currentPage=${paginationList.currentPage}&amp;RESULT_MESSAGE=${RESULT_MESSAGE}
+			</result>
+		</action>
+		<action name="approveUserDelete" method="approveUserDelete"
+			class="fmss.action.UserChangeAuditAction">
+			<result name="success" type="redirect">
+				listAllAuditWorks.action?changeType=${changeType}&amp;operationType=${operationType}&amp;paginationList.currentPage=${paginationList.currentPage}&amp;RESULT_MESSAGE=${RESULT_MESSAGE}
+			</result>
+		</action>
+		<action name="rejectUserDelete" method="rejectUserDelete"
+			class="fmss.action.UserChangeAuditAction">
+			<result name="success" type="redirect">
+				listAllAuditWorks.action?changeType=${changeType}&amp;operationType=${operationType}&amp;paginationList.currentPage=${paginationList.currentPage}&amp;RESULT_MESSAGE=${RESULT_MESSAGE}
+			</result>
+		</action>
+		<action name="approveRoleChanges" method="approveRoleChanges"
+			class="fmss.action.UserChangeAuditAction">
+			<result name="success" type="redirect">
+				listAllAuditWorks.action?changeType=${changeType}&amp;operationType=${operationType}&amp;paginationList.currentPage=${paginationList.currentPage}&amp;RESULT_MESSAGE=${RESULT_MESSAGE}
+			</result>
+		</action>
+		<action name="rejectRoleChanges" method="rejectRoleChanges"
+			class="fmss.action.UserChangeAuditAction">
+			<result name="success" type="redirect">
+				listAllAuditWorks.action?changeType=${changeType}&amp;operationType=${operationType}&amp;paginationList.currentPage=${paginationList.currentPage}&amp;RESULT_MESSAGE=${RESULT_MESSAGE}
+			</result>
+		</action>
+		<action name="approveResourceChanges"
+			method="approveResourceChanges"
+			class="fmss.action.UserChangeAuditAction">
+			<result name="success" type="redirect">
+				listAllAuditWorks.action?changeType=${changeType}&amp;operationType=${operationType}&amp;paginationList.currentPage=${paginationList.currentPage}&amp;RESULT_MESSAGE=${RESULT_MESSAGE}
+			</result>
+		</action>
+		<action name="approveHolidayChanges"
+			method="approveHolidayChanges"
+			class="fmss.action.UserChangeAuditAction">
+			<result name="success" type="redirect">
+				listAllAuditWorks.action?changeType=${changeType}&amp;operationType=${operationType}&amp;paginationList.currentPage=${paginationList.currentPage}&amp;RESULT_MESSAGE=${RESULT_MESSAGE}
+			</result>
+			<result name="input" type="redirect">
+				listAllAuditWorks.action?changeType=${changeType}&amp;operationType=${operationType}&amp;paginationList.currentPage=${paginationList.currentPage}&amp;RESULT_MESSAGE=${RESULT_MESSAGE}
+			</result>
+		</action>
+		<action name="rejectHolidayChanges"
+			method="rejectHolidayChanges"
+			class="fmss.action.UserChangeAuditAction">
+			<result name="success" type="redirect">
+				listAllAuditWorks.action?changeType=${changeType}&amp;operationType=${operationType}&amp;paginationList.currentPage=${paginationList.currentPage}&amp;RESULT_MESSAGE=${RESULT_MESSAGE}
+			</result>
+			<result name="input" type="redirect">
+				listAllAuditWorks.action?changeType=${changeType}&amp;operationType=${operationType}&amp;paginationList.currentPage=${paginationList.currentPage}&amp;RESULT_MESSAGE=${RESULT_MESSAGE}
+			</result>
+		</action>
+		<action name="approveInstChanges"
+			method="approveInstChanges"
+			class="fmss.action.UserChangeAuditAction">
+			<result name="success" type="redirect">
+				listAllAuditWorks.action?changeType=${changeType}&amp;operationType=${operationType}&amp;paginationList.currentPage=${paginationList.currentPage}&amp;RESULT_MESSAGE=${RESULT_MESSAGE}
+			</result>
+		</action>
+		<action name="approveInstAddChanges"
+			method="approveInstAddChanges"
+			class="fmss.action.UserChangeAuditAction">
+			<result name="success" type="redirect">
+				listAllAuditWorks.action?changeType=${changeType}&amp;operationType=${operationType}&amp;paginationList.currentPage=${paginationList.currentPage}&amp;RESULT_MESSAGE=${RESULT_MESSAGE}
+			</result>
+		</action>
+		<action name="approveSysParamChanges"
+			method="approveSysParamChanges"
+			class="fmss.action.UserChangeAuditAction">
+			<result name="success" type="redirect">
+				listAllAuditWorks.action?changeType=${changeType}&amp;operationType=${operationType}&amp;paginationList.currentPage=${paginationList.currentPage}&amp;RESULT_MESSAGE=${RESULT_MESSAGE}
+			</result>
+		</action>
+		<action name="approveSubSystemAdminChanges"
+			method="approveSubSystemAdminChanges"
+			class="fmss.action.UserChangeAuditAction">
+			<result name="success" type="redirect">
+				listAllAuditWorks.action?changeType=${changeType}&amp;operationType=${operationType}&amp;paginationList.currentPage=${paginationList.currentPage}&amp;RESULT_MESSAGE=${RESULT_MESSAGE}
+			</result>
+		</action>
+		<action name="approveSubSystemAdminDelChanges"
+			method="approveSubSystemAdminDelChanges"
+			class="fmss.action.UserChangeAuditAction">
+			<result name="success" type="redirect">
+				listAllAuditWorks.action?changeType=${changeType}&amp;operationType=${operationType}&amp;paginationList.currentPage=${paginationList.currentPage}&amp;RESULT_MESSAGE=${RESULT_MESSAGE}
+			</result>
+		</action>
+		<action name="approveUbaseCfgChanges"
+			method="approveUbaseCfgChanges"
+			class="fmss.action.UserChangeAuditAction">
+			<result name="success" type="redirect">
+				listAllAuditWorks.action?changeType=${changeType}&amp;operationType=${operationType}&amp;paginationList.currentPage=${paginationList.currentPage}&amp;RESULT_MESSAGE=${RESULT_MESSAGE}
+			</result>
+		</action>
+		<action name="approveInstDeleteChanges"
+			method="approveInstDeleteChanges"
+			class="fmss.action.UserChangeAuditAction">
+			<result name="success" type="redirect">
+				listAllAuditWorks.action?changeType=${changeType}&amp;operationType=${operationType}&amp;paginationList.currentPage=${paginationList.currentPage}&amp;RESULT_MESSAGE=${RESULT_MESSAGE}
+			</result>
+		</action>
+		
+		<action name="rejectResourceChanges"
+			method="rejectResourceChanges"
+			class="fmss.action.UserChangeAuditAction">
+			<result name="success" type="redirect">
+				listAllAuditWorks.action?changeType=${changeType}&amp;operationType=${operationType}&amp;paginationList.currentPage=${paginationList.currentPage}&amp;RESULT_MESSAGE=${RESULT_MESSAGE}
+			</result>
+		</action>
+		<action name="rejectInstBaseChanges"
+			method="rejectInstBaseChanges"
+			class="fmss.action.UserChangeAuditAction">
+			<result name="success" type="redirect">
+				listAllAuditWorks.action?changeType=${changeType}&amp;operationType=${operationType}&amp;paginationList.currentPage=${paginationList.currentPage}&amp;RESULT_MESSAGE=${RESULT_MESSAGE}
+			</result>
+		</action>
+		<action name="rejectSysParamChanges"
+			method="rejectSysParamChanges"
+			class="fmss.action.UserChangeAuditAction">
+			<result name="success" type="redirect">
+				listAllAuditWorks.action?changeType=${changeType}&amp;operationType=${operationType}&amp;paginationList.currentPage=${paginationList.currentPage}&amp;RESULT_MESSAGE=${RESULT_MESSAGE}
+			</result>
+		</action>
+		<action name="rejectSubSystemAdminChanges"
+			method="rejectSubSystemAdminChanges"
+			class="fmss.action.UserChangeAuditAction">
+			<result name="success" type="redirect">
+				listAllAuditWorks.action?changeType=${changeType}&amp;operationType=${operationType}&amp;paginationList.currentPage=${paginationList.currentPage}&amp;RESULT_MESSAGE=${RESULT_MESSAGE}
+			</result>
+		</action>
+		<action name="rejectSubSystemAdminDelChanges"
+			method="rejectSubSystemAdminDelChanges"
+			class="fmss.action.UserChangeAuditAction">
+			<result name="success" type="redirect">
+				listAllAuditWorks.action?changeType=${changeType}&amp;operationType=${operationType}&amp;paginationList.currentPage=${paginationList.currentPage}&amp;RESULT_MESSAGE=${RESULT_MESSAGE}
+			</result>
+		</action>
+		<action name="rejectUBaseCfgChanges"
+			method="rejectUBaseCfgChanges"
+			class="fmss.action.UserChangeAuditAction">
+			<result name="success" type="redirect">
+				listAllAuditWorks.action?changeType=${changeType}&amp;operationType=${operationType}&amp;paginationList.currentPage=${paginationList.currentPage}&amp;RESULT_MESSAGE=${RESULT_MESSAGE}
+			</result>
+		</action>
+		<action name="showUserChanges" method="showUserChanges"
+			class="fmss.action.UserChangeAuditAction">
+			<result name="add">
+				/WEB-INF/jsp/system/authority/audit/userAddChanges.jsp
+			</result>
+			<result name="modify">
+				/WEB-INF/jsp/system/authority/audit/userModifyChanges.jsp
+			</result>
+		</action>
+		<action name="showHolidayChanges" method="showHolidayChanges"
+			class="fmss.action.UserChangeAuditAction">
+			<result name="add">
+				/WEB-INF/jsp/system/authority/audit/userAddChanges.jsp
+			</result>
+			<result name="modify">
+				/WEB-INF/jsp/system/authority/audit/userModifyChanges.jsp
+			</result>
+		</action>
+		<action name="showRoleChanges" method="showRoleChanges"
+			class="fmss.action.UserChangeAuditAction">
+			<result name="success">
+				/WEB-INF/jsp/system/authority/audit/roleChanges.jsp
+			</result>
+		</action>
+		<action name="showResourceChanges" method="showResourceChanges"
+			class="fmss.action.UserChangeAuditAction">
+			<result name="success">
+				/WEB-INF/jsp/system/authority/audit/resourceChanges.jsp
+			</result>
+		</action>
+
+		<action name="listMyAuditWorks" method="listMyAuditWorks"
+			class="fmss.action.UserChangeAuditAction">
+			<result name="success">
+				/WEB-INF/jsp/system/authority/audit/listMyAuditWorks.jsp
+			</result>
+		</action>
+		<action name="cancelUserAdd" method="cancelUserAdd"
+			class="fmss.action.UserChangeAuditAction">
+			<result name="success" type="redirect">
+				listMyAuditWorks.action?changeType=${changeType}&amp;operationType=${operationType}&amp;paginationList.currentPage=${paginationList.currentPage}&amp;RESULT_MESSAGE=${RESULT_MESSAGE}
+			</result>
+		</action>
+		<action name="cancelUserModify" method="cancelUserModify"
+			class="fmss.action.UserChangeAuditAction">
+			<result name="success" type="redirect">
+				listMyAuditWorks.action?changeType=${changeType}&amp;operationType=${operationType}&amp;paginationList.currentPage=${paginationList.currentPage}&amp;RESULT_MESSAGE=${RESULT_MESSAGE}
+			</result>
+		</action>
+		<action name="cancelUserDelete" method="cancelUserDelete"
+			class="fmss.action.UserChangeAuditAction">
+			<result name="success" type="redirect">
+				listMyAuditWorks.action?changeType=${changeType}&amp;operationType=${operationType}&amp;paginationList.currentPage=${paginationList.currentPage}&amp;RESULT_MESSAGE=${RESULT_MESSAGE}
+			</result>
+		</action>
+		<action name="cancelRoleChanges" method="cancelRoleChanges"
+			class="fmss.action.UserChangeAuditAction">
+			<result name="success" type="redirect">
+				listMyAuditWorks.action?changeType=${changeType}&amp;operationType=${operationType}&amp;paginationList.currentPage=${paginationList.currentPage}&amp;RESULT_MESSAGE=${RESULT_MESSAGE}
+			</result>
+		</action>
+		<action name="cancelResourceChanges"
+			method="cancelResourceChanges"
+			class="fmss.action.UserChangeAuditAction">
+			<result name="success" type="redirect">
+				listMyAuditWorks.action?changeType=${changeType}&amp;operationType=${operationType}&amp;paginationList.currentPage=${paginationList.currentPage}&amp;RESULT_MESSAGE=${RESULT_MESSAGE}
+			</result>
+		</action>
+			<action name="cancelUBaseInstChanges" method="cancelUBaseInstChanges"
+			class="fmss.action.UserChangeAuditAction">
+			<result name="success" type="redirect">
+				listMyAuditWorks.action?changeType=${changeType}&amp;operationType=${operationType}&amp;paginationList.currentPage=${paginationList.currentPage}&amp;RESULT_MESSAGE=${RESULT_MESSAGE}
+			</result>
+		</action>
+		<action name="cancelUBaseSysParamChanges" method="cancelUBaseSysParamChanges"
+			class="fmss.action.UserChangeAuditAction">
+			<result name="success" type="redirect">
+				listMyAuditWorks.action?changeType=${changeType}&amp;operationType=${operationType}&amp;paginationList.currentPage=${paginationList.currentPage}&amp;RESULT_MESSAGE=${RESULT_MESSAGE}
+			</result>
+		</action>
+		<action name="cancelSubSystemAdminChanges" method="cancelSubSystemAdminChanges"
+			class="fmss.action.UserChangeAuditAction">
+			<result name="success" type="redirect">
+				listMyAuditWorks.action?changeType=${changeType}&amp;operationType=${operationType}&amp;paginationList.currentPage=${paginationList.currentPage}&amp;RESULT_MESSAGE=${RESULT_MESSAGE}
+			</result>
+		</action>
+		<action name="cancelSubSystemAdminDelChanges" method="cancelSubSystemAdminDelChanges"
+			class="fmss.action.UserChangeAuditAction">
+			<result name="success" type="redirect">
+				listMyAuditWorks.action?changeType=${changeType}&amp;operationType=${operationType}&amp;paginationList.currentPage=${paginationList.currentPage}&amp;RESULT_MESSAGE=${RESULT_MESSAGE}
+			</result>
+		</action>
+		<action name="cancelUbaseCfgChanges" method="cancelUbaseCfgChanges"
+			class="fmss.action.UserChangeAuditAction">
+			<result name="success" type="redirect">
+				listMyAuditWorks.action?changeType=${changeType}&amp;operationType=${operationType}&amp;paginationList.currentPage=${paginationList.currentPage}&amp;RESULT_MESSAGE=${RESULT_MESSAGE}
+			</result>
+		</action>
+		<action name="showOwnUserChanges" method="showOwnUserChanges"
+			class="fmss.action.UserChangeAuditAction">
+			<result name="add">
+				/WEB-INF/jsp/system/authority/audit/userAddChanges.jsp
+			</result>
+			<result name="modify">
+				/WEB-INF/jsp/system/authority/audit/userModifyChanges.jsp
+			</result>
+		</action>
+		<action name="showOwnUBaseInstChanges" method="showOwnUBaseInstChanges"
+			class="fmss.action.UserChangeAuditAction">
+			<result name="inst">
+				/WEB-INF/jsp/system/authority/audit/instAddChanges.jsp
+			</result>
+		</action>
+			<action name="showModifyUBaseInstChanges" method="showModifyUBaseInstChanges"
+			class="fmss.action.UserChangeAuditAction">
+			<result name="modify">
+				/WEB-INF/jsp/system/authority/audit/instModifyChanges.jsp
+			</result>
+		</action>
+		<action name="showOwnUBaseCfgChanges" method="showOwnUBaseCfgChanges"
+			class="fmss.action.UserChangeAuditAction">
+				<result name="success">//WEB-INF/jsp/system/authority/audit/showOwnBaseConfgChanges.jsp</result>
+		</action>
+		<action name="showOwnSysParamChanges" method="showOwnSysParamChanges"
+			class="fmss.action.UserChangeAuditAction">
+			<result name="success">
+				/WEB-INF/jsp/system/authority/audit/showOwnSysParamChanges.jsp
+			</result>
+		</action>
+		<action name="showOwnRoleChanges" method="showOwnRoleChanges"
+			class="fmss.action.UserChangeAuditAction">
+			<result name="success">
+				/WEB-INF/jsp/system/authority/audit/ownRoleChanges.jsp
+			</result>
+		</action>
+		<action name="showOwnResourceChanges"
+			method="showOwnResourceChanges"
+			class="fmss.action.UserChangeAuditAction">
+			<result name="success">
+				/WEB-INF/jsp/system/authority/audit/ownResourceChanges.jsp
+			</result>
+		</action>
+		
+		<action name="userSimultaneous" method="queryUser"
+			class="fmss.action.UserSimultaneousAction">
+			<result name="success">
+				/WEB-INF/jsp/system/authority/audit/userSimultaneous.jsp
+			</result>
+		</action>
+		
+		<action name="userTongBu" method="userTongBu"
+			class="fmss.action.UserSimultaneousAction">
+			<result name="success" >
+				/WEB-INF/jsp/system/authority/audit/userSimultaneous.jsp
+			</result>
+		</action> 
+		 
+		<action name="coreMethod" method="coreMethod"
+			class="fmss.action.UserSimultaneousAction">
+			<result name="success" type="redirect">
+				listUserMain.action?RESULT_MESSAGE=${RESULT_MESSAGE}
+ 			</result>
+		</action> 
+		<!-- struts2 -->
+		<!-- online  -->
+	    <action name="listOnline" method="listOnline" class="fmss.action.OnlineAction">
+			<result name="success">/WEB-INF/jsp/system/authority/listOnline.jsp</result>
+		</action>
+		<action name="listOnlineHead" method="listOnlineHead" class="fmss.action.OnlineAction">
+			<result name="success">/WEB-INF/jsp/system/authority/listOnlineHead.jsp</result>
+		</action>
+		<action name="listOnlineInstTree" method="listOnlineInstTree" class="fmss.action.OnlineAction">
+			<result name="success">/WEB-INF/jsp/system/authority/listOnlineInstTree.jsp</result>
+		</action>
+		<action name="listOnlineMain" method="listOnlineMain" class="fmss.action.OnlineAction">
+			<result name="success">/WEB-INF/jsp/system/authority/listOnlineMain.jsp</result>
+		</action>
+	    <!-- file -->
+		<action name="listFile" method="listFile" class="fmss.action.FileAction">
+			<result name="success">/WEB-INF/jsp/system/baseinfo/listFile.jsp</result>
+		</action>
+		<action name="listFileHead" method="listFileHead" class="fmss.action.FileAction">
+			<result name="success">/WEB-INF/jsp/system/baseinfo/listFileHead.jsp</result>
+		</action>
+		<action name="listFolderTree" method="listFolderTree" class="fmss.action.FileAction">
+			<result name="success">/WEB-INF/jsp/system/baseinfo/listFolderTree.jsp</result>
+		</action>
+		<action name="listFileMain" method="listFileMain" class="fmss.action.FileAction">
+			<result name="success">/WEB-INF/jsp/system/baseinfo/listFileMain.jsp</result>
+		</action>
+		<action name="deleteFile" method="deleteFile" class="fmss.action.FileAction">
+			<result name="success" type="redirect">listFileMain.action?baseFolder.folderId=${baseFolder.folderId}&amp;fixQuery=${fixQuery}&amp;RESULT_MESSAGE=${RESULT_MESSAGE}</result>
+		</action>
+		<action name="synchronization" method="synchronization" class="fmss.action.FileAction">
+			<result name="success" type="redirect">listFileMain.action?baseFolder.folderId=${baseFolder.folderId}&amp;fixQuery=${fixQuery}&amp;RESULT_MESSAGE=${RESULT_MESSAGE}</result>
+		</action>
+		<action name="loadFolderXml" method="loadFolderXml" class="fmss.action.FileAction"></action>
+		
+		<action name="createFile" method="createFile" class="fmss.action.FileAction">
+			<result name="formFile">/WEB-INF/jsp/system/baseinfo/formFile.jsp</result>
+		</action>
+		<action name="upLoadFile" method="upLoadFile" class="fmss.action.FileAction">
+			<result name="success">/WEB-INF/jsp/close.jsp</result>
+		</action>
+		<action name="upLoadZipFile" method="upLoadZipFile" class="fmss.action.FileAction">
+			<result name="success">/WEB-INF/jsp/close.jsp</result>
+		</action>
+		<action name="downLoadFile" method="downLoadFile" class="fmss.action.FileAction"></action>
+		<action name="downLoadZipFile" method="downLoadZipFile" class="fmss.action.FileAction"></action>
+		<action name="changeStatus" method="changeStatus" class="fmss.action.FileAction">
+		    <result name="success" type="redirect">listFileMain.action?baseFolder.folderId=${baseFolder.folderId}&amp;fixQuery=${fixQuery}&amp;RESULT_MESSAGE=${RESULT_MESSAGE}</result>
+		</action>
+		
+		<!-- user  -->
+		<action name="listUser_old" method="list_old" class="fmss.action.UserAction">
+			<result name="success">/WEB-INF/jsp/system/authority/listUsers.jsp</result>
+			<result name="stream" type="stream">
+				<param name="contentType">text/html;charset=utf-8</param>
+				<param name="inputName">inputStream</param>
+			</result>
+		</action>
+		<action name="listUser" method="listUser" class="fmss.action.UserAction">
+			<result name="success">/WEB-INF/jsp/system/authority/listUser.jsp</result>
+		</action>
+		<action name="listUserHead" method="listUserHead" class="fmss.action.UserAction">
+			<result name="success">/WEB-INF/jsp/system/authority/listUserHead.jsp</result>
+		</action>
+		<action name="listUserInstTree" method="listUserInstTree" class="fmss.action.UserAction">
+			<result name="success">/WEB-INF/jsp/system/authority/listUserInstTree.jsp</result>
+		</action>
+		<action name="listUserMain" method="listUserMain" class="fmss.action.UserAction">
+			<result name="success">/WEB-INF/jsp/system/authority/listUserMain.jsp</result>
+		</action>
+		<action name="createUser" method="createUser" class="fmss.action.UserAction">
+			<result name="formUser">/WEB-INF/jsp/system/authority/formUser.jsp</result>
+		</action>
+		<action name="moveUser" method="moveUser" class="fmss.action.UserAction">
+		</action>
+		<action name="checkUserId" method="checkUserId" class="fmss.action.UserAction">
+		</action>
+		<action name="saveUser" method="saveUser" class="fmss.action.UserAction">
+			<result name="success">/WEB-INF/jsp/close.jsp</result>
+			<result name="input">/WEB-INF/jsp/system/authority/formUser.jsp</result>
+		</action>
+		<action name="editUser" method="editUser" class="fmss.action.UserAction">
+			<result name="formUser">/WEB-INF/jsp/system/authority/formUser.jsp</result>
+		</action>
+		<action name="viewUser" method="viewUser" class="fmss.action.UserAction">
+			<result name="success">/WEB-INF/jsp/system/authority/viewUser.jsp</result>
+		</action>  
+		<action name="deleteUser" method="deleteUser" class="fmss.action.UserAction">
+			<result name="success" type="redirect">listUserMain.action?user.instId=${user.instId}&amp;fixQuery=${fixQuery}&amp;RESULT_MESSAGE=${RESULT_MESSAGE}</result>
+		</action> 
+		<action name="recoverUser" method="recoverUser" class="fmss.action.UserAction">
+			<result name="success" type="redirect">listUserMain.action?user.instId=${user.instId}&amp;fixQuery=${fixQuery}&amp;RESULT_MESSAGE=${RESULT_MESSAGE}</result>
+		</action>       
+		<action name="loadInstAndUsrXml" method="loadInstAndUsrXml" class="fmss.action.InstitueAction">
+			<result name="success">/WEB-INF/jsp/system/authority/listUserMain.jsp</result>
+		</action>
+		
+		<action name="loadInstXmlZTree" method="loadInstXmlZTree" class="fmss.action.InstitueAction">
+ 			<result name="success">/WEB-INF/jsp/system/authority/listUserMain.jsp</result>
+		</action>
+		<action name="editPswd" method="editPswd" class="fmss.action.UserAction">
+			<result name="success">/WEB-INF/jsp/formPswd.jsp</result>
+		</action>
+		
+		<!-- inst-mail -->
+		<action name="instMail" method="instMail" class="fmss.action.InstMailAction">
+			<result name="success">/WEB-INF/jsp/system/authority/instMail.jsp</result>
+		</action>
+		<action name="instMailHead" method="instMailHead" class="fmss.action.InstMailAction">
+			<result name="success">/WEB-INF/jsp/system/authority/instMailHead.jsp</result>
+		</action>
+		<action name="instMailTree" method="instMailTree" class="fmss.action.InstMailAction">
+			<result name="success">/WEB-INF/jsp/system/authority/instMailTree.jsp</result>
+		</action>	
+		<action name="instMailMain" method="instMailMain" class="fmss.action.InstMailAction">
+			<result name="success">/WEB-INF/jsp/system/authority/instMailMain.jsp</result>
+		</action>
+		<action name="instMailUser" method="instMailUser" class="fmss.action.InstMailAction">
+			<result name="success">/WEB-INF/jsp/system/authority/instMailUser.jsp</result>
+		</action>
+		
+		<!-- inst -->
+		<action name="listInst" method="listInst" class="fmss.action.InstAction">
+			<result name="success">/WEB-INF/jsp/system/authority/listInst.jsp</result>
+		</action>
+		<action name="listInstHead" method="listInstHead" class="fmss.action.InstAction">
+			<result name="success">/WEB-INF/jsp/system/authority/listInstHead.jsp</result>
+		</action>
+		<action name="listInstTree" method="listInstTree" class="fmss.action.InstAction">
+			<result name="success">/WEB-INF/jsp/system/authority/listInstTree.jsp</result>
+		</action>
+		<action name="listInstMain" method="listInstMain" class="fmss.action.InstAction">
+			<result name="success">/WEB-INF/jsp/system/authority/listInstMain.jsp</result>
+		</action>
+		<action name="createInst" method="createInst" class="fmss.action.InstAction">
+			<result name="formInst">/WEB-INF/jsp/system/authority/formInst.jsp</result>
+		</action>
+		<action name="ajaxReadData" method="ajaxReadData" class="fmss.action.InstAction">
+			
+		</action>
+		<action name="saveInst" method="saveInst" class="fmss.action.InstAction">
+			<result name="success">/WEB-INF/jsp/close.jsp</result>
+			<result name="input">/WEB-INF/jsp/system/authority/formInst.jsp</result>
+		</action>
+		<action name="editInst" method="editInst" class="fmss.action.InstAction">
+			<result name="formInst">/WEB-INF/jsp/system/authority/formInst.jsp</result>
+		</action>
+		<action name="viewInstc" method="viewInstc" class="fmss.action.InstAction">
+			<result name="success">/WEB-INF/jsp/system/authority/viewInst.jsp</result>
+		</action> 
+		<action name="viewInst" method="viewInst" class="fmss.action.InstAction">
+			<result name="success">/WEB-INF/jsp/system/authority/viewInst.jsp</result>
+		</action> 
+		<action name="deleteInst" method="deleteInst" class="fmss.action.InstAction">
+			<result name="success" type="redirect">listInstMain.action?inst.instId=${inst.instId}&amp;isDelteSuccess=${isDelteSuccess}&amp;fixQuery=${fixQuery}&amp;RESULT_MESSAGE=${RESULT_MESSAGE}</result>
+		</action>
+		<action name="initInst" method="initInst" class="fmss.action.InstAction">
+			<result name="success" type="redirect">listInstMain.action?inst.instId=${inst.instId}&amp;isDelteSuccess=${isDelteSuccess}&amp;fixQuery=${fixQuery}&amp;RESULT_MESSAGE=${RESULT_MESSAGE}</result>
+		</action>  
+		<action name="moveInst" method="moveInst" class="fmss.action.InstAction"></action> 
+		
+		<action name="checkUserInInst" method="checkUserInInst" class="fmss.action.InstAction">
+		</action>
+		<!-- inst ajax
+
+		<action name="listInst" method="list" class="fmss.action.AjaxInstAction">
+			<result name="success">/WEB-INF/jsp/system/authority/instList.jsp</result> 
+		</action>
+		<action name="ajaxInstList" method="instList" class="fmss.action.AjaxInstAction">
+			<result name="stream" type="stream">
+				<param name="contentType">text/html; charset=GBK</param>
+				<param name="inputName">inputStream</param>
+			</result>    
+		</action>
+		<action name="ajaxInstUpdate" method="instUpdate" class="fmss.action.AjaxInstAction">
+			<result name="stream" type="stream">
+				<param name="contentType">text/html; charset=GBK</param>
+				<param name="inputName">inputStream</param>
+			</result>    
+		</action>
+		<action name="ajaxCommonInfo" method="commonInfo" class="fmss.action.AjaxInstAction">
+			<result name="stream" type="stream">
+				<param name="contentType">text/html; charset=GBK</param>
+				<param name="inputName">inputStream</param>
+			</result>    
+		</action>
+		-->
+		<action name="listAuth" method="listAuth" class="fmss.action.AuthorityAction">
+			<result name="success">/WEB-INF/jsp/system/authority/listRoles.jsp</result>
+		</action>
+		<action name="createAuth" method="createAuth" class="fmss.action.AuthorityAction">
+			<result name="formAuth">/WEB-INF/jsp/system/authority/formRole.jsp</result>
+		</action>
+		<action name="checkAuth" method="checkAuth" class="fmss.action.AuthorityAction">
+			
+		</action>
+		
+		<action name="editAuth" method="editAuth" class="fmss.action.AuthorityAction">
+			<result name="formAuth">/WEB-INF/jsp/system/authority/formRole.jsp</result>
+		</action>
+		<action name="deleteAuth" method="deleteAuth" class="fmss.action.AuthorityAction">
+			<result name="success" type="redirect">listRoleTree.action?isSuccess=${isSuccess}&amp;RESULT_MESSAGE=${RESULT_MESSAGE}</result>
+			<result name="input" type="redirect">listResTreeRole.action?isSuccess=${isSuccess}&amp;RESULT_MESSAGE=${RESULT_MESSAGE}</result>
+		</action>
+		<action name="saveAuth" method="saveAuth" class="fmss.action.AuthorityAction">
+			<interceptor-ref name="basicStack"/>
+			<result name="success">/WEB-INF/jsp/close.jsp</result>
+			<result name="input">/WEB-INF/jsp/system/authority/formRole.jsp</result>
+		</action>
+		<action name="updateAuth" method="updateAuth" class="fmss.action.AuthorityAction">
+			<result name="success">/WEB-INF/jsp/close.jsp</result>
+			<result name="input">/WEB-INF/jsp/system/authority/formRole.jsp</result>
+		</action>
+		<action name="viewAuthRoleRes" method="viewAuthRoleRes" class="fmss.action.AuthorityAction">
+			<result name="viewAuthRoleRes">/WEB-INF/jsp/system/authority/viewAuthRoleRes.jsp</result>
+		</action>
+		<action name="viewUserByRole" method="viewUserByRole" class="fmss.action.AuthorityAction">
+			<result name="success">/WEB-INF/jsp/system/authority/listRoleUserCfg.jsp</result>
+		</action>
+		<action name="configUserByRole" method="configUserByRole" class="fmss.action.AuthorityAction">
+			<result name="success">/WEB-INF/jsp/system/authority/listRoleUserLevCfg.jsp</result>
+		</action>
+		<action name="saveUserByRole" method="saveUserByRole" class="fmss.action.AuthorityAction">
+			<result name="success">/WEB-INF/jsp/close.jsp</result>
+		</action>
+		<action name="deleteUserByRole" method="deleteUserByRole" class="fmss.action.AuthorityAction">
+			<result name="success" type="redirect">viewUserByRole.action?role.roleId=${role.roleId}&amp;fixQuery=${fixQuery}&amp;displayMessage=${displayMessage}&amp;RESULT_MESSAGE=${RESULT_MESSAGE}</result>
+		</action>
+		<action name="listRoleHead" method="listRoleHead" class="fmss.action.AuthorityAction">
+			<result name="success">/WEB-INF/jsp/system/authority/listRoleHead.jsp</result>
+		</action>
+		<action name="listRoleTree" method="listRoleTree" class="fmss.action.AuthorityAction">
+			<result name="success">/WEB-INF/jsp/system/authority/listRoleTree.jsp</result>
+		</action>
+		<action name="listRoleMain" method="listRoleMain" class="fmss.action.AuthorityAction">
+			<result name="success">/WEB-INF/jsp/system/authority/listRoleMain.jsp</result>
+		</action>
+		<action name="getRoleTree" method="getRoleTree" class="fmss.action.AuthorityAction">
+		</action>
+		<action name="getRoleZTree" method="getRoleZTree" class="fmss.action.AuthorityAction">
+		</action>
+		<action name="queryConfigUser" method="queryConfigUser" class="fmss.action.AuthorityAction">
+			<result name="success">/WEB-INF/jsp/system/authority/listRoleUserCfg.jsp</result>
+		</action>
+		<action name="queryConfigUserLev" method="queryConfigUserLev" class="fmss.action.AuthorityAction">
+			<result name="success">/WEB-INF/jsp/system/authority/listRoleUserLevCfg.jsp</result>
+		</action>
+        
+		<!-- 资源配置 -->
+		<action name="listResFrm" method="listResFrm" class="fmss.action.ResourceConfigAction">
+			<result name="success">/WEB-INF/jsp/system/authority/listResFrm.jsp</result>
+		</action>
+		<action name="listResMain" method="listResMain" class="fmss.action.ResourceConfigAction">
+			<result name="success">/WEB-INF/jsp/system/authority/listResMain.jsp</result>
+		</action>
+		<action name="listResHead" method="listResHead" class="fmss.action.ResourceConfigAction">
+			<result name="success">/WEB-INF/jsp/system/authority/listResHead.jsp</result>
+		</action>
+		<action name="queryResByUser" method="queryResByUser" class="fmss.action.ResourceConfigAction">
+			<result name="success">/WEB-INF/jsp/system/authority/listResCfgUser.jsp</result>
+		</action>
+		<action name="queryResByRole" method="queryResByRole" class="fmss.action.ResourceConfigAction">
+			<result name="success">/WEB-INF/jsp/system/authority/listResCfgRole.jsp</result>
+		</action>
+		<action name="listResTreeUser" method="listResTreeUser" class="fmss.action.ResourceConfigAction">
+			<result name="success">/WEB-INF/jsp/system/authority/listResTreeUser.jsp</result>
+		</action>
+		<action name="listResTreeRole" method="listResTreeRole" class="fmss.action.ResourceConfigAction">
+			<result name="success">/WEB-INF/jsp/system/authority/listResTreeRole.jsp</result>
+		</action>
+		<action name="viewResByRole" method="viewResByRole" class="fmss.action.ResourceConfigAction">
+			<result name="success">/WEB-INF/jsp/system/authority/listResCfgRole.jsp</result>
+		</action>
+		<action name="initResByRole" method="initResByRole" class="fmss.action.ResourceConfigAction">
+			<result name="success">/WEB-INF/jsp/system/authority/listResCfgRole.jsp</result>
+		</action>
+		<action name="saveResByRole" method="saveResByRole" class="fmss.action.ResourceConfigAction">
+			<result name="success">/WEB-INF/jsp/close.jsp</result>
+		</action>
+		<action name="delAllResByRole" method="delAllResByRole" class="fmss.action.ResourceConfigAction">
+			<result name="success"  type="redirect">viewResByRole.action?role.roleId=${role.roleId}&amp;uBaseConfig.systemId=${uBaseConfig.systemId}&amp;RESULT_MESSAGE=${RESULT_MESSAGE}</result>
+		</action>
+		<action name="getResTreeRole" method="getResTreeRole" class="fmss.action.ResourceConfigAction" />
+		<action name="getResZTreeRole" method="getResZTreeRole" class="fmss.action.ResourceConfigAction" />
+		<action name="viewRoleByUser" method="viewRoleByUser" class="fmss.action.ResourceConfigAction">
+			<result name="success">/WEB-INF/jsp/system/authority/listUserCfgRole.jsp</result>
+		</action>
+		<action name="checkRoleByUser" method="checkRoleByUser" class="fmss.action.ResourceConfigAction">
+			<result name="success">/WEB-INF/jsp/system/authority/listUserAllRole.jsp</result>
+		</action>
+		<action name="saveRoleByUser" method="saveRoleByUser" class="fmss.action.ResourceConfigAction">
+			<result name="success" >/WEB-INF/jsp/close.jsp</result>
+		</action>
+		<action name="getResTreeXMLRole" method="getResTreeXMLRole" class="fmss.action.ResourceConfigAction" />
+		<action name="showResTreeByRole" method="showResTreeByRole" class="fmss.action.ResourceConfigAction">
+			<result name="success">/WEB-INF/jsp/system/authority/listResTreeAddByRole.jsp</result>
+		</action>
+		<!-- subsystem -->
+		<action name="createSystem" method="createSystem" class="fmss.action.SubSystemAction">
+			<result name="success">/WEB-INF/jsp/system/baseinfo/formSubsystem.jsp</result>
+		</action>
+		<action name="editSystem" method="editSystem" class="fmss.action.SubSystemAction">
+			<result name="success">/WEB-INF/jsp/system/baseinfo/formSubsystem.jsp</result>
+		</action>      
+		<action name="deleteSystem" method="deleteSystem" class="fmss.action.SubSystemAction">
+			<result name="success">/WEB-INF/jsp/system/baseinfo/listSubsystems.jsp</result>
+		</action>               
+		<action name="viewSystem" method="viewSystem" class="fmss.action.SubSystemAction">
+			<result name="success">/WEB-INF/jsp/system/baseinfo/viewSubsystem.jsp</result>
+		</action>  
+		<action name="saveSystem" method="saveSystem" class="fmss.action.SubSystemAction">
+			<result name="success">/WEB-INF/jsp/close.jsp</result>            
+			<result name="input">/WEB-INF/jsp/system/baseinfo/formSubsystem.jsp</result>
+		</action>
+		<action name="listSystem" method="listSystem" class="fmss.action.SubSystemAction">
+			<result name="success">/WEB-INF/jsp/system/baseinfo/listSubsystems.jsp</result>
+		</action>
+		<action name="setAdmin" method="setAdmin" class="fmss.action.SubSystemAction">
+			<result name="success">/WEB-INF/jsp/system/baseinfo/formAdministrator2.jsp</result>
+		</action>
+		<action name="showOwnSubSystemChanges" method="showOwnSubSystemChanges"
+		class="fmss.action.SubSystemAction">
+		<result name="success">
+		/WEB-INF/jsp/system/authority/audit/showOwnSubSystemChanges.jsp
+		</result>
+		</action>
+		<action name="saveAdmin" method="saveAdmin" class="fmss.action.SubSystemAction">
+			<result name="success">/WEB-INF/jsp/close.jsp</result>
+		</action>
+		<!-- resource -->
+        
+                 
+		<!-- 子系统资源配置 -->
+		<action name="listResource" method="listResource" class="fmss.action.ResourceDefineAction">
+			<result name="success">/WEB-INF/jsp/system/baseinfo/listSubsystemResources.jsp</result>
+		</action>
+		<action name="createResource" method="createResource" class="fmss.action.ResourceDefineAction">
+			<result name="success">/WEB-INF/jsp/system/baseinfo/formSubsystemResource.jsp</result>
+		</action>
+		<action name="editResource" method="editResource" class="fmss.action.ResourceDefineAction">
+			<result name="success">/WEB-INF/jsp/system/baseinfo/formSubsystemResource.jsp</result>
+		</action>
+		<action name="saveResource" method="saveResource" class="fmss.action.ResourceDefineAction">
+			<result name="success">/WEB-INF/jsp/close.jsp</result>
+		</action>
+		<action name="viewResourceContent" method="viewResourceContent" class="fmss.action.ResourceDefineAction">
+			<result name="success">/WEB-INF/jsp/system/baseinfo/viewResourceContent.jsp</result>
+		</action>
+		<action name="deleteResource" method="deleteResource" class="fmss.action.ResourceDefineAction">
+			<result name="success">/WEB-INF/jsp/system/baseinfo/listSubsystemResources.jsp</result>
+		</action>
+        
+		<!-- theme -->
+		<action name="listParamConfig" method="listParamConfig" class="fmss.action.ParamConfigAction">
+			<result name="success">/WEB-INF/jsp/system/baseinfo/listParamConfig.jsp</result>
+		</action>
+		<action name="listLogo" method="outLogo" class="fmss.action.ParamConfigAction">
+		</action>
+		<action name="saveParamConfig" method="saveParamConfig" class="fmss.action.ParamConfigAction">
+			<result name="success" type="redirect">listParamConfig.action?selectTab=${selectTab}&amp;innerHtml=${innerHtml}&amp;RESULT_MESSAGE=${RESULT_MESSAGE}</result>
+			<result name="isOvered" type="redirect">listParamConfig.action?selectTab=${selectTab}&amp;innerHtml=${innerHtml}&amp;RESULT_MESSAGE=${RESULT_MESSAGE}</result>
+		</action>
+		<action name="listRefresh" method="listRefresh" class="fmss.action.CacheFreshAction">
+			<result name="success">/WEB-INF/jsp/system/baseinfo/cacheRefresh.jsp</result>
+		</action>
+        
+		<!-- 通告管理 start -->
+		
+ 		<action name="toHeadNotice" method="toHeadNotice" class="fmss.action.NoticeAction">
+			<result name="success" type="redirect">listNotice.action?RESULT_MESSAGE=${RESULT_MESSAGE}</result>
+		</action>
+		<action name="listNotice" method="listNotice" class="fmss.action.NoticeAction">
+			<result name="success">/WEB-INF/jsp/system/notice/listNotice.jsp</result>
+		</action>
+		<action name="listSNotice" method="listSNotice" class="fmss.action.NoticeAction">
+			<result name="success">/WEB-INF/jsp/system/notice/listSNotice.jsp</result>
+		</action>
+		<action name="listLog" method="listLog" class="fmss.action.NoticeAction">
+			<result name="success">/WEB-INF/jsp/system/notice/listLog.jsp</result>
+		</action>
+		<action name="listFeedBack" method="listFeedBack" class="fmss.action.NoticeAction">
+			<result name="success">/WEB-INF/jsp/system/notice/listFeedBack.jsp</result>
+		</action>
+		<action name="editNotice" method="editNotice" class="fmss.action.NoticeAction">
+			<result name="success">/WEB-INF/jsp/system/notice/formNotice.jsp</result>
+		</action>
+		<action name="deleteNotice" method="deleteNotice" class="fmss.action.NoticeAction">
+			<result name="success" type="redirect">listNotice.action?RESULT_MESSAGE=${RESULT_MESSAGE}</result>
+		</action>
+		<action name="saveNotice" method="saveNotice" class="fmss.action.NoticeAction">
+			<result name="success">/WEB-INF/jsp/close.jsp</result>
+		</action>
+		<action name="viewNotice" method="viewNotice" class="fmss.action.NoticeAction">
+			<result name="success">/WEB-INF/jsp/system/notice/viewNotice.jsp</result>
+		</action>
+		<action name="viewFile" method="viewFile" class="fmss.action.NoticeAction">
+			<result name="success" type="stream">
+				<param name="inputName">downLoadFile</param>
+				<param name="bufferSize">2048</param>
+			</result>
+		</action>
+		<action name="downloadAttach" method="downloadAttach" class="fmss.action.NoticeAction" />
+		<!-- 通告管理 end -->
+		<!--日志管理-->
+		<action name="listSysLog" method="list" class="fmss.action.SysLogAction">
+			<result name="success">/WEB-INF/jsp/listSysLog.jsp</result>
+		</action>
+		
+		<action name="deleteSysLog" method="delete" class="fmss.action.SysLogAction">
+			<result name="success">/WEB-INF/jsp/listSysLog.jsp</result>
+		</action>
+		<action name="logToExcel" method="logToExcel" class="fmss.action.SysLogAction" />
+		<!--日志管理 end-->
+		<action name="down" method="down" class="fmss.action.HelpFileAction">
+			<result name="success" type="stream">
+				<param name="inputName">fileStream</param>
+				<param name="bufferSize">2048</param>
+			</result>
+		</action>
+		<action name="isExistFile" method="isExistFile" class="fmss.action.HelpFileAction" />
+		<!-- 指标配置 -->
+		<action name="listExtentBase" method="list" class="fmss.action.ExtentBaseAction">
+			<result name="success">/WEB-INF/jsp/system/otherconfig/extentbase.jsp</result>
+		</action>
+		<action name="batchExportList" method="batchExportList" class="fmss.action.ExtentBaseAction">
+			<result name="success">/WEB-INF/jsp/system/otherconfig/extentbase.jsp</result>
+		</action>
+		<!-- 指标配置 end -->
+		
+		<!-- 维护总账配置 -->
+		<action name="listSapMapInfo" method="list" class="fmss.action.SapMapInfoAction">
+			<result name="success">/WEB-INF/jsp/system/otherconfig/sapmapinfo.jsp</result>
+		</action>
+		<action name="saveSapMapInfo" method="saveOrUpdate" class="fmss.action.SapMapInfoAction">
+			<result name="success">/WEB-INF/jsp/close.jsp</result>
+		</action>
+		<action name="deleteSapMapInfo" method="delete" class="fmss.action.SapMapInfoAction">
+			<result name="success" type="redirect">listSapMapInfo.action?RESULT_MESSAGE=${RESULT_MESSAGE}</result>
+		</action>
+		<action name="loadSapMapInfo" method="load" class="fmss.action.SapMapInfoAction">
+			<result name="success">/WEB-INF/jsp/system/otherconfig/sapmapinfoedit.jsp</result>
+		</action>
+		<!-- 维护总账配置 end -->
+		
+		<!-- 自由查询 -->
+		<action name="freeQueryList" method="freeQueryList" class="fmss.action.FreeQueryAction">
+			<result name="success">/WEB-INF/jsp/freequery/freeQueryList.jsp</result>
+		</action>
+		<action name="freeQueryCondition" method="freeQueryCondition" class="fmss.action.FreeQueryAction">
+			<result name="success">/WEB-INF/jsp/freequery/runFreeQueryStep0.jsp</result>
+		</action>
+		<action name="freeQueryData" method="freeQueryData" class="fmss.action.FreeQueryAction">
+			<result name="success">/WEB-INF/jsp/freequery/freeQueryData.jsp</result>
+		</action>
+		<action name="exportExcel" method="exportExcel" class="fmss.action.FreeQueryAction"/>
+		<!-- 自由查询 end -->
+		
+		
+		
+		<action name="getRegion" method="getRegion" class="fmss.action.InstRegionAction"/>
+		
+		<action name="getHolidayTypes" method="getHolidayTypes" class="fmss.action.HolidayAPIAction"/>
+		
+		<action name="checkHoliday" method="checkHoliday" class="fmss.action.HolidayAPIAction"/>
+		
+		<action name="addBatchHolidays" method="addBatchHolidays" class="fmss.action.HolidayAPIAction"/>
+		
+		<action name="getHolidayTypeXML" method="getHolidayTypeXML" class="fmss.action.HolidayConfigAction">
+		</action>
+		<action name="getHolidayTypeThisSystemXML" method="getHolidayTypeThisSystemXML" class="fmss.action.HolidayConfigAction">
+		</action>
+		<action name="listHoliday" method="listHoliday" class="fmss.action.HolidayConfigAction">
+			<result name="success">/WEB-INF/jsp/system/holiday/list.jsp</result>
+		</action>
+		<action name="listHolidayHead" method="listHolidayHead" class="fmss.action.HolidayConfigAction">
+			<result name="success">/WEB-INF/jsp/system/holiday/listHolidayHead.jsp</result>
+		</action>
+		<action name="listHolidayLeft" method="listHolidayLeft" class="fmss.action.HolidayConfigAction">
+			<result name="success">/WEB-INF/jsp/system/holiday/listHolidayLeft.jsp</result>
+		</action>
+		<action name="listHolidayMain" method="listHolidayMain" class="fmss.action.HolidayConfigAction">
+			<result name="success">/WEB-INF/jsp/system/holiday/listHolidayMain.jsp</result>
+		</action>
+		<action name="addHolidayType" method="addHolidayType" class="fmss.action.HolidayConfigAction">
+			<result name="success">/WEB-INF/jsp/system/holiday/formHolidayType.jsp</result>
+		</action>
+		<action name="editHolidayType" method="editHolidayType" class="fmss.action.HolidayConfigAction">
+			<result name="success">/WEB-INF/jsp/system/holiday/formHolidayType.jsp</result>
+		</action>
+		<action name="saveHolidayType" method="saveHolidayType" class="fmss.action.HolidayConfigAction">
+			<result name="success">/WEB-INF/jsp/close.jsp</result>
+			<result name="input">/WEB-INF/jsp/system/holiday/formHolidayType.jsp</result>
+		</action>
+		<action name="updateHolidayType" method="updateHolidayType" class="fmss.action.HolidayConfigAction">
+			<result name="success">/WEB-INF/jsp/close.jsp</result>
+			<result name="input">/WEB-INF/jsp/system/holiday/formHolidayType.jsp</result>
+		</action>
+		<action name="deleteHolidayType" method="deleteHolidayType" class="fmss.action.HolidayConfigAction">
+			<result name="success" type="redirect">listHolidayLeft.action?isDelete=${isDelete}&amp;readOnly=false&amp;RESULT_MESSAGE=${RESULT_MESSAGE}</result>
+		</action>
+		<action name="listHolidayByType" method="listHolidayByType" class="fmss.action.HolidayConfigAction">
+			<result name="success">/WEB-INF/jsp/system/holiday/holiday.jsp</result>
+			<result name="changeHoliday">/WEB-INF/jsp/system/holiday/changeHoliday.jsp</result>
+			<result name="changeHolidayType">/WEB-INF/jsp/system/holiday/changeHolidayType.jsp</result>
+			<result name="input">/WEB-INF/jsp/system/holiday/formHolidyType.jsp</result>
+		</action>
+		<action name="setThis2Holiday" method="setThis2Holiday" class="fmss.action.HolidayConfigAction">
+		</action>
+		<action name="getHolidayOneMonth" method="getHolidayOneMonth" class="fmss.action.HolidayConfigAction">
+		</action>
+		<action name="getMostEarlyMonth" method="getMostEarlyMonth" class="fmss.action.HolidayConfigAction">
+		</action>
+		<action name="userToExcel" method="userToExcel" class="fmss.action.UserAction"/>
+		<!-- 数据库对比工具 -->
+		<action name="toExportXML" method="toExportXML" class="fmss.action.DbCompareAction">
+			<result name="success">/WEB-INF/jsp/system/dbcompare/exp.jsp</result>
+		</action>
+		<action name="toComparetXML" method="toComparetXML" class="fmss.action.DbCompareAction">
+			<result name="success">/WEB-INF/jsp/system/dbcompare/imp.jsp</result>
+		</action>
+		<action name="expAction" method="expAction" class="fmss.action.DbCompareAction">
+			<result name="error">/WEB-INF/jsp/system/dbcompare/exp.jsp</result>
+		</action>
+		<action name="compareAction" method="compareAction" class="fmss.action.DbCompareAction">
+			<result name="error">/WEB-INF/jsp/system/dbcompare/imp.jsp</result>
+		</action>
+		<!-- 数据库对比工具 end-->
+		<action name="keepSession"  class="fmss.action.KeepSessionAction"></action>
+		<!-- struts3 -->
+		<action name="listRoleFunc" method="listRoleFunc"
+			class="fmss.action.FuncConfigAction">
+			<result name="success">
+				/WEB-INF/jsp/system/authority/func/listRoleFunc.jsp
+			</result>
+		</action>
+		<action name="viewMenuRes" method="viewMenuRes"
+			class="fmss.action.FuncConfigAction">
+			<result name="success">
+				/WEB-INF/jsp/system/authority/func/viewMenuRes.jsp
+			</result>
+		</action>
+		<action name="viewMenuResWithXML" method="viewMenuResWithXML"
+			class="fmss.action.FuncConfigAction">
+		</action>
+		<action name="listUserFunc" method="listUserFunc"
+			class="fmss.action.FuncConfigAction">
+			<result name="success">
+				/WEB-INF/jsp/system/authority/func/listUserFunc.jsp
+			</result>
+		</action>
+		<action name="saveFuncWithUser" method="saveFuncWithUser"
+			class="fmss.action.FuncConfigAction">
+			<result name="success">/WEB-INF/jsp/close.jsp</result>
+		</action>
+		<action name="listMetaActions" method="listMetaActions"
+			class="fmss.action.FunctionMetaAction">
+			<result name="success">/WEB-INF/jsp/system/authority/func/listMetaActions.jsp</result>
+		</action>
+		<action name="list00003Menus" method="list00003Menus"
+			class="fmss.action.FunctionMetaAction">
+			<result name="success">/WEB-INF/jsp/system/authority/func/listMetaActions.jsp</result>
+		</action>
+		<action name="viewMetaActionConfigs" method="viewMetaActionConfigs"
+			class="fmss.action.FunctionMetaAction">
+		</action>
+		<action name="immediateInitMetaActions" method="immediateInitMetaActions"
+			class="fmss.action.FunctionMetaAction">
+		</action>
+		<action name="saveMenuActionRelations" method="saveMenuActionRelations"
+			class="fmss.action.FunctionMetaAction">
+		</action>
+		<action name="saveMetaActions" method="saveMetaActions"
+			class="fmss.action.FunctionMetaAction">
+		</action>
+		<action name="getOneMetaActions" method="getOneMetaActions"
+			class="fmss.action.FunctionMetaAction">
+		</action>
+		<action name="onSelectChang" method="onSelectChang" class="fmss.action.InstAction">
+		</action>
+		<action name="loadSelfInfo" method="loadSelfInfo" class="fmss.action.InstAction">
+		</action> 
+	</package>
+</struts>

@@ -1,0 +1,351 @@
+.downLoadClass {
+	POSITION: relative; MARGIN-TOP: 10px; WIDTH: 370px; BACKGROUND: #f5f5f5; HEIGHT: 190px
+}
+.downLoadClass .left {
+	POSITION: relative; MARGIN-TOP: 10px; WIDTH: 280px; BACKGROUND: #f5f5f5; FLOAT: left
+}
+.downLoadClass .leftImg {
+	POSITION: relative; PADDING-BOTTOM: 5px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; FLOAT: left; TOP: 90px; CURSOR: pointer; PADDING-TOP: 5px
+}
+.downLoadClass .rightImg {
+	POSITION: relative; PADDING-BOTTOM: 5px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; FLOAT: left; TOP: 86px; CURSOR: pointer; PADDING-TOP: 5px
+}
+.titleClass {
+	PADDING-BOTTOM: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; BACKGROUND: #abbfea; COLOR: #ffffff; FONT-SIZE: 14px; FONT-WEIGHT: bold; PADDING-TOP: 10px
+}
+.downContent {
+	BACKGROUND-COLOR: #f5f5f5; WIDTH: 370px; HEIGHT: 400px
+}
+.downloadImgClass {
+	MARGIN-LEFT: 65px
+}
+.downloadImgClass1 {
+	MARGIN-LEFT: 20px
+}
+#center_content {
+	PADDING-BOTTOM: 0px; MARGIN: 15px 0px 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+#center_content .divSet {
+	WIDTH: 24.5%; HEIGHT: 90px
+}
+#center_content .title_class {
+	MARGIN-TOP: 10px; COLOR: #000000; FONT-SIZE: 14px; FONT-WEIGHT: bold
+}
+#center_content A:link {
+	COLOR: #666666; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #666666; TEXT-DECORATION: none
+}
+#center_content A:hover {
+	COLOR: red; TEXT-DECORATION: none
+}
+#center_content .content_class {
+	MARGIN-TOP: 8px; COLOR: #666666
+}
+#center_content .divImg {
+	MARGIN-TOP: 10px; MARGIN-LEFT: 10px
+}
+#imgDiv .imgLiDiv {
+	PADDING-LEFT: 10px; WIDTH: 285px; HEIGHT: 190px
+}
+#center_content .txt_class {
+	HEIGHT: 85px; MARGIN-LEFT: 95px
+}
+.footnogutter {
+	MARGIN-TOP: -80px; WIDTH: 1px; FLOAT: right; HEIGHT: 70px; BORDER-RIGHT: #888d94 1px solid
+}
+#subContent .li_class {
+	FLOAT: left
+}
+.hrClass {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; LINE-HEIGHT: 1px; HEIGHT: 1px; BORDER-TOP: #e6edf3 1px solid; BORDER-RIGHT: 0px
+}
+.next {
+	CURSOR: pointer
+}
+.prev {
+	CURSOR: pointer
+}
+.txt_classSch {
+	HEIGHT: 60px; MARGIN-LEFT: 95px
+}
+.ts328 {
+	WIDTH: 328px
+}
+.dialogRili .titleWrapperRili {
+	BACKGROUND: rgb(236,241,255); HEIGHT: 30px
+}
+.dialogRili .title {
+	MARGIN: 5px 10px 0px 15px; DISPLAY: inline; COLOR: red; FONT-SIZE: 14px
+}
+.dateNumClass {
+	MARGIN-BOTTOM: -5px; MARGIN-LEFT: 5px; FONT-SIZE: 65px
+}
+.dialogRili {
+	Z-INDEX: 19999; BORDER-BOTTOM: rgb(192,192,192) 1px solid; POSITION: absolute; BORDER-LEFT: rgb(192,192,192) 1px solid; DISPLAY: none; BACKGROUND: #ffffff; BORDER-TOP: rgb(192,192,192) 1px solid; TOP: 80px; BORDER-RIGHT: rgb(192,192,192) 1px solid
+}
+.dialogRili .contentWrapper {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 2px; PADDING-RIGHT: 2px; BACKGROUND: #ffffff; PADDING-TOP: 5px
+}
+.dialogRili .content {
+	BACKGROUND: #ffffff
+}
+.detailRili {
+	PADDING-BOTTOM: 10px
+}
+.detailRili .lunar {
+	LINE-HEIGHT: 30px; PADDING-LEFT: 13px; BACKGROUND: #ffffff; HEIGHT: 30px
+}
+.detailRili .detailOpt {
+	LINE-HEIGHT: 25px; HEIGHT: 25px
+}
+.detailRili .detailOpt .icon {
+	MARGIN-TOP: 4px
+}
+.detailRili .detailOpt A {
+	PADDING-BOTTOM: 0px; MARGIN: 2px 5px 0px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; DISPLAY: block; COLOR: #455878; FONT-SIZE: 14px; TEXT-DECORATION: none; PADDING-TOP: 0px
+}
+.detail .detailOpt A:visited {
+	PADDING-BOTTOM: 0px; MARGIN: 2px 5px 0px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; DISPLAY: block; COLOR: #455878; FONT-SIZE: 14px; TEXT-DECORATION: none; PADDING-TOP: 0px
+}
+.detailRili .detailOpt A:hover {
+	BACKGROUND: #455878; COLOR: #ffffff
+}
+.detailRili .detailOpt .optText {
+	BORDER-BOTTOM: #455878 1px solid
+}
+.detailRili .huangli {
+	LINE-HEIGHT: 20px; MARGIN: 8px 12px; PADDING-LEFT: 5px; COLOR: #000000
+}
+.detailRili .huangliSpan {
+	WIDTH: 260px; DISPLAY: block; FLOAT: left; MARGIN-LEFT: 5px
+}
+.detailRili .yj {
+	BACKGROUND-COLOR: #79bf20; PADDING-LEFT: 2px; PADDING-RIGHT: 2px; FLOAT: left; COLOR: #ffffff; FONT-WEIGHT: bold
+}
+.detailRili .y {
+	BACKGROUND-COLOR: #79bf20
+}
+.detailRili .j {
+	BACKGROUND-COLOR: red
+}
+.detailRili .itemsWrapper {
+	MARGIN: 0px 10px
+}
+#dateDetailInfo .huangliSpan {
+	WIDTH: 250px; DISPLAY: block; FLOAT: left; MARGIN-LEFT: 2px
+}
+#dateDetailInfo .huangliRili {
+	LINE-HEIGHT: 20px; MARGIN: 8px 2px; COLOR: #000000
+}
+#dateDetailInfo .yj {
+	BACKGROUND-COLOR: #79bf20; PADDING-LEFT: 2px; PADDING-RIGHT: 2px; FLOAT: left; COLOR: #ffffff; FONT-WEIGHT: bold
+}
+#dateDetailInfo .y {
+	BACKGROUND-COLOR: #79bf20
+}
+#dateDetailInfo .j {
+	BACKGROUND-COLOR: red
+}
+.dateNumClass1 {
+	MARGIN-BOTTOM: -5px; MARGIN-LEFT: 2px; FONT-SIZE: 65px
+}
+.RiliIndex .page {
+	MARGIN: 0px auto; WIDTH: 980px
+}
+.RiliIndex .container {
+	PADDING-BOTTOM: 10px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+.RiliIndex .cldGridWrapper {
+	PADDING-BOTTOM: 15px; PADDING-LEFT: 15px; PADDING-RIGHT: 15px; HEIGHT: 360px; PADDING-TOP: 6px
+}
+.RiliIndex .mainWrapper {
+	HEIGHT: 360px
+}
+.RiliIndex .cldContentWrapper {
+	WIDTH: 595px
+}
+.RiliIndex .dayNotInMonthWrapper {
+	BACKGROUND-COLOR: #f5f5f5
+}
+.RiliIndex .nogutterRili {
+	Z-INDEX: 2; BACKGROUND-COLOR: #e4e4e4
+}
+.RiliIndex .hruleMonth {
+	Z-INDEX: 2 !important; BORDER-TOP-COLOR: #e4e4e4; HEIGHT: 1px
+}
+.dayOfMonthRili {
+	POSITION: absolute; TEXT-ALIGN: right; LINE-HEIGHT: 18px; WIDTH: 100%; BOTTOM: 0px; FONT-FAMILY: Verdana; HEIGHT: 18px; LEFT: 0px
+}
+.RiliIndex .dayOfMonthRili {
+	TEXT-ALIGN: left; COLOR: #000000
+}
+.RiliIndex .currentDayRili {
+	
+}
+.RiliIndex .currentDayFont {
+	COLOR: red
+}
+.RiliIndex .uncurrentDayFont {
+	COLOR: #fff
+}
+.RiliIndex .dateNum {
+	Z-INDEX: 0; POSITION: absolute; WIDTH: 100%; BOTTOM: 5px; FONT-FAMILY: verdana; HEIGHT: 40px; FONT-SIZE: 20px; OVERFLOW: hidden; CURSOR: pointer; LEFT: 3px
+}
+.RiliIndex .dayOfMonthWithoutBg {
+	BACKGROUND: 0px 0px
+}
+#colheadersRili {
+	POSITION: relative; LINE-HEIGHT: 25px; HEIGHT: 25px
+}
+.mainNavRili {
+	POSITION: relative; HEIGHT: 30px
+}
+.cheadNotTodayRili {
+	COLOR: #9b9fa8; FONT-WEIGHT: bold
+}
+.cheadNotTodayRili A {
+	COLOR: #9b9fa8; FONT-WEIGHT: bold
+}
+#gridcontainerRili {
+	BORDER-BOTTOM: #e4e4e4 1px solid; POSITION: relative; BORDER-LEFT: #e4e4e4 1px solid; BACKGROUND: #e8eef7; HEIGHT: 300px; BORDER-TOP: #e4e4e4 1px solid; BORDER-RIGHT: #e4e4e4 1px solid
+}
+.dateNavInfoRili {
+	Z-INDEX: 20; POSITION: relative; TEXT-ALIGN: center; LINE-HEIGHT: 20px; MARGIN: 0px auto; WIDTH: 280px; FONT-FAMILY: Verdana; HEIGHT: 25px; COLOR: #6d81a5; FONT-SIZE: 14px; FONT-WEIGHT: bold
+}
+.dateSelectionRili {
+	BORDER-BOTTOM: #6d81a5 1px solid; CURSOR: pointer
+}
+.dateSelectionIf {
+	BORDER-BOTTOM: #fff 1px solid; CURSOR: pointer
+}
+.dateNavBtnWrapperRili {
+	WIDTH: 20px; HEIGHT: 20px
+}
+.dateNavBtnRili {
+	TEXT-ALIGN: center; LINE-HEIGHT: 18px; WIDTH: 20px; HEIGHT: 18px; COLOR: #6b92d7; CURSOR: pointer
+}
+.dateNavBtnRili1 {
+	TEXT-ALIGN: center; LINE-HEIGHT: 18px; WIDTH: 20px; HEIGHT: 18px; COLOR: #ffffff; CURSOR: pointer
+}
+.month.dateNavBtnWrapperRili .dateNavBtnRili {
+	FONT-SIZE: 10px
+}
+.dateNavBtnRili1 {
+	FONT-SIZE: 10px
+}
+.year.dateNavBtnWrapperRili .dateNavBtnRili {
+	LETTER-SPACING: -2px; FONT-SIZE: 9px
+}
+.dateNavBtnRili1 {
+	LETTER-SPACING: -2px; FONT-SIZE: 9px
+}
+.fLinkClass {
+	TEXT-ALIGN: center; DISPLAY: block; FONT-SIZE: 12px
+}
+.fLinkSpan {
+	PADDING-LEFT: 5px; PADDING-RIGHT: 5px
+}
+.fLinkClass A:link {
+	COLOR: #666666; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #666666; TEXT-DECORATION: none
+}
+.fLinkClass A:hover {
+	COLOR: red; TEXT-DECORATION: none
+}
+#img1 {
+	WIDTH: 255px; HEIGHT: 187px
+}
+#img2 {
+	WIDTH: 255px; HEIGHT: 187px
+}
+#img3 {
+	WIDTH: 255px; HEIGHT: 187px
+}
+#img4 {
+	WIDTH: 255px; HEIGHT: 187px
+}
+#img1 {
+	BACKGROUND: url(../img/function_1.jpg) no-repeat 15% 2%
+}
+#img2 {
+	BACKGROUND: url(../img/function_2.gif) no-repeat 35% 2%
+}
+#img3 {
+	BACKGROUND: url(../img/function_3.gif) no-repeat 45% 2%
+}
+.linkClass {
+	LINE-HEIGHT: 20px; FLOAT: left
+}
+.lunarFestival {
+	COLOR: #32cd32
+}
+.solarFestival {
+	COLOR: #46baec
+}
+.solarTerm {
+	COLOR: #32cd32
+}
+#dateSelectionTodayBtnRili {
+	WIDTH: 35px; FLOAT: left; HEIGHT: 20px; MARGIN-LEFT: 5px; CURSOR: pointer
+}
+#dateSelectionOkBtnRili {
+	TEXT-ALIGN: center; MARGIN: 0px 5px; WIDTH: 35px; FLOAT: left; HEIGHT: 20px; CURSOR: pointer
+}
+#dateSelectionCancelBtnRili {
+	WIDTH: 41px; FLOAT: right; HEIGHT: 20px; CURSOR: pointer
+}
+.daySelectionDiv {
+	Z-INDEX: 20; BORDER-BOTTOM: #7fb4e9 1px solid; POSITION: absolute; BORDER-LEFT: #7fb4e9 1px solid; WIDTH: 160px; DISPLAY: none; BACKGROUND: #f1f6f7; BORDER-TOP: #7fb4e9 1px solid; TOP: 25px; BORDER-RIGHT: #7fb4e9 1px solid
+}
+#prevMonBtn {
+	POSITION: absolute; TOP: 4px; LEFT: 0px
+}
+#prevDayBtn {
+	POSITION: absolute; TOP: 4px; LEFT: 30px
+}
+#nextDayBtn {
+	POSITION: absolute; TOP: 4px; RIGHT: 30px
+}
+#nextMonBtn {
+	POSITION: absolute; TOP: 4px; RIGHT: 0px
+}
+#daySelectionBody {
+	WIDTH: 100%
+}
+#daySelectionFooter {
+	WIDTH: 100%; FONT-SIZE: 0px
+}
+#daySeparator {
+	MARGIN: 0px auto; WIDTH: 152px; HEIGHT: 2px; FONT-SIZE: 0px
+}
+#daySelectionBtnRili {
+	LINE-HEIGHT: 20px; MARGIN: 0px auto; WIDTH: 133px; HEIGHT: 20px
+}
+#daySelectionTodayBtnRili {
+	WIDTH: 35px; FLOAT: left; HEIGHT: 20px; MARGIN-LEFT: 5px; CURSOR: pointer
+}
+#daySelectionOkBtnRili {
+	TEXT-ALIGN: center; MARGIN: 0px 5px; WIDTH: 35px; FLOAT: left; HEIGHT: 20px; CURSOR: pointer
+}
+#daySelectionCancelBtnRili {
+	TEXT-ALIGN: right; WIDTH: 35px; FLOAT: right; HEIGHT: 20px; CURSOR: pointer
+}
+.dateNavInfoIf {
+	Z-INDEX: 20; POSITION: relative; TEXT-ALIGN: center; LINE-HEIGHT: 25px; MARGIN: 0px auto; WIDTH: 280px; FONT-FAMILY: Arial, Verdana, Helvetica, Sans-Serif; HEIGHT: 25px; COLOR: #fff; FONT-SIZE: 14px; FONT-WEIGHT: bold
+}
+.dateNavInfoIf .dateNavBtnRili {
+	LINE-HEIGHT: 15px; HEIGHT: 15px
+}
+.goodban {
+	TEXT-ALIGN: center
+}
+.goodban TABLE {
+	MARGIN: 0px auto; WIDTH: 90%
+}
+.goodban TABLE TD {
+	PADDING-BOTTOM: 5px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 5px
+}

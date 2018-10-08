@@ -1,0 +1,129 @@
+A:ACTIVE {
+	color:#FFFFFF;
+}
+.simpleTree {
+  padding:8px 3px 3px 3px;
+}
+.simpleTree A {
+  font:normal 12px Arial,宋体;
+  color:#000;
+  text-decoration:none;
+  word-break:keep-all;
+  white-space:nowrap;
+}
+.simpleTree * {
+    margin:0px;
+    padding:0px;
+    border:0px;
+    text-align:left;
+    font:normal 12px Arial,宋体;
+    position:static;
+    overflow:hidden;
+}
+.simpleTree table {
+}
+.simpleTree .boxDiv {
+}
+.simpleTree .treeNodeLineDiv {
+  display:-moz-inline-block;
+  height:26px;
+  font-size:1px;
+  width:1px;
+}
+.simpleTree .treeNodeIconRootDiv {
+  display:-moz-inline-block;
+  width:26px;
+  height:26px;
+  font-size:1px;
+  background-repeat:repeat-y!important;
+}
+.simpleTree .treeNodeIconRootDiv img {
+  position:relative;
+  top:6px;
+}
+.simpleTree .treeNodeIconDiv {
+  display:-moz-inline-block;
+  width:20px;
+  height:26px;
+  font-size:1px;
+}
+.simpleTree .treeNodeIconDiv img {
+  position:relative;
+  top:6px;
+}
+.simpleTree .treeNodeSpaceDiv {
+  display:-moz-inline-block;
+  width:16px;
+  height:26px;
+  font-size:1px;
+}
+.simpleTree .treeNodeDiv {
+  display:-moz-inline-block;
+  height:26px;
+  font:normal 12px Arial,宋体;
+  word-break:keep-all;
+  white-space:nowrap;
+  color:#000;
+}
+.simpleTree .treeNodeDiv A {
+  height:26px;
+  line-height:26px;
+  color:#000;
+  padding:0 5px;
+}
+.simpleTree .treeNodeDiv A:hover {
+  background:#389FA8;
+  color:#FFF;
+  text-decoration:none;
+  height:26px;
+  line-height:26px;
+}
+
+.simpleTree .treeNodeDiv_Select {
+  display:-moz-inline-block;
+  height:26px;
+  line-height:26px;
+  background:#389FA8;
+  font:normal 12px Arial,宋体;
+  word-break:keep-all;
+  white-space:nowrap;
+  color:#FFFFFF!important;
+}
+.simpleTree .treeNodeDiv_Select A {
+  color:#FFF;
+  background:#389FA8;
+  height:26px;
+  line-height:26px;
+  text-decoration:none;
+  padding:0 5px;
+}
+.simpleTree .treeNodeDiv_Select A:hover {
+  background:#389FA8;
+  color:#FFF;
+  text-decoration:none;
+  height:26px;
+  line-height:26px;
+}
+.simpleTree div {
+  cursor:default;
+  color:#476FB6;
+}
+.simpleTree .treeCheckBoxTD {
+	padding:1px 1px 0px 4px;
+    vertical-align:top;
+    display:none;
+}
+.simpleTree .treeCheckBox {
+  cursor:hand;
+	width:10px;
+	height:10px;
+	background:url(../images/checkBox.gif);
+	font-size:1px;
+}
+.simpleTree .treeRadioBox {
+  cursor:hand;
+	width:10px;
+	height:10px;
+	background:url(../images/radioBox.gif);
+	font-size:1px;
+}

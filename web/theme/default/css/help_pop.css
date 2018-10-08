@@ -1,0 +1,42 @@
+@charset "utf-8";
+/* CSS Document */
+
+.bg {
+	background-image: url(../img/bg.gif);
+	height: 45px;
+	width: 501px;
+	background-color: #FFFFFF;
+	background-repeat: no-repeat;
+	border: 1px solid #a59fa1;
+	background-position: left top;
+}
+.close {
+	text-align: right;
+	margin-right: 5px;
+	margin-top: 3px;
+}
+.bg ul {
+	margin-top: -13px;
+	margin-left: 8px;
+}
+
+.bg li {
+	font-size: 12px;
+	color: #303030;
+	float: left;
+	width: 15%;
+	line-height: 120%;
+	background-image: url(../img/ico.gif);
+	background-repeat: no-repeat;
+	background-position: 0px;
+	padding-left: 13px;
+}
+.bg li a {
+	text-decoration: none;
+	color: #303030;
+	font-size: 12px;
+}
+.bg li a:hover {
+	text-decoration: underline;
+    
+}

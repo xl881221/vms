@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE weblogic-web-app PUBLIC "-//BEA Systems, Inc.//DTD Web Application 8.1//EN" "http://www.bea.com/servers/wls810/dtd/weblogic810-web-jar.dtd">
+
+<weblogic-web-app>
+	<session-descriptor>
+		<session-param>
+			<param-name>CookieName</param-name>
+			<param-value>myCookie</param-value>
+		</session-param>
+	</session-descriptor>
+	<jsp-descriptor>
+		<jsp-param>
+			<param-name>compileFlags</param-name>
+			<param-value>-g</param-value>
+		</jsp-param>
+		<jsp-param>
+			<param-name>keepgenerated</param-name>
+			<param-value>true</param-value>
+		</jsp-param>
+		<jsp-param>
+		   <param-name>compilerSupportsEncoding</param-name>
+		   <param-value>true</param-value>
+		 </jsp-param>
+		 <jsp-param>
+		   <param-name>encoding</param-name>
+		   <param-value>UTF-8</param-value>
+		</jsp-param>
+	</jsp-descriptor>
+	<container-descriptor>
+		<servlet-reload-check-secs>-1</servlet-reload-check-secs>
+		<prefer-web-inf-classes>true</prefer-web-inf-classes>
+	</container-descriptor>
+	<context-root>/vms</context-root>
+</weblogic-web-app>
+

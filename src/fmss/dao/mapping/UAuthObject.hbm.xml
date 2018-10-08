@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping
+>
+    <class
+     name="fmss.dao.entity.UAuthObjectDO"
+        table="U_AUTH_OBJECT"
+        dynamic-update="true"
+        dynamic-insert="true"
+    >
+		<id
+            name="objectId"
+            column="OBJECT_ID"
+            type="java.lang.String"
+            unsaved-value="null"
+        />
+       <property
+            name="objectName"
+            type="java.lang.String"
+            update="true"
+            insert="true"
+            column="OBJECT_NAME"
+            length="30"/>
+		<property
+            name="objectType"
+            type="java.lang.String"
+            update="true"
+            insert="true"
+            column="OBJECT_TYPE"
+            length="10"/>
+    </class>
+
+</hibernate-mapping>

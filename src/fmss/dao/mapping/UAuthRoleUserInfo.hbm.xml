@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping
+>
+    <class
+        name="fmss.dao.entity.UAuthRoleUserInfoDO"
+        table="U_AUTH_ROLE_USER"
+        dynamic-update="true"
+        dynamic-insert="true"
+    >
+	<composite-id>
+            <key-property name="roleId" column="ROLE_ID" type="java.lang.String" />
+            <key-property name="userId" column="USER_ID" type="java.lang.String" />
+    </composite-id>
+    
+    <many-to-one name="authrole"
+			class="fmss.dao.entity.UAuthRoleDO" cascade="none"
+			outer-join="auto" update="false" insert="false" lazy="false"
+			column="ROLE_ID" />
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="GB2312"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+	<!-- ===================================================================== -->
+	<!--  以下是appender的定义                                                 -->
+	<!-- ===================================================================== -->
+	<appender name="PROJECT"
+		class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="file" value="sys-logs/fmss.log" />
+		<param name="encoding" value="GBK" />
+		<param name="threshold" value="info" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="%d [%X{requestURIWithQueryString}] %-5p - %m [%c{1}:%M] %n" />
+		</layout>
+	</appender>
+
+	<appender name="CONSOLE" class="org.apache.log4j.ConsoleAppender">
+		<param name="encoding" value="GBK" />
+		<layout class="org.apache.log4j.PatternLayout">
+		<param name="ConversionPattern"
+				value="%d [%X{requestURIWithQueryString}] %-5p - %m [%c{1}:%M] %n" />
+		</layout>
+	</appender>
+	<category name="com.opensymphony.xwork2.ognl.OgnlValueStack"> 
+		<priority value="error"/> 
+	</category> 
+	<!-- ===================================================================== -->
+	<!--  Root logger的定义                                                    -->
+	<!-- ===================================================================== -->
+	<root>
+		<level value="info" /><!-- 生产环境至少应设置成info或warn或error,推荐：warn ,大量跑批时,请设为 error . -->
+		<appender-ref ref="PROJECT" />
+		<appender-ref ref="CONSOLE" />
+	</root>
+
+</log4j:configuration>

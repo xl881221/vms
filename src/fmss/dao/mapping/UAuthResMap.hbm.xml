@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="fmss.dao.entity.UAuthResMapDO"
+		table="U_AUTH_RES_MAP" dynamic-update="true" dynamic-insert="true">
+		<id name="resId" column="RES_ID" type="java.lang.String"
+			unsaved-value="null" />
+		<property name="resName" type="java.lang.String" update="true"
+			insert="true" column="RES_NAME" length="20" />
+		<property name="systemId" type="java.lang.String" update="true"
+			insert="true" column="SYSTEM_ID" length="20" />
+		<property name="resType" type="java.lang.String" update="true"
+			insert="true" column="RES_TYPE" length="5" />
+		<property name="srcTable" type="java.lang.String" update="true"
+			insert="true" column="SRC_TABLE" length="20" />
+		<property name="srcKeyField" type="java.lang.String"
+			update="true" insert="true" column="SRC_KEY_FIELD" length="20" />
+		<property name="srcIdField" type="java.lang.String"
+			update="true" insert="true" column="SRC_ID_FIELD" length="20" />
+		<property name="srcNameField" type="java.lang.String"
+			update="true" insert="true" column="SRC_NAME_FIELD" length="30" />
+		<property name="orderNum" type="java.lang.Integer" update="true"
+			insert="true" column="ORDER_NUM" length="22" />
+		<property name="description" type="java.lang.String"
+			update="true" insert="true" column="DESCRIPTION" length="50" />
+		<many-to-one name="ubaseConfig"
+			class="fmss.dao.entity.UBaseConfigDO" cascade="none"
+			outer-join="auto" update="false" insert="false" lazy="false"
+			column="SYSTEM_ID" />
+
+	</class>
+</hibernate-mapping>

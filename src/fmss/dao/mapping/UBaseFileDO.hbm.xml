@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping
+>
+    <class
+        name="fmss.dao.entity.UBaseFileDO"
+        table="U_BASE_FILE"
+        dynamic-update="true"
+        dynamic-insert="true"
+    >
+	   <id
+            name="fileId"
+            column="FILE_ID"
+            type="java.lang.Long"
+            unsaved-value="null"
+        />  
+       <many-to-one name="baseFolder"
+			class="fmss.dao.entity.UBaseFolderDO" cascade="none"
+			outer-join="auto" update="false" insert="false" lazy="false"
+			column="FOLDER_ID" />
+       <property
+            name="refId"
+            type="java.lang.String"
+            update="true"
+            insert="true"
+            column="ref_id"
+            length="20"/>
+       <property
+            name="fileName"
+            type="java.lang.String"
+            update="true"
+            insert="true"
+            column="FILE_NAME"
+            length="50"/>
+       <property
+            name="fileSize"
+            type="java.lang.Long"
+            update="true"
+            insert="true"
+            column="FILE_SIZE"/>
+       <property
+            name="uploadTime"
+            type="java.sql.Date"
+            update="true"
+            insert="true"
+            column="UPLOAD_TIME"
+       />
+       <property
+            name="status"
+            type="java.lang.String"
+            update="true"
+            insert="true"
+            column="STATUS"
+            length="50"/>    
+       <property
+            name="createUserId"
+            type="java.lang.String"
+            update="true"
+            insert="true"
+            column="CREATE_USER_ID"
+            length="50"/> 
+       <property
+            name="createUserName"
+            type="java.lang.String"
+            update="true"
+            insert="true"
+            column="CREATE_USER_NAME"
+            length="50"/>
+    </class>
+
+</hibernate-mapping>

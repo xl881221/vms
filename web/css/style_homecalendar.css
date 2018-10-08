@@ -1,0 +1,1203 @@
+BODY {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+DIV {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+DL {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+DT {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+DD {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+UL {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+OL {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+LI {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+H1 {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+H2 {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+H3 {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+H4 {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+H5 {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+H6 {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+PRE {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+FORM {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+FIELDSET {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+INPUT {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+TEXTAREA {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+P {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+BLOCKQUOTE {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+TH {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+TD {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+FIELDSET {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; BORDER-TOP: 0px; BORDER-RIGHT: 0px
+}
+IMG {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; BORDER-TOP: 0px; BORDER-RIGHT: 0px
+}
+TABLE {
+	BORDER-SPACING: 0; BORDER-COLLAPSE: collapse
+}
+OL {
+	LIST-STYLE-TYPE: none; LIST-STYLE-IMAGE: none
+}
+UL {
+	LIST-STYLE-TYPE: none; LIST-STYLE-IMAGE: none
+}
+ADDRESS {
+	FONT-STYLE: normal; FONT-WEIGHT: normal
+}
+CAPTION {
+	FONT-STYLE: normal; FONT-WEIGHT: normal
+}
+CITE {
+	FONT-STYLE: normal; FONT-WEIGHT: normal
+}
+CODE {
+	FONT-STYLE: normal; FONT-WEIGHT: normal
+}
+DFN {
+	FONT-STYLE: normal; FONT-WEIGHT: normal
+}
+EM {
+	FONT-STYLE: normal; FONT-WEIGHT: normal
+}
+STRONG {
+	FONT-STYLE: normal; FONT-WEIGHT: normal
+}
+TH {
+	FONT-STYLE: normal; FONT-WEIGHT: normal
+}
+VAR {
+	FONT-STYLE: normal; FONT-WEIGHT: normal
+}
+CAPTION {
+	TEXT-ALIGN: left
+}
+TH {
+	TEXT-ALIGN: left
+}
+H1 {
+	FONT-SIZE: 100%; FONT-WEIGHT: normal
+}
+H2 {
+	FONT-SIZE: 100%; FONT-WEIGHT: normal
+}
+H3 {
+	FONT-SIZE: 100%; FONT-WEIGHT: normal
+}
+H4 {
+	FONT-SIZE: 100%; FONT-WEIGHT: normal
+}
+H5 {
+	FONT-SIZE: 100%; FONT-WEIGHT: normal
+}
+H6 {
+	FONT-SIZE: 100%; FONT-WEIGHT: normal
+}
+Q:before {
+	CONTENT: ''
+}
+Q:after {
+	CONTENT: ''
+}
+ABBR {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; BORDER-TOP: 0px; BORDER-RIGHT: 0px
+}
+ACRONYM {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; BORDER-TOP: 0px; BORDER-RIGHT: 0px
+}
+HTML {
+	FONT-FAMILY: Arial, Verdana, Helvetica, Sans-Serif; FONT-SIZE: 12px
+}
+BODY {
+	FONT-FAMILY: Arial, Verdana, Helvetica, Sans-Serif; FONT-SIZE: 12px
+}
+.left {
+	FLOAT: left
+}
+.right {
+	FLOAT: right
+}
+.clear {
+	CLEAR: both
+}
+.clearfix:after {
+	DISPLAY: block; HEIGHT: 0px; VISIBILITY: hidden; CLEAR: both; CONTENT: "."
+}
+.clearfix {
+	DISPLAY: inline-block
+}
+* HTML .clearfix {
+	HEIGHT: 1%
+}
+.clearfix {
+	DISPLAY: block
+}
+.t0 {
+	LINE-HEIGHT: 1px; MARGIN: 0px; HEIGHT: 1px; FONT-SIZE: 1px
+}
+.t1 {
+	LINE-HEIGHT: 1px; MARGIN: 0px 2px; HEIGHT: 1px; FONT-SIZE: 1px
+}
+.t2 {
+	LINE-HEIGHT: 1px; MARGIN: 0px 1px; HEIGHT: 1px; FONT-SIZE: 1px
+}
+.t3 {
+	LINE-HEIGHT: 1px; MARGIN: 0px 1px; HEIGHT: 1px; FONT-SIZE: 1px
+}
+.t5 {
+	LINE-HEIGHT: 1px; HEIGHT: 1px; MARGIN-LEFT: 1px; FONT-SIZE: 1px
+}
+.t6 {
+	LINE-HEIGHT: 1px; HEIGHT: 1px; FONT-SIZE: 1px; MARGIN-RIGHT: 1px
+}
+.white {
+	BACKGROUND-COLOR: #ffffff
+}
+.dialogColor {
+	BACKGROUND-COLOR: #fe9641
+}
+.icon {
+	WIDTH: 20px; HEIGHT: 16px
+}
+.addSchedule.icon {
+	BACKGROUND: url(../img/icon_newschedule.gif) no-repeat center center
+}
+.newCalendar.icon {
+	BACKGROUND: url(../img/icon_newcld.gif) no-repeat center center
+}
+.newBirth.icon {
+	BACKGROUND: url(../../icon/cake.gif) no-repeat center center
+}
+.todoClass.icon {
+	BACKGROUND: url(../../icon/blog.gif) no-repeat center center
+}
+.subCalendar.icon {
+	BACKGROUND: url(../../icon/cat.gif) no-repeat center center
+}
+.remind.icon {
+	BACKGROUND: url(../../icon/clock.gif) no-repeat center center
+}
+.msn.icon {
+	BACKGROUND: url(../../icon/msn.gif) no-repeat center center
+}
+.favorite.icon {
+	BACKGROUND: url(../../icon/cd.gif) no-repeat center center
+}
+.share.icon {
+	BACKGROUND: url(../../icon/blog.gif) no-repeat center center
+}
+.tplbox {
+	DISPLAY: none
+}
+.shadow {
+	Z-INDEX: 19998; POSITION: absolute; FILTER: alpha(opacity=20); WIDTH: 100%; DISPLAY: none; BACKGROUND: #000000; TOP: 0px; LEFT: 0px; opacity: 0.2
+}
+.loading {
+	Z-INDEX: 19999; POSITION: absolute; PADDING-BOTTOM: 5px; PADDING-LEFT: 9px; WIDTH: 90px; PADDING-RIGHT: 0px; BACKGROUND: #cc4444 0px 0px; COLOR: #ffffff; FONT-SIZE: 16px; TOP: 0px; PADDING-TOP: 5px; LEFT: 0px
+}
+.b16 {
+	FONT-SIZE: 16px; FONT-WEIGHT: bold
+}
+.mb10 {
+	MARGIN-BOTTOM: 10px
+}
+.ml0 {
+	MARGIN-LEFT: 0px
+}
+.mr0 {
+	MARGIN-RIGHT: 0px
+}
+.mt15 {
+	MARGIN-TOP: 15px
+}
+.header {
+	POSITION: relative
+}
+.logo {
+	POSITION: absolute; WIDTH: 135px; BACKGROUND: url(../img/logo_new.gif) no-repeat; HEIGHT: 55px; TOP: 10px; LEFT: 5px
+}
+.logo_xinrili {
+	POSITION: absolute; WIDTH: 135px; BACKGROUND: url(../img/logo_xinrili.png) no-repeat; HEIGHT: 55px; TOP: 10px; LEFT: 5px
+}
+.loginStatus {
+	TEXT-ALIGN: right; LINE-HEIGHT: 27px; HEIGHT: 27px; MARGIN-RIGHT: 5px
+}
+.loginStatus .arrow {
+	MARGIN-TOP: 9px; WIDTH: 9px; BACKGROUND: url(../img/icon_arrow_right.gif) no-repeat; HEIGHT: 9px
+}
+.loginStatus .username {
+	MARGIN: 0px 0px 0px 5px
+}
+.loginStatus .loginOpt {
+	
+}
+.loginStatus .loginOpt LI {
+	DISPLAY: inline; COLOR: #455878; MARGIN-LEFT: 10px
+}
+.loginStatus .loginOpt LI.link {
+	CURSOR: pointer; TEXT-DECORATION: underline !important
+}
+.navBar {
+	MARGIN-LEFT: 140px
+}
+.navContent {
+	LINE-HEIGHT: 30px; HEIGHT: 30px
+}
+.nav {
+	COLOR: #ffffff; FONT-SIZE: 14px; FONT-WEIGHT: bold
+}
+.nav UL {
+	MARGIN-LEFT: 10px
+}
+.nav LI {
+	PADDING-BOTTOM: 0px; LIST-STYLE-TYPE: none; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; FLOAT: left; LIST-STYLE-IMAGE: none; PADDING-TOP: 0px
+}
+.nav .navText {
+	BORDER-BOTTOM: #ffffff 1px solid
+}
+.nav LI.selected {
+	BACKGROUND-COLOR: #455878
+}
+.nav LI:hover {
+	BACKGROUND-COLOR: #336699
+}
+.nav LI.over {
+	BACKGROUND-COLOR: #336699
+}
+.nav LI:hover .navText {
+	BORDER-BOTTOM: 0px
+}
+.nav LI.over .navText {
+	BORDER-BOTTOM: 0px
+}
+.nav LI.selected .navText {
+	BORDER-BOTTOM: 0px
+}
+.nav LI A:link {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+.nav LI A:visited {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+.nav LI A:hover {
+	TEXT-DECORATION: none
+}
+.searchBar {
+	WIDTH: 230px; DISPLAY: inline; BACKGROUND: url(../img/searchForm.gif) no-repeat; HEIGHT: 30px; MARGIN-RIGHT: 5px
+}
+.searchBar .searchKey {
+	BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; PADDING-BOTTOM: 5px; MARGIN: 2px 0px 0px 23px; PADDING-LEFT: 8px; WIDTH: 140px; PADDING-RIGHT: 0px; BACKGROUND: 0px 0px; FLOAT: left; COLOR: #666666; BORDER-TOP: medium none; BORDER-RIGHT: medium none; PADDING-TOP: 5px
+}
+.searchBar .searchBtn {
+	LINE-HEIGHT: 24px; MARGIN: 2px 2px 0px 0px; WIDTH: 48px; DISPLAY: inline; FLOAT: right; HEIGHT: 24px; CURSOR: pointer
+}
+.optbar {
+	LINE-HEIGHT: 25px; MARGIN: 15px 0px 10px 20px; HEIGHT: 25px
+}
+.optbar .icon {
+	MARGIN-TOP: 4px
+}
+.optbar UL LI {
+	FLOAT: left
+}
+.optbar UL LI A {
+	PADDING-BOTTOM: 0px; MARGIN: 0px 5px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; DISPLAY: block; COLOR: #455878; FONT-SIZE: 14px; TEXT-DECORATION: none; PADDING-TOP: 0px
+}
+.optbar UL LI A:visited {
+	PADDING-BOTTOM: 0px; MARGIN: 0px 5px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; DISPLAY: block; COLOR: #455878; FONT-SIZE: 14px; TEXT-DECORATION: none; PADDING-TOP: 0px
+}
+.optbar UL LI A:hover {
+	BACKGROUND: #455878; COLOR: #ffffff
+}
+.optbar .optText {
+	BORDER-BOTTOM: #455878 1px solid
+}
+BODY.main {
+	OVERFLOW: hidden
+}
+.main .page {
+	WIDTH: 100%; OVERFLOW: hidden
+}
+.main .header {
+	MARGIN-RIGHT: 10px
+}
+.main .sidebar {
+	FLOAT: left; HEIGHT: 200px; OVERFLOW: hidden
+}
+.main #spliter {
+	WIDTH: 7px; FLOAT: left; CURSOR: pointer
+}
+.main .spliter_hide {
+	BACKGROUND: url(../img/spliter_hide.gif) #e6eaee no-repeat center center
+}
+.main .spliter_expand {
+	BACKGROUND: url(../img/spliter_expand.gif) #e6eaee no-repeat center center
+}
+.main .cldContentWrapper {
+	MARGIN: 0px 10px; WIDTH: 400px; DISPLAY: inline
+}
+.main .cldContent {
+	PADDING-BOTTOM: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; PADDING-TOP: 10px
+}
+.main .cldGridWrapper {
+	POSITION: relative; OVERFLOW: auto
+}
+.listPannel_box {
+	BORDER-BOTTOM: #c1d8f9 1px solid; POSITION: relative; BORDER-LEFT: #c1d8f9; PADDING-BOTTOM: 0px; OVERFLOW-X: hidden; OVERFLOW-Y: auto; MARGIN-TOP: 0px; PADDING-LEFT: 0px; WIDTH: 200px; PADDING-RIGHT: 0px; BORDER-TOP: #c1d8f9 1px solid; BORDER-RIGHT: #c1d8f9 1px solid; PADDING-TOP: 0px
+}
+.ul_folder {
+	PADDING-BOTTOM: 0px; LINE-HEIGHT: 24px; BACKGROUND-COLOR: inherit; LIST-STYLE-TYPE: none; MARGIN: 0px; PADDING-LEFT: 3px; PADDING-RIGHT: 0px; HEIGHT: 24px; CLEAR: both; CURSOR: pointer; LIST-STYLE-IMAGE: none; PADDING-TOP: 0px
+}
+.ul_folder:hover {
+	BACKGROUND-COLOR: #e1f1ff
+}
+.folder_preImg_expand {
+	PADDING-LEFT: 5px; WIDTH: 10px; BACKGROUND: url(../img/openFolder.gif) no-repeat center center; FLOAT: left; CURSOR: pointer; MARGIN-RIGHT: 2px
+}
+.folder_preImg_collapse {
+	PADDING-LEFT: 5px; WIDTH: 10px; BACKGROUND: url(../img/closeFolder.gif) no-repeat center center; FLOAT: left; CURSOR: pointer; MARGIN-RIGHT: 2px
+}
+.folder_title_li {
+	MAX-WIDTH: 154px; WHITE-SPACE: nowrap; FLOAT: left; OVERFLOW: hidden; CURSOR: pointer
+}
+.ul_root_sublist {
+	LIST-STYLE: none none outside; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; CLEAR: both; PADDING-TOP: 0px
+}
+.ul_sublist {
+	PADDING-BOTTOM: 0px; LIST-STYLE-TYPE: none; MARGIN: 0px 0px 0px 7px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; TABLE-LAYOUT: fixed; CLEAR: both; LIST-STYLE-IMAGE: none; PADDING-TOP: 0px
+}
+.li_subcld {
+	POSITION: relative; WIDTH: 100%; MARGIN-BOTTOM: 2px; FLOAT: left
+}
+.subcld {
+	LINE-HEIGHT: 18px; MARGIN: 0px 23px 0px 5px; HEIGHT: 20px
+}
+.subcldImg {
+	BACKGROUND-IMAGE: url(../img/combined.gif); POSITION: absolute; WIDTH: 15px; HEIGHT: 14px; OVERFLOW: hidden; TOP: 4px; CURSOR: pointer; RIGHT: 5px
+}
+.index .page {
+	MARGIN: 0px auto; WIDTH: 980px
+}
+.index .container {
+	PADDING-BOTTOM: 10px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+.index .cldGridWrapper {
+	PADDING-BOTTOM: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 377px; PADDING-TOP: 10px
+}
+.index .mainWrapper {
+	HEIGHT: 375px
+}
+.index .cldContentWrapper {
+	WIDTH: 595px
+}
+.index .dayNotInMonthWrapper {
+	BACKGROUND-COLOR: #d9e4eb
+}
+.index .nogutter {
+	BORDER-LEFT-COLOR: #888d94
+}
+.index .hruleMonth {
+	BORDER-TOP-COLOR: #888d94
+}
+.index .dayOfMonth {
+	TEXT-ALIGN: left; BACKGROUND: #ffffff; COLOR: #666666
+}
+.index .currentDay {
+	BACKGROUND: #fe9641
+}
+.index .dateNum {
+	Z-INDEX: 0; POSITION: absolute; TEXT-ALIGN: right; FONT-STYLE: italic; WIDTH: 45px; BOTTOM: 0px; FONT-FAMILY: Arial; HEIGHT: 40px; COLOR: #d8e6e9; FONT-SIZE: 40px; OVERFLOW: hidden; CURSOR: pointer; RIGHT: 0px; FONT-WEIGHT: bolder
+}
+.single .page {
+	MARGIN: 0px auto; WIDTH: 980px
+}
+.single .container {
+	PADDING-BOTTOM: 80px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BACKGROUND: url(../img/single_bg_default.gif) no-repeat; PADDING-TOP: 30px
+}
+.single .cldTitle {
+	PADDING-BOTTOM: 0px; BACKGROUND-COLOR: #4b6696; PADDING-LEFT: 30px; PADDING-RIGHT: 20px; FLOAT: left; HEIGHT: 79px; COLOR: #ffffff; PADDING-TOP: 10px
+}
+.single .cldName {
+	FONT-FAMILY: Î¢ÈíÑÅºÚ, ºÚÌå; FONT-SIZE: 34px; FONT-WEIGHT: bold
+}
+.single .cldDesc {
+	MARGIN: 5px 0px 0px 4px
+}
+.single .cldWrapper {
+	MARGIN: 50px 5px 0px
+}
+.single .cldSideWrapper {
+	WIDTH: 190px
+}
+.single .cldContentWrapper {
+	WIDTH: 780px
+}
+.single .cldSide {
+	PADDING-BOTTOM: 20px; PADDING-LEFT: 8px; PADDING-RIGHT: 2px; PADDING-TOP: 5px
+}
+.single .cldSideBox H2 {
+	PADDING-BOTTOM: 4px; LINE-HEIGHT: 14px; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; COLOR: #ffffff; FONT-SIZE: 14px; FONT-WEIGHT: bold; PADDING-TOP: 7px
+}
+.single .cldSideBox UL.cldRelated {
+	MARGIN: 8px 0px 0px 5px
+}
+.single .cldSideBox UL.cldRelated LI {
+	LIST-STYLE-POSITION: inside; LIST-STYLE-TYPE: disc; COLOR: #455878
+}
+.single .cldSideBox UL.cldRelated LI A {
+	COLOR: #455878; TEXT-DECORATION: underline
+}
+.single .cldSideBox UL.cldRelated LI A:visited {
+	COLOR: #455878; TEXT-DECORATION: underline
+}
+.single .cldSideBox UL.todaySchedules {
+	MARGIN: 8px 0px 0px 5px; WORD-BREAK: break-all
+}
+.single .cldSideBox UL.todaySchedules LI {
+	LINE-HEIGHT: 1.5em
+}
+.single .cldSideBox UL.todaySchedules .time {
+	LETTER-SPACING: 1px; COLOR: #455878; FONT-WEIGHT: bold
+}
+.single .cldSideBox UL.todaySchedules .note {
+	COLOR: #455878; MARGIN-LEFT: 10px; CURSOR: pointer
+}
+.single .cldContent {
+	PADDING-BOTTOM: 10px; PADDING-LEFT: 15px; PADDING-RIGHT: 10px; PADDING-TOP: 15px
+}
+.single .cldGridWrapper {
+	HEIGHT: 600px
+}
+.single .mainWrapper {
+	HEIGHT: 580px
+}
+.single .scheduleListWrapper {
+	
+}
+.single .scheduleListTitle {
+	PADDING-BOTTOM: 4px; LINE-HEIGHT: 14px; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; COLOR: #ffffff; FONT-SIZE: 14px; FONT-WEIGHT: bold; PADDING-TOP: 6px
+}
+.single .scheduleListTable {
+	BORDER-BOTTOM: #acb1bd 1px solid; BORDER-LEFT: #acb1bd 1px solid; WIDTH: 100%; BORDER-COLLAPSE: separate; BACKGROUND: #ffffff; TABLE-LAYOUT: fixed; WORD-BREAK: break-all; BORDER-TOP: #acb1bd 1px solid; BORDER-RIGHT: #acb1bd 1px solid
+}
+.single .scheduleItem {
+	
+}
+.single .odd.scheduleItem {
+	BACKGROUND: #ffffff
+}
+.single .even.scheduleItem {
+	BACKGROUND: #eff3f7
+}
+.single .scheduleItem .time {
+	PADDING-BOTTOM: 3px; PADDING-LEFT: 5px; WIDTH: 118px; PADDING-RIGHT: 5px; COLOR: #47484a; PADDING-TOP: 3px
+}
+.single .scheduleItem .note {
+	BORDER-LEFT: #d6e0ea 1px solid; PADDING-BOTTOM: 3px; PADDING-LEFT: 5px; WIDTH: 500px; PADDING-RIGHT: 5px; COLOR: #455878; CURSOR: pointer; BORDER-RIGHT: #d6e0ea 1px solid; PADDING-TOP: 3px
+}
+.single .scheduleItem .author {
+	PADDING-BOTTOM: 3px; PADDING-LEFT: 5px; WIDTH: 90px; PADDING-RIGHT: 5px; COLOR: #455878; PADDING-TOP: 3px
+}
+.pageNav {
+	MARGIN: 10px; HEIGHT: 24px
+}
+.pageNav SPAN {
+	PADDING-BOTTOM: 2px; LINE-HEIGHT: 16px; MARGIN: 2px; PADDING-LEFT: 2px; PADDING-RIGHT: 2px; DISPLAY: block; FLOAT: left; HEIGHT: 16px; PADDING-TOP: 2px
+}
+.pageNav SPAN.pages {
+	BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 1px solid; BACKGROUND-COLOR: #ffffff; COLOR: #000000; BORDER-TOP: #000000 1px solid; BORDER-RIGHT: #000000 1px solid
+}
+.pageNav SPAN.link {
+	BORDER-BOTTOM: #0066cc 1px solid; BORDER-LEFT: #0066cc 1px solid; BACKGROUND-COLOR: #ffffff; COLOR: #0066cc; BORDER-TOP: #0066cc 1px solid; CURSOR: pointer; BORDER-RIGHT: #0066cc 1px solid
+}
+.pageNav SELECT {
+	PADDING-BOTTOM: 2px; LINE-HEIGHT: 16px; MARGIN: 2px; PADDING-LEFT: 2px; PADDING-RIGHT: 2px; DISPLAY: block; FLOAT: left; HEIGHT: 22px; PADDING-TOP: 2px
+}
+#dateSelectionDiv {
+	Z-INDEX: 20; BORDER-BOTTOM: #7fb4e9 1px solid; POSITION: absolute; BORDER-LEFT: #7fb4e9 1px solid; WIDTH: 160px; DISPLAY: none; BACKGROUND: #f1f6f7; BORDER-TOP: #7fb4e9 1px solid; TOP: 25px; BORDER-RIGHT: #7fb4e9 1px solid
+}
+#dateSelectionHeader {
+	WIDTH: 100%; FONT-SIZE: 0px
+}
+#dateSelectionBody {
+	WIDTH: 100%
+}
+#dateSelectionFooter {
+	WIDTH: 100%; FONT-SIZE: 0px
+}
+#dateSeparator {
+	MARGIN: 0px auto; WIDTH: 152px; HEIGHT: 2px; FONT-SIZE: 0px
+}
+#dateSelectionBtn {
+	LINE-HEIGHT: 20px; MARGIN: 0px auto; WIDTH: 133px; HEIGHT: 20px
+}
+#dateSelectionTodayBtn {
+	WIDTH: 41px; FLOAT: left; HEIGHT: 20px; CURSOR: pointer
+}
+#dateSelectionOkBtn {
+	TEXT-ALIGN: center; MARGIN: 0px 5px; WIDTH: 41px; FLOAT: left; HEIGHT: 20px; CURSOR: pointer
+}
+#dateSelectionCancelBtn {
+	TEXT-ALIGN: right; WIDTH: 41px; FLOAT: right; HEIGHT: 20px; CURSOR: pointer
+}
+#yearList {
+	LINE-HEIGHT: 20px; WIDTH: 158px; HEIGHT: 20px; COLOR: green
+}
+#yearListPrev {
+	TEXT-ALIGN: left; WIDTH: 8px; FLOAT: left; HEIGHT: 20px; MARGIN-LEFT: 3px; CURSOR: pointer
+}
+#yearListNext {
+	TEXT-ALIGN: right; WIDTH: 8px; FLOAT: right; HEIGHT: 20px; CURSOR: pointer; MARGIN-RIGHT: 3px
+}
+#yearListContent {
+	FLOAT: left; HEIGHT: 20px
+}
+#yearListContent .year {
+	TEXT-ALIGN: center; WIDTH: 33px; DISPLAY: block; FLOAT: left; HEIGHT: 20px; FONT-SIZE: 11px; CURSOR: pointer
+}
+#yearListContent .curr {
+	COLOR: red
+}
+#monthList {
+	PADDING-BOTTOM: 0px; MARGIN: 0px 1px; PADDING-LEFT: 15px; PADDING-RIGHT: 15px; PADDING-TOP: 0px
+}
+#monthListContent .month {
+	TEXT-ALIGN: center; LINE-HEIGHT: 15px; MARGIN: 2px; WIDTH: 17px; DISPLAY: block; FLOAT: left; HEIGHT: 15px; CURSOR: pointer
+}
+#monthListContent .curr {
+	COLOR: red
+}
+.mainWrapper {
+	OVERFLOW: hidden
+}
+.mainColor {
+	BORDER-BOTTOM-COLOR: #c3d9ff; BACKGROUND-COLOR: #c3d9ff; BORDER-TOP-COLOR: #c3d9ff; BORDER-RIGHT-COLOR: #c3d9ff; BORDER-LEFT-COLOR: #c3d9ff
+}
+#mainBody {
+	POSITION: relative
+}
+.mainNav {
+	POSITION: relative; HEIGHT: 25px
+}
+.dateNavBtnWrapper {
+	WIDTH: 23px; HEIGHT: 20px
+}
+.dateNavBtn {
+	TEXT-ALIGN: center; LINE-HEIGHT: 18px; WIDTH: 23px; HEIGHT: 18px; COLOR: #ffffff; CURSOR: pointer
+}
+.month.dateNavBtnWrapper .dateNavBtn {
+	FONT-SIZE: 12px
+}
+.year.dateNavBtnWrapper .dateNavBtn {
+	LETTER-SPACING: -2px; FONT-SIZE: 10px
+}
+#prevYearBtn {
+	POSITION: absolute; TOP: 0px; LEFT: 0px
+}
+#prevMonthBtn {
+	POSITION: absolute; TOP: 0px; LEFT: 30px
+}
+#nextMonthBtn {
+	POSITION: absolute; TOP: 0px; RIGHT: 30px
+}
+#nextYearBtn {
+	POSITION: absolute; TOP: 0px; RIGHT: 0px
+}
+.dateNavInfo {
+	Z-INDEX: 20; POSITION: relative; TEXT-ALIGN: center; LINE-HEIGHT: 20px; MARGIN: 0px auto; WIDTH: 280px; FONT-FAMILY: Verdana; HEIGHT: 25px; COLOR: #455878; FONT-SIZE: 14px; FONT-WEIGHT: bold
+}
+.dateSelection {
+	BORDER-BOTTOM: #455878 1px solid; CURSOR: pointer
+}
+.dateSelectionBtn {
+	FONT-SIZE: 11px; CURSOR: pointer
+}
+#lunarValue {
+	MARGIN-LEFT: 10px
+}
+.mainGrid {
+	
+}
+.printborder {
+	BORDER-LEFT: #c3d9ff 9px solid
+}
+#colheaders {
+	POSITION: relative; LINE-HEIGHT: 18px; HEIGHT: 18px
+}
+.chead {
+	TEXT-ALIGN: center
+}
+.cheadNotToday {
+	COLOR: #ffffff
+}
+.cheadNotToday A {
+	COLOR: #ffffff
+}
+.chead {
+	FONT-SIZE: 12px
+}
+.rheadtext {
+	FONT-SIZE: 12px
+}
+.chead {
+	POSITION: absolute
+}
+.rhead {
+	POSITION: absolute
+}
+#gridcontainer {
+	BORDER-BOTTOM: #acb1bd 1px solid; POSITION: relative; BORDER-LEFT: #acb1bd 1px solid; BACKGROUND: #e8eef7; HEIGHT: 300px; OVERFLOW: hidden; BORDER-TOP: #acb1bd 1px solid; BORDER-RIGHT: #acb1bd 1px solid
+}
+#calowner {
+	WIDTH: 100%; DISPLAY: block; HEIGHT: 100%
+}
+DIV.grid {
+	POSITION: relative; BACKGROUND: #ffffff 0px 0px; HEIGHT: 100%; CURSOR: default
+}
+#eventowner {
+	POSITION: absolute; WIDTH: 100%; HEIGHT: 100%; TOP: 0px; LEFT: 0px
+}
+#decowner {
+	POSITION: absolute; WIDTH: 100%; HEIGHT: 100%; TOP: 0px; LEFT: 0px
+}
+#clickowner {
+	POSITION: absolute; WIDTH: 100%; HEIGHT: 100%; TOP: 0px; LEFT: 0px
+}
+.dayInMonth {
+	COLOR: #6a6a6b
+}
+.dayOfMonth {
+	POSITION: absolute; TEXT-ALIGN: right; LINE-HEIGHT: 18px; WIDTH: 100%; FONT-FAMILY: Verdana; BACKGROUND: #e8eef7 0px 0px; HEIGHT: 18px; TOP: 0px; LEFT: 0px
+}
+.index .dayOfMonthWithoutBg {
+	BACKGROUND: 0px 0px
+}
+.dayOfMonth .cldIcons {
+	MARGIN-TOP: 1px; FLOAT: left
+}
+.dayOfMonth .cldIcons IMG {
+	MARGIN-LEFT: 1px; CURSOR: pointer
+}
+.currentDay {
+	BORDER-LEFT: #889bb1 1px solid; BACKGROUND: #fe9641 0px 0px; COLOR: #ffffff; BORDER-RIGHT: #ddeeff 1px solid
+}
+.currentDayDecIndex {
+	BORDER-BOTTOM: #ff0000 3px solid; BORDER-LEFT: #ff0000 3px solid; MARGIN-TOP: 1px; WIDTH: 91%; HEIGHT: 89%; MARGIN-LEFT: 1px; BORDER-TOP: #ff0000 3px solid; BORDER-RIGHT: #ff0000 3px solid
+}
+.currentDayDec {
+	WIDTH: 100%; BACKGROUND: #ffffcc 0px 0px; HEIGHT: 100%
+}
+.hruleMonth {
+	BORDER-TOP: #ccddee 1px solid
+}
+.hrule {
+	POSITION: absolute; WIDTH: 100%; LEFT: 0px
+}
+.nogutter {
+	BORDER-LEFT: #ccddee 1px solid
+}
+.vrule {
+	POSITION: absolute; TOP: 0px
+}
+.scowner {
+	POSITION: absolute; DISPLAY: none
+}
+#eventowner .event {
+	Z-INDEX: 2; POSITION: absolute; LINE-HEIGHT: 15px; MARGIN: 0px 0px 0px 2px; OVERFLOW: hidden
+}
+#eventowner .icon {
+	Z-INDEX: 5; POSITION: absolute
+}
+#clickowner .click {
+	Z-INDEX: 5; POSITION: absolute; CURSOR: pointer
+}
+.noleft {
+	PADDING-LEFT: 3px
+}
+.moreicon {
+	POSITION: absolute
+}
+.moreevent {
+	Z-INDEX: 5; POSITION: absolute; TEXT-ALIGN: right; LINE-HEIGHT: 17px; MARGIN: 0px 0px 0px 2px; WHITE-SPACE: nowrap; COLOR: #112abb; CURSOR: pointer; TEXT-DECORATION: underline
+}
+.menu {
+	Z-INDEX: 1000000; BORDER-BOTTOM: #92a3b9 1px solid; POSITION: absolute; BORDER-LEFT: #92a3b9 1px solid; PADDING-BOTTOM: 1px; LINE-HEIGHT: 22px; BACKGROUND-COLOR: #ffffff; PADDING-LEFT: 1px; WIDTH: 130px; PADDING-RIGHT: 1px; BORDER-TOP: #92a3b9 1px solid; TOP: 150px; BORDER-RIGHT: #92a3b9 1px solid; PADDING-TOP: 1px; LEFT: 300px
+}
+.menuitem {
+	BORDER-BOTTOM: #ffffff 1px solid; BORDER-LEFT: #ffffff 1px solid; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: #ffffff; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; COLOR: #435d90; BORDER-TOP: #ffffff 1px solid; CURSOR: default; BORDER-RIGHT: #ffffff 1px solid; PADDING-TOP: 0px
+}
+.hovermenuitem {
+	BORDER-BOTTOM: #a9b7c9 1px solid; BORDER-LEFT: #a9b7c9 1px solid; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: #e1f1ff; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; COLOR: #435d90; BORDER-TOP: #a9b7c9 1px solid; BORDER-RIGHT: #a9b7c9 1px solid; PADDING-TOP: 0px
+}
+.subcldPannel {
+	Z-INDEX: 20000; BORDER-BOTTOM: #5b85c2 2px solid; POSITION: absolute; BORDER-LEFT: #5b85c2 2px solid; PADDING-BOTTOM: 5px; BACKGROUND-COLOR: #ddecff; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; DISPLAY: block; VISIBILITY: hidden; BORDER-TOP: #5b85c2 2px solid; TOP: 0px; BORDER-RIGHT: #5b85c2 2px solid; PADDING-TOP: 5px; LEFT: 0px
+}
+.subcldPannel .title {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 5px; PADDING-RIGHT: 0px; FLOAT: left; COLOR: black; FONT-WEIGHT: bold; PADDING-TOP: 3px
+}
+.subcldPannel .close {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; BACKGROUND: url(../img/closePanel.gif) no-repeat center top; FLOAT: right; CURSOR: pointer; PADDING-TOP: 0px
+}
+.subcldPannel .select {
+	BORDER-BOTTOM: #989ca5 1px solid; BORDER-LEFT: #989ca5 1px solid; MARGIN: 5px 10px 5px 5px; WIDTH: 200px; BORDER-TOP: #989ca5 1px solid; BORDER-RIGHT: #989ca5 1px solid
+}
+.subcldPannel .subcldInput {
+	BORDER-BOTTOM: #989ca5 1px solid; BORDER-LEFT: #989ca5 1px solid; MARGIN: 5px 10px 5px 5px; WIDTH: 200px; BORDER-TOP: #989ca5 1px solid; BORDER-RIGHT: #989ca5 1px solid
+}
+.subcldPannel .append {
+	TEXT-ALIGN: center; MARGIN: 5px 10px 5px 0px; WIDTH: 45px; HEIGHT: 25px; CURSOR: pointer
+}
+.ts428 {
+	WIDTH: 428px
+}
+.dialog {
+	Z-INDEX: 19999; POSITION: absolute; DISPLAY: none; TOP: 80px
+}
+.dialog .top {
+	LINE-HEIGHT: 1px; BACKGROUND: url(../img/dialog_top.gif) no-repeat; HEIGHT: 7px; FONT-SIZE: 1px
+}
+.dialog .bottom {
+	LINE-HEIGHT: 1px; BACKGROUND: url(../img/dialog_bottom.gif) no-repeat; HEIGHT: 6px; FONT-SIZE: 1px
+}
+.dialog .titleWrapper {
+	BACKGROUND: #fe9641
+}
+.dialog .title {
+	MARGIN: 3px 0px 0px 15px; DISPLAY: inline; COLOR: #ffffff; FONT-SIZE: 14px; FONT-WEIGHT: bold
+}
+.dialog .close {
+	WIDTH: 18px; DISPLAY: inline; BACKGROUND: url(../img/dialog_close.gif) no-repeat; HEIGHT: 18px; CURSOR: pointer; MARGIN-RIGHT: 10px
+}
+.dialog .contentWrapper {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 2px; PADDING-RIGHT: 2px; BACKGROUND: #fe9641; PADDING-TOP: 5px
+}
+.dialog .content {
+	BACKGROUND: #ffffff
+}
+.detail {
+	
+}
+.detail .lunar {
+	LINE-HEIGHT: 30px; PADDING-LEFT: 13px; BACKGROUND: #f4f0e7; HEIGHT: 30px; COLOR: #8b8883
+}
+.detail .detailOpt {
+	LINE-HEIGHT: 25px; HEIGHT: 25px
+}
+.detail .detailOpt .icon {
+	MARGIN-TOP: 4px
+}
+.detail .detailOpt A {
+	PADDING-BOTTOM: 0px; MARGIN: 2px 5px 0px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; DISPLAY: block; COLOR: #455878; FONT-SIZE: 14px; TEXT-DECORATION: none; PADDING-TOP: 0px
+}
+.detail .detailOpt A:visited {
+	PADDING-BOTTOM: 0px; MARGIN: 2px 5px 0px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; DISPLAY: block; COLOR: #455878; FONT-SIZE: 14px; TEXT-DECORATION: none; PADDING-TOP: 0px
+}
+.detail .detailOpt A:hover {
+	BACKGROUND: #455878; COLOR: #ffffff
+}
+.detail .detailOpt .optText {
+	BORDER-BOTTOM: #455878 1px solid
+}
+.detail .huangli {
+	LINE-HEIGHT: 20px; MARGIN: 3px 12px; PADDING-LEFT: 22px; COLOR: #666666
+}
+.detail .y.huangli {
+	BACKGROUND: url(../img/huangli_y.gif) no-repeat left top
+}
+.detail .j.huangli {
+	BACKGROUND: url(../img/huangli_j.gif) no-repeat left top
+}
+.detail .itemsWrapper {
+	MARGIN: 0px 10px
+}
+.detail .cldDetailWrapper {
+	
+}
+.detail .cldDetailSpliter {
+	LINE-HEIGHT: 1px; HEIGHT: 10px; FONT-SIZE: 1px
+}
+.detail .cldDetailTitleWrapper {
+	BORDER-BOTTOM: #cccccc 1px solid; BORDER-LEFT: #cccccc 1px solid; BACKGROUND: #e1e1e1; BORDER-TOP: #cccccc 1px solid; BORDER-RIGHT: #cccccc 1px solid
+}
+.detail .cldDetailTitle {
+	PADDING-BOTTOM: 3px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; MARGIN-LEFT: 5px; FONT-SIZE: 14px; CURSOR: pointer; FONT-WEIGHT: bold; PADDING-TOP: 3px
+}
+.detail .cldDetailTitle .cldDetailTitleText {
+	BORDER-BOTTOM: #455878 1px solid
+}
+.detail .cldDetailTitle .cldDetailTitleCount {
+	FONT-SIZE: 12px; FONT-WEIGHT: normal
+}
+.detail .cldDetailImage {
+	MARGIN: 0px 3px -2px 0px
+}
+.detail .cldOpt {
+	LINE-HEIGHT: 20px; MARGIN-RIGHT: 10px
+}
+.detail .cldOpt .opt {
+	BORDER-BOTTOM: #000000 1px solid; CURSOR: pointer
+}
+.detail .detailItemWrapper {
+	BORDER-BOTTOM: #cccccc 1px solid; BORDER-LEFT: #cccccc 1px solid; LINE-HEIGHT: 25px; BORDER-RIGHT: #cccccc 1px solid
+}
+.detail .odd.detailItemWrapper {
+	BACKGROUND: #ffffff
+}
+.detail .even.detailItemWrapper {
+	BACKGROUND: #ecf1fa
+}
+.detail .detailItemWrapper .detailItemBox {
+	WIDTH: 100%; DISPLAY: inline; FLOAT: right; MARGIN-LEFT: -60px
+}
+.detail .detailItemWrapper .noteWrapper {
+	MARGIN-LEFT: 65px
+}
+.detail .detailItemWrapper .note {
+	WIDTH: 100%; COLOR: #5f6063; WORD-BREAK: break-all; CURSOR: pointer
+}
+.detail .detailItemWrapper .time {
+	TEXT-ALIGN: right; WIDTH: 60px; FLOAT: left; COLOR: #646464
+}
+.detail .detailItemBtn {
+	POSITION: absolute; WIDTH: 15px; DISPLAY: none; BACKGROUND: url(../img/detail_opt_btn.gif) no-repeat; HEIGHT: 14px; CURSOR: pointer
+}
+.editCld {
+	
+}
+.editCld .editCldWrapper {
+	LINE-HEIGHT: 25px; MARGIN: 10px 20px; WIDTH: 384px
+}
+.editCld .editCldWrapper TEXTAREA {
+	WIDTH: 280px; HEIGHT: 80px
+}
+.editCld .defaultIcons IMG {
+	DISPLAY: block; FLOAT: left; VERTICAL-ALIGN: middle; MARGIN-RIGHT: 1px
+}
+.editCld .defaultIcons {
+	MARGIN-LEFT: 10px
+}
+.editCld .defaultIcons IMG {
+	CURSOR: pointer
+}
+.editCld .moreIconsBtn {
+	WIDTH: 15px; BACKGROUND: url(../img/detail_opt_btn.gif) no-repeat center bottom; HEIGHT: 16px; MARGIN-LEFT: 10px; CURSOR: pointer
+}
+.editCld .moreIcons {
+	POSITION: absolute; WIDTH: 317px; VISIBILITY: hidden
+}
+.editCld .moreIconsTab {
+	MARGIN: 5px 5px 0px; DISPLAY: inline
+}
+.editCld .moreIconsTab LI {
+	PADDING-BOTTOM: 3px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; FLOAT: left; COLOR: #ffffff; CURSOR: pointer; TEXT-DECORATION: underline; PADDING-TOP: 5px
+}
+.editCld .moreIconsTab LI.selected {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; BACKGROUND: #ffffff; COLOR: #000000; TEXT-DECORATION: none; PADDING-TOP: 8px
+}
+.editCld .moreIconsList {
+	PADDING-BOTTOM: 10px; MARGIN: 0px 5px 3px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; BACKGROUND: #ffffff; PADDING-TOP: 10px
+}
+.editCld .moreIconsList IMG {
+	MARGIN: 5px 3px; DISPLAY: block; FLOAT: left; VERTICAL-ALIGN: middle; CURSOR: pointer
+}
+.editCld .moreIcons .close {
+	MARGIN: 5px 5px 0px 0px
+}
+.editSchedule .editScheduleWrapper {
+	MARGIN: 10px 20px; WIDTH: 384px
+}
+.editSchedule .lunarSwitch {
+	LINE-HEIGHT: 20px; HEIGHT: 20px
+}
+.editSchedule .lunarSwitch LI.switch {
+	TEXT-ALIGN: center; LINE-HEIGHT: 20px; WIDTH: 40px; BACKGROUND: url(../img/btn_normal.gif) no-repeat; FLOAT: left; HEIGHT: 20px; CURSOR: pointer; MARGIN-RIGHT: 5px
+}
+.editSchedule .lunarSwitch LI.selected {
+	BACKGROUND: url(../img/btn_selected.gif) no-repeat
+}
+.editSchedule .scheduleTimeSelect {
+	MARGIN-TOP: 10px
+}
+.editSchedule .repeatSelect {
+	LINE-HEIGHT: 20px; MARGIN-TOP: 5px; HEIGHT: 20px
+}
+.editSchedule .repeatSelect LI {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 2px; PADDING-RIGHT: 3px; FLOAT: left; MARGIN-RIGHT: 2px; PADDING-TOP: 0px
+}
+.editSchedule .repeatSelect LI.selected {
+	BACKGROUND-COLOR: #d9e1f4
+}
+.editSchedule .repeatWeekSelect {
+	LINE-HEIGHT: 20px; BACKGROUND-COLOR: #d9e1f4; FLOAT: left; HEIGHT: 20px
+}
+.editSchedule .repeatWeekSelect LI {
+	MARGIN: 0px 5px 0px 0px; FLOAT: left
+}
+.editSchedule .scheduleContent {
+	LINE-HEIGHT: 20px; MARGIN-TOP: 5px
+}
+.editSchedule .scheduleNote {
+	WIDTH: 350px; HEIGHT: 100px
+}
+.editSchedule .scheduleRemind {
+	MARGIN-TOP: 5px
+}
+.editSchedule .calendarList {
+	MARGIN-TOP: 5px
+}
+.editSchedule .editScheduleBtns {
+	TEXT-ALIGN: center; MARGIN-TOP: 5px
+}
+.loginDialogContent {
+	
+}
+.loginDialogContent A:link {
+	COLOR: #336699; TEXT-DECORATION: underline
+}
+.loginDialogContent A:visited {
+	COLOR: #336699; TEXT-DECORATION: underline
+}
+.loginDialogContent A:hover {
+	BACKGROUND: #003399; COLOR: #ffffff; TEXT-DECORATION: none
+}
+.loginDialogContent .userLoginForm {
+	LINE-HEIGHT: 150%; MARGIN: 10px 20px
+}
+.loginDialogContent .loginInput {
+	MARGIN-TOP: 0.3em; COLOR: #016502
+}
+.loginDialogContent .loginInput .label {
+	LINE-HEIGHT: 120%; MARGIN-TOP: 0.3em; WIDTH: 5em; FLOAT: left; COLOR: #006600; FONT-SIZE: 12px
+}
+.loginDialogContent .loginInput .text {
+	BORDER-BOTTOM: #cccccc 1px solid; BORDER-LEFT: #cccccc 1px solid; MARGIN: 2px 5px; WIDTH: 180px; FLOAT: left; BORDER-TOP: #cccccc 1px solid; BORDER-RIGHT: #cccccc 1px solid
+}
+.loginDialogContent .loginEnd {
+	MARGIN-TOP: 0.5em; MARGIN-LEFT: 5em
+}
+.loginDialogContent .loginEnd .submit {
+	MARGIN: 4px 0px 2px 4px
+}
+.manageAccountContent {
+	
+}
+.manageAccountContent .manageAccountWrapper {
+	MARGIN: 10px
+}
+.manageAccountContent TABLE.userInfo TD {
+	PADDING-BOTTOM: 5px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; PADDING-TOP: 5px
+}
+.manageRemindContent {
+	
+}
+.manageRemindContent .remindListWrapper {
+	MARGIN: 10px
+}
+.remindListWrapper .remindItemWrapper {
+	BORDER-BOTTOM: #cccccc 1px solid; BORDER-LEFT: #cccccc 1px solid; LINE-HEIGHT: 25px; BORDER-RIGHT: #cccccc 1px solid
+}
+.remindListWrapper .odd.remindItemWrapper {
+	BACKGROUND: #ffffff
+}
+.remindListWrapper .even.remindItemWrapper {
+	BACKGROUND: #ecf1fa
+}
+.remindListWrapper .remindItemWrapper .remindItemBox {
+	WIDTH: 100%; DISPLAY: inline; FLOAT: right; MARGIN-LEFT: -80px
+}
+.remindListWrapper .remindItemWrapper .noteWrapper {
+	MARGIN-LEFT: 80px
+}
+.remindListWrapper .remindItemWrapper .note {
+	WIDTH: 100%; COLOR: #5f6063
+}
+.remindListWrapper .remindItemWrapper .time {
+	TEXT-ALIGN: center; WIDTH: 80px; FLOAT: left; COLOR: #646464
+}
+.remindListWrapper .remindItemBtn {
+	POSITION: absolute; WIDTH: 15px; DISPLAY: none; BACKGROUND: url(../img/detail_opt_btn.gif) no-repeat; HEIGHT: 14px; CURSOR: pointer
+}
+.cateWrapper {
+	
+}
+#categoryWrapper {
+	WIDTH: 595px; HEIGHT: 252px
+}
+#category {
+	WIDTH: 100%; HEIGHT: 100%
+}
+#cateTitle {
+	PADDING-BOTTOM: 5px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; HEIGHT: 20px; PADDING-TOP: 7px
+}
+#cateContent {
+	PADDING-BOTTOM: 5px; MARGIN: 0px 1px; PADDING-LEFT: 5px; WIDTH: 583px; PADDING-RIGHT: 5px; BACKGROUND: #eff3f7; HEIGHT: 210px; PADDING-TOP: 5px
+}
+.cateBorder {
+	BACKGROUND: #e3e3e3
+}
+#cateSlide {
+	HEIGHT: 210px
+}
+#cateSlideshow {
+	WIDTH: 100%; OVERFLOW: hidden
+}
+.slideUl {
+	WIDTH: 3900px
+}
+.slideLi {
+	FLOAT: left
+}
+.cateDiv {
+	PADDING-BOTTOM: 0px; MARGIN: 10px 0px; PADDING-LEFT: 20px; WIDTH: 160px; PADDING-RIGHT: 2px; BACKGROUND: #eff3f7; HEIGHT: 189px; BORDER-RIGHT: #dadcde 2px solid; PADDING-TOP: 0px
+}
+.cateDiv LI {
+	LIST-STYLE-POSITION: inside; LIST-STYLE-TYPE: disc
+}
+.rightBox {
+	WIDTH: 370px; MARGIN-BOTTOM: 10px
+}
+.rightBoxContent {
+	BORDER-LEFT: #dee8f1 1px solid; PADDING-BOTTOM: 10px; LINE-HEIGHT: 22px; PADDING-LEFT: 20px; PADDING-RIGHT: 20px; BACKGROUND: #eff3f7; BORDER-RIGHT: #dee8f1 1px solid; PADDING-TOP: 10px
+}
+#downloadBtn {
+	BACKGROUND-IMAGE: url(../img/newDownLoad.jpg); MARGIN: 20px 0px 10px 45px; WIDTH: 257px; HEIGHT: 82px; CURSOR: pointer
+}
+.downSite {
+	TEXT-ALIGN: right; WIDTH: 200px; DISPLAY: inline; BACKGROUND: url(../img/downArrow.gif) no-repeat 0px 2px; COLOR: #003399; CURSOR: pointer; FONT-WEIGHT: bold; MARGIN-RIGHT: 10px
+}
+.indexDataTitle {
+	PADDING-BOTTOM: 4px; LINE-HEIGHT: 20px; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; COLOR: white; FONT-SIZE: 14px; FONT-WEIGHT: bold; PADDING-TOP: 6px
+}
+.categoryWrapper {
+	MARGIN: 7px 13px 7px 5px
+}
+.categoryTitleWrapper {
+	BORDER-BOTTOM: #6b92d7 2px solid; LINE-HEIGHT: 26px
+}
+.categoryTitle {
+	COLOR: #ff6d01; MARGIN-LEFT: 5px; FONT-SIZE: 14px; FONT-WEIGHT: bold
+}
+.categoryMore {
+	COLOR: #003399; MARGIN-RIGHT: 5px; TEXT-DECORATION: underline
+}
+.categoryCalendarsWrapper {
+	BORDER-BOTTOM: #9f9f9f 1px dotted; PADDING-BOTTOM: 7px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 7px
+}
+.categoryCalendar {
+	LINE-HEIGHT: 17px; CURSOR: pointer
+}
+.categoryCalendar A {
+	COLOR: #003399; TEXT-DECORATION: none
+}
+.categorySchedulesWrapper {
+	PADDING-BOTTOM: 7px; PADDING-LEFT: 5px; PADDING-RIGHT: 0px; PADDING-TOP: 7px
+}
+.categorySchedules {
+	LINE-HEIGHT: 17px; CURSOR: pointer
+}
+.categorySchedules A {
+	COLOR: #347aba; TEXT-DECORATION: none
+}
+.categoryEvenLine {
+	BACKGROUND: #fcf9e6
+}
+#login A {
+	COLOR: #003399
+}
+.search .page {
+	WIDTH: 100%
+}
+.search .header {
+	MARGIN-RIGHT: 10px
+}
+.browse .page {
+	WIDTH: 100%
+}
+.browse .header {
+	MARGIN-RIGHT: 10px
+}
+#center_content .left TD {
+	WHITE-SPACE: nowrap; OVERFLOW: hidden
+}
+#center_content .left TABLE {
+	TABLE-LAYOUT: fixed
+}
+UL {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+LI {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+#scrollDiv {
+	OVERFLOW-X: hidden; OVERFLOW-Y: auto
+}
+.scrollText {
+	WIDTH: 300px; HEIGHT: 225px; OVERFLOW: hidden
+}
+.scrollText LI {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 15px; PADDING-RIGHT: 15px; PADDING-TOP: 0px
+}
+.blockImg {
+	MARGIN-TOP: 4px; FLOAT: left; MARGIN-LEFT: 4px; MARGIN-RIGHT: 2px
+}
+.noneImg {
+	MARGIN-TOP: 4px; FLOAT: left; MARGIN-LEFT: 4px; MARGIN-RIGHT: 2px
+}
+.blockImg {
+	DISPLAY: block
+}
+.noneImg {
+	DISPLAY: none
+}
+.hoverClass {
+	BACKGROUND-COLOR: #ccff66
+}
+.note_hover {
+	COLOR: #5f6063; TEXT-DECORATION: none
+}
+.note_line {
+	COLOR: blue; TEXT-DECORATION: underline
+}
+#rili365 .header {
+	MARGIN-RIGHT: 10px
+}

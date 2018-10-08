@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="fmss.dao.entity.UBaseFuncDO"
+		table="u_base_func" dynamic-update="true" dynamic-insert="true">
+		<id name="funcId" column="func_id" type="java.lang.Integer"
+			unsaved-value="null" />
+		<property name="funcURL" type="java.lang.String" update="true"
+			insert="true" column="func_url" length="100" />
+		<property name="funcDesc" type="java.lang.String" update="true"
+			insert="true" column="func_desc" length="100" />
+		<property name="funcType" type="java.lang.String" update="true"
+			insert="true" column="func_type" length="10" />
+		<set name="funcMenus" lazy="false" inverse="true" cascade="all">
+			<key column="func_id"></key>
+			<one-to-many class="fmss.dao.entity.UBaseFuncMenuDO" />
+		</set>
+		<set name="funcAuths" lazy="false" inverse="true" cascade="all">
+			<key column="func_id"></key>
+			<one-to-many class="fmss.dao.entity.UBaseFuncAuthDO" />
+		</set>
+	</class>
+
+</hibernate-mapping>

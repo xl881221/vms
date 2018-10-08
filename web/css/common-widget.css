@@ -1,0 +1,9 @@
+@CHARSET "UTF-8";
+
+.ellipsis {
+	white-space: nowrap;
+	-o-text-overflow: ellipsis;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	-moz-binding: url('ellipsis.xml#ellipsis');
+}

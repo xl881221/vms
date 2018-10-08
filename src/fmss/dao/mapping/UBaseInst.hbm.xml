@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping
+>
+    <class
+        name="fmss.dao.entity.UBaseInstDO"
+        table="U_BASE_INST"
+        dynamic-update="true"
+        dynamic-insert="true"
+    >
+		<id
+            name="instId"
+            column="INST_ID"
+            type="java.lang.String"
+            unsaved-value="null"
+        />
+       <property
+            name="instName"
+            type="java.lang.String"
+            update="true"
+            insert="true"
+            column="INST_NAME"
+            length="30"/>
+	    <property
+            name="instSmpName"
+            type="java.lang.String"
+            update="true"
+            insert="true"
+            column="INST_SMP_NAME"
+            length="20"/>
+       <property
+            name="parentInstId"
+            type="java.lang.String"
+            update="true"
+            insert="true"
+            column="PARENT_INST_ID"
+            length="20"/> 
+      <property
+            name="instLayer"
+            type="java.lang.Integer"
+            update="true"
+            insert="true"
+            column="INST_LAYER"
+            length="22"/> 
+       <property
+            name="address"
+            type="java.lang.String"
+            update="true"
+            insert="true"
+            column="ADDRESS"
+            length="100"/>            
+		<property
+            name="zip"
+            type="java.lang.String"
+            update="true"
+            insert="true"
+            column="ZIP"
+            length="6"/>            
+		<property
+            name="tel"
+            type="java.lang.String"
+            update="true"
+            insert="true"
+            column="TEL"
+            length="27"/> 
+		<property
+            name="fax"
+            type="java.lang.String"
+            update="true"
+            insert="true"
+            column="FAX"
+            length="20"/>      
+      <property
+            name="isBussiness"
+            type="java.lang.String"
+            update="true"
+            insert="true"
+            column="IS_BUSSINESS"
+            length="5"/>
+      <property
+            name="orderNum"
+            type="java.lang.Integer"
+            update="true"
+            insert="true"
+            column="ORDER_NUM"
+            length="22"/> 
+      <property
+            name="startDate"
+            type="java.util.Date"
+            update="true"
+            insert="true"
+            column="START_DATE"/> 
+      <property
+            name="endDate"
+            type="java.util.Date"
+            update="true"
+            insert="true"
+            column="END_DATE"/> 
+             
+       <property
+            name="enabled"
+            type="java.lang.String"
+            update="true"
+            insert="true"
+            column="ENABLED"
+            length="5"/> 
+
+ 	  <property
+            name="createTime"
+            type="java.util.Date"
+            update="true"
+            insert="true"
+            column="CREATE_TIME"/>            
+		
+		<property
+            name="description"
+            type="java.lang.String"
+            update="true"
+            insert="true"
+            column="DESCRIPTION"
+            length="600"/>      
+        
+        <property
+            name="instRegion"
+            type="java.lang.String"
+            update="true"
+            insert="true"
+            column="inst_region"
+            length="10"/> 
+             
+       <property 
+		    name="email" 
+		    type="java.lang.String" 
+		    update="true"
+			insert="true" 
+			column="EMAIL" 
+			length="50" />     
+	   <property 
+		    name="instPath" 
+		    type="java.lang.String" 
+		    update="true"
+			insert="true" 
+			column="INST_PATH" 
+			length="1000" />  
+	   <property 
+		    name="isHead" 
+		    type="java.lang.String" 
+		    update="true"
+			insert="true" 
+			column="IS_HEAD" 
+			length="10" />  
+	   <property 
+		    name="instLevel" 
+		    type="java.lang.Integer"
+		    update="true"
+			insert="true" 
+			column="INST_LEVEL" 
+			length="22" />   
+		<property
+            name="parentInstName"
+            type="java.lang.String"
+            formula="(SELECT a.INST_NAME FROM U_BASE_INST a WHERE a.INST_ID=PARENT_INST_ID)"/>  
+         <property name="taxpername"
+            type="java.lang.String"
+            update="true"
+            insert="true"
+            column="TAXPERNAME" 
+			length="100"
+            />
+         <property name="account"
+            type="java.lang.String"
+            update="true"
+            insert="true"
+            column="ACCOUNT" 
+			length="50"
+            />
+         <property name="taxpernumber"
+            type="java.lang.String"
+            update="true"
+            insert="true"
+            column="TAXPERNUMBER" 
+			length="50"
+            />
+         <property name="taxaddress"
+            type="java.lang.String"
+            update="true"
+            insert="true"
+            column="TAXADDRESS" 
+			length="70"
+            />
+         <property name="taxtel"
+            type="java.lang.String"
+            update="true"
+            insert="true"
+            column="TAXTEL" 
+			length="30"
+            />
+         <property name="taxbank"
+            type="java.lang.String"
+            update="true"
+            insert="true"
+            column="TAXBANK" 
+			length="50"
+            />
+          <property name="taxPayerType"
+            type="java.lang.String"
+            update="true"
+            insert="true"
+            column="TAXPAYER_TYPE" 
+			length="1"
+            />
+			
+    </class>
+
+</hibernate-mapping>

@@ -1,0 +1,2 @@
+<script type="text/javascript" src="<c:out value='${webapp}'/>/js/jquery/jquery.js"></script>
+<script type="text/javascript" src="<c:out value='${webapp}'/>/js/jquery/region.js" charset="GBK"></script>

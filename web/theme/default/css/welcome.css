@@ -1,0 +1,63 @@
+  body {
+      padding:0px;
+      margin:0px;
+      font:normal 12px Arial,Verdana,宋体;
+      scrollbar-base-color:		#494949;
+      scrollbar-highlight-color:	#ffffff;
+      scrollbar-3dlight-color:	#c9c9c9;
+      scrollbar-darkshadow-color:	#c9c9c9;
+      scrollbar-shadow-color:		#ffffff;
+      scrollbar-face-color:		#c9c9c9;
+      scrollbar-track-color:		#494949;
+      scrollbar-arrow-color:		black;
+  }
+
+
+  /* 页面其它样式复写 */
+  .title1 {
+      color:#1b7e96;
+      font:bold 12px Arial,Verdana,宋体;
+      padding-top:3px;
+      cursor:default;
+      white-space:nowrap;
+  }
+  .more A {
+      color:#EB6A2A;
+      font:normal 12px Arial;
+  }
+  .rightCon {
+      padding-right:5px;
+  }
+  .rightInfoTitle {
+      color:#1b7e96;
+      font:bold 12px Arial,Verdana,宋体;
+      padding:7px 5px 0px 6px;
+      cursor:default;
+      white-space:nowrap;
+      height:31px;
+  }
+  .rightInfoContent {
+      color:#000;
+      font:normal 12px Arial,Verdana,宋体;
+      height:438px;
+      overflow:auto;
+      padding:5px;
+  }
+  .blockTitle {
+      color:#1b7e96;
+      font:normal 12px Arial,Verdana,宋体;
+      padding-top:3px;
+      cursor:default;
+      white-space:nowrap;
+      background:url(../img/filter.jpg) no-repeat;
+      padding:5px 0px 2px 5px;
+  }
+  .splitDiv {
+      height:1px;
+      font-size:1px;
+  }
+  .waitBlock {
+      border-left:1px solid #B9BFC4;
+      border-right:1px solid #B9BFC4;
+      background:url(../img/blockBg.jpg) right 24px no-repeat;
+  }

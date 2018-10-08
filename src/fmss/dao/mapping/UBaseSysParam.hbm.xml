@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping
+>
+    <class
+     name="fmss.dao.entity.UBaseSysParamDO"
+        table="U_BASE_SYS_PARAM"
+        dynamic-update="true"
+        dynamic-insert="true"
+    >
+		<id
+            name="paramId"
+            column="PARAM_ID"
+            type="java.lang.Integer"
+            unsaved-value="null"
+        />
+        <property
+            name="systemId"
+            type="java.lang.String"
+            update="false"
+            insert="false"
+            column="SYSTEM_ID"
+            length="100"/>
+       <property
+            name="type"
+            type="java.lang.String"
+            update="false"
+            insert="false"
+            column="TYPE"
+            length="100"/>
+       <property
+            name="typeDesc"
+            type="java.lang.String"
+            update="false"
+            insert="false"
+            column="TYPE_DESC"
+            length="100"/>
+		<property
+            name="itemEname"
+            type="java.lang.String"
+            update="false"
+            insert="false"
+            column="ITEM_ENAME"
+            length="100"/>
+		<property
+            name="itemCname"
+            type="java.lang.String"
+            update="false"
+            insert="false"
+            column="ITEM_CNAME"
+            length="100"/>
+		<property
+            name="selectedValue"
+            type="java.lang.String"
+            update="true"
+            insert="true"
+            column="SELECTED_VALUE"
+            length="100"/>
+		<property
+            name="valueList"
+            type="java.lang.String"
+            update="false"
+            insert="false"
+            column="VALUE_LIST"
+            length="100"/>
+		<property
+            name="isMofify"
+            type="java.lang.String"
+            update="false"
+            insert="false"
+            column="IS_MODIFY"
+            length="100"/>
+		<property
+            name="isVisible"
+            type="java.lang.String"
+            update="false"
+            insert="false"
+            column="IS_VISIBLE"
+            length="100"/>
+         <property
+            name="orderNum"
+            type="java.lang.Integer"
+            update="true"
+            insert="true"
+            column="ORDER_NUM"
+         />
+    </class>
+
+</hibernate-mapping>

@@ -1,0 +1,14 @@
+body{
+	margin:0;
+	padding:0; 
+	border-left:#BCC4D5 solid 1px;
+	background: url(../images/mainbg.png) repeat;
+}
+table{
+	margin:0;
+	padding:0 ;
+	border-width:0px; 
+	width:10px;
+}
+img{width:10px;CURSOR:pointer;}
+

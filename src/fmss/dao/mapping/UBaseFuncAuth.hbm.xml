@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="fmss.dao.entity.UBaseFuncAuthDO"
+		table="u_base_func_auth_rela" dynamic-update="true"
+		dynamic-insert="true">
+		<composite-id>
+			<key-property name="funcId" column="func_id"
+				type="java.lang.Integer" />
+			<key-property name="objectId" column="object_id"
+				type="java.lang.String" />
+			<key-property name="objectType" column="object_type"
+				type="java.lang.String" />
+		</composite-id>
+		<many-to-one name="func"
+			class="fmss.dao.entity.UBaseFuncDO" cascade="none"
+			outer-join="auto" update="false" insert="false" lazy="false"
+			column="func_id" />
+	</class>
+</hibernate-mapping>
